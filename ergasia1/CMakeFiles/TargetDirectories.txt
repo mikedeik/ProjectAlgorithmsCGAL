@@ -1,0 +1,3 @@
+/home/mike/Documents/Project_Emiris/project-emiris/ergasia1/CMakeFiles/new.o.dir
+/home/mike/Documents/Project_Emiris/project-emiris/ergasia1/CMakeFiles/edit_cache.dir
+/home/mike/Documents/Project_Emiris/project-emiris/ergasia1/CMakeFiles/rebuild_cache.dir
