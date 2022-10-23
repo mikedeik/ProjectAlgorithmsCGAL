@@ -19,10 +19,24 @@ int main(int argc, char **argv)
 
     vector<Point> points;
     get_points_from_file("data/images/euro-night-0000010.instance", &points);
+    // get_points_from_file("test.txt", &points);
 
     Incrementing algo = Incrementing(points, sorter[inp]);
     algo.Print_Points();
-    Point p(2, 3);
+    cout << "----Edges----\n";
+    algo.Print_Edges();
+
+    cout << algo.Simple() << "\n";
+
+    algo.testing();
+    algo.Create_Polygon_Line();
+    algo.testing();
+    algo.Create_Polygon_Line();
+    algo.testing();
+    algo.Create_Polygon_Line();
+    algo.testing();
+    algo.Create_Polygon_Line();
+    algo.testing();
 
     return 0;
 }

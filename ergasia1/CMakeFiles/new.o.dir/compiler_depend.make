@@ -181,6 +181,26 @@ CMakeFiles/new.o.dir/incrementing.cpp.o: incrementing.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  incrementing.h \
   /home/mike/CGAL-5.5/include/CGAL/Exact_predicates_exact_constructions_kernel.h \
   /home/mike/CGAL-5.5/include/CGAL/Simple_cartesian.h \
   /home/mike/CGAL-5.5/include/CGAL/Cartesian/Cartesian_base.h \
@@ -359,14 +379,12 @@ CMakeFiles/new.o.dir/incrementing.cpp.o: incrementing.cpp \
   /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
-  /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_tempbuf.h \
   /usr/include/c++/11/bits/uniform_int_dist.h \
   /usr/include/c++/11/pstl/glue_algorithm_defs.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/tuple \
   /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
@@ -378,11 +396,6 @@ CMakeFiles/new.o.dir/incrementing.cpp.o: incrementing.cpp \
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/pstl/execution_defs.h \
   /usr/include/c++/11/iterator \
   /usr/include/c++/11/bits/stream_iterator.h \
@@ -402,11 +415,6 @@ CMakeFiles/new.o.dir/incrementing.cpp.o: incrementing.cpp \
   /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /home/mike/CGAL-5.5/include/CGAL/license/lgpl.h \
   /home/mike/CGAL-5.5/include/CGAL/license.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /home/mike/CGAL-5.5/include/CGAL/assertions.h \
   /home/mike/CGAL-5.5/include/CGAL/Uncertain.h \
   /home/mike/CGAL-5.5/include/CGAL/enum.h \
@@ -414,8 +422,6 @@ CMakeFiles/new.o.dir/incrementing.cpp.o: incrementing.cpp \
   /home/mike/CGAL-5.5/include/CGAL/Origin.h \
   /home/mike/CGAL-5.5/include/CGAL/Origin_impl.h \
   /home/mike/CGAL-5.5/include/CGAL/Profile_counter.h \
-  /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/iomanip \
   /usr/include/c++/11/locale \
   /usr/include/c++/11/bits/locale_facets_nonio.h \
@@ -1269,9 +1275,6 @@ CMakeFiles/new.o.dir/incrementing.cpp.o: incrementing.cpp \
   /usr/include/c++/11/variant \
   /usr/include/boost/container_hash/extensions.hpp \
   /usr/include/boost/detail/container_fwd.hpp \
-  /usr/include/c++/11/deque \
-  /usr/include/c++/11/bits/stl_deque.h \
-  /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/list \
   /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/bits/list.tcc \
@@ -1965,10 +1968,8 @@ CMakeFiles/new.o.dir/incrementing.cpp.o: incrementing.cpp \
   /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
   /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
   /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_impl.h \
-  /usr/include/c++/11/queue \
-  /usr/include/c++/11/bits/stl_queue.h \
-  incrementing.h \
-  util.h
+  util.h \
+  /usr/include/boost/optional/optional_io.hpp
 
 CMakeFiles/new.o.dir/main.cpp.o: main.cpp \
   /usr/include/stdc-predef.h \
@@ -3921,6 +3922,21 @@ CMakeFiles/new.o.dir/main.cpp.o: main.cpp \
   /home/mike/CGAL-5.5/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
   /home/mike/CGAL-5.5/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
   incrementing.h \
+  /home/mike/CGAL-5.5/include/CGAL/Polygon_2.h \
+  /home/mike/CGAL-5.5/include/CGAL/circulator.h \
+  /home/mike/CGAL-5.5/include/CGAL/circulator_bases.h \
+  /home/mike/CGAL-5.5/include/CGAL/Iterator_range.h \
+  /home/mike/CGAL-5.5/include/CGAL/tuple.h \
+  /usr/include/boost/foreach.hpp \
+  /usr/include/boost/foreach_fwd.hpp \
+  /home/mike/CGAL-5.5/include/CGAL/Polygon_2_algorithms.h \
+  /home/mike/CGAL-5.5/include/CGAL/Polygon_2/polygon_assertions.h \
+  /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
+  /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
+  /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
+  /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
+  /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
+  /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_impl.h \
   /usr/include/c++/11/queue \
   /usr/include/c++/11/bits/stl_queue.h
 
@@ -5876,10 +5892,6 @@ CMakeFiles/new.o.dir/util.cpp.o: util.cpp \
   /home/mike/CGAL-5.5/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h
 
 
-incrementing.h:
-
-/usr/include/c++/11/queue:
-
 /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_impl.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h:
@@ -6658,10 +6670,6 @@ incrementing.h:
 
 /usr/include/c++/11/list:
 
-/usr/include/c++/11/bits/deque.tcc:
-
-/usr/include/c++/11/bits/stl_deque.h:
-
 /usr/include/boost/math/special_functions/detail/igamma_inverse.hpp:
 
 /usr/include/boost/tuple/tuple.hpp:
@@ -6894,15 +6902,15 @@ incrementing.h:
 
 /usr/include/boost/variant/detail/apply_visitor_unary.hpp:
 
-/usr/include/boost/type_traits/is_rvalue_reference.hpp:
+/usr/include/boost/variant/apply_visitor.hpp:
 
-/home/mike/CGAL-5.5/include/CGAL/Iterator_range.h:
+/usr/include/boost/variant/detail/hash_variant.hpp:
 
-/home/mike/CGAL-5.5/include/CGAL/Kernel/Conic_misc.h:
+/usr/include/boost/variant/detail/cast_storage.hpp:
 
-/usr/include/boost/type_traits/is_lvalue_reference.hpp:
+/home/mike/CGAL-5.5/include/CGAL/Kernel/interface_macros.h:
 
-/usr/include/boost/type_traits/is_reference.hpp:
+/usr/include/boost/variant/detail/visitation_impl.hpp:
 
 /usr/include/boost/type_traits/declval.hpp:
 
@@ -6984,14 +6992,6 @@ incrementing.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
-/usr/include/boost/math/special_functions/gamma.hpp:
-
-/usr/include/boost/type_traits/remove_reference.hpp:
-
-/home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h:
-
-/usr/include/boost/preprocessor/array/data.hpp:
-
 /usr/include/boost/preprocessor/repeat.hpp:
 
 /home/mike/CGAL-5.5/include/CGAL/Needs_parens_as_product.h:
@@ -7009,10 +7009,6 @@ incrementing.h:
 /home/mike/CGAL-5.5/include/CGAL/number_type_basic.h:
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/home/mike/CGAL-5.5/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h:
-
-/usr/include/boost/type_traits/is_function.hpp:
 
 /usr/include/boost/mpl/aux_/config/dtp.hpp:
 
@@ -7138,35 +7134,7 @@ incrementing.h:
 
 /usr/include/c++/11/bits/locale_facets_nonio.h:
 
-/usr/include/c++/11/sstream:
-
 /home/mike/CGAL-5.5/include/CGAL/assertions.h:
-
-/usr/include/c++/11/set:
-
-/usr/include/boost/optional/detail/optional_aligned_storage.hpp:
-
-/usr/include/boost/preprocessor/identity.hpp:
-
-/usr/include/boost/mpl/quote.hpp:
-
-/home/mike/CGAL-5.5/include/CGAL/Coercion_traits.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
-
-/usr/include/boost/type_traits/add_pointer.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
-
-/usr/include/boost/random/chi_squared_distribution.hpp:
-
-/usr/include/boost/predef/compiler/sunpro.h:
-
-/home/mike/CGAL-5.5/include/CGAL/Cartesian/Segment_3.h:
-
-/usr/include/boost/optional/optional_fwd.hpp:
-
-/usr/include/boost/numeric/conversion/udt_builtin_mixture_enum.hpp:
 
 /usr/include/boost/container_hash/hash.hpp:
 
@@ -7206,26 +7174,6 @@ incrementing.h:
 
 /usr/include/c++/11/bits/stl_vector.h:
 
-/usr/include/c++/11/bits/vector.tcc:
-
-/usr/include/boost/math/special_functions/next.hpp:
-
-/usr/include/boost/concept/assert.hpp:
-
-/home/mike/CGAL-5.5/include/CGAL/Kernel/function_objects.h:
-
-/usr/include/c++/11/bits/stl_uninitialized.h:
-
-/usr/include/boost/mpl/aux_/reverse_fold_impl.hpp:
-
-/usr/include/boost/mpl/aux_/traits_lambda_spec.hpp:
-
-/usr/include/c++/11/vector:
-
-/home/mike/CGAL-5.5/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h:
-
-/usr/include/boost/mpl/aux_/size_impl.hpp:
-
 /usr/include/c++/11/bits/unordered_map.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h:
@@ -7249,10 +7197,6 @@ incrementing.h:
 /usr/include/boost/preprocessor/facilities/empty.hpp:
 
 /usr/include/c++/11/bits/basic_ios.tcc:
-
-/usr/include/c++/11/bits/uses_allocator.h:
-
-/usr/include/boost/mpl/aux_/config/workaround.hpp:
 
 /usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
 
@@ -7316,10 +7260,6 @@ incrementing.h:
 
 /usr/include/boost/predef/platform/ios.h:
 
-/usr/include/c++/11/bits/stl_queue.h:
-
-/usr/include/boost/predef/hardware/simd/x86_amd.h:
-
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h:
 
 /usr/include/boost/preprocessor/comma_if.hpp:
@@ -7327,8 +7267,6 @@ incrementing.h:
 /usr/include/boost/mpl/aux_/arg_typedef.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
-
-/usr/include/boost/variant/detail/hash_variant.hpp:
 
 /usr/include/boost/predef/platform/windows_system.h:
 
@@ -7347,8 +7285,6 @@ incrementing.h:
 /usr/include/boost/predef/platform/cloudabi.h:
 
 /usr/include/boost/predef/os/solaris.h:
-
-/usr/include/boost/type_traits/detail/is_function_cxx_11.hpp:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h:
 
@@ -7460,6 +7396,10 @@ incrementing.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
+/usr/include/boost/mpl/aux_/config/workaround.hpp:
+
+/usr/include/c++/11/bits/uses_allocator.h:
+
 /usr/include/boost/predef/compiler/microtec.h:
 
 /usr/include/boost/mpl/not.hpp:
@@ -7474,8 +7414,6 @@ incrementing.h:
 
 /usr/include/boost/predef/compiler/ibm.h:
 
-/usr/include/boost/variant/detail/cast_storage.hpp:
-
 /home/mike/CGAL-5.5/include/CGAL/Cartesian/Triangle_2.h:
 
 /usr/include/boost/predef/os/bsd/bsdi.h:
@@ -7488,15 +7426,85 @@ incrementing.h:
 
 /usr/include/boost/type_traits/conditional.hpp:
 
+/usr/include/boost/predef/os/bsd.h:
+
+/usr/include/boost/type_traits/has_right_shift_assign.hpp:
+
+/usr/include/boost/predef/os/windows.h:
+
+/usr/include/boost/predef/compiler/edg.h:
+
+/home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h:
+
+/usr/include/wchar.h:
+
+/usr/include/boost/predef/compiler/digitalmars.h:
+
+/usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector20.hpp:
+
+/usr/include/boost/mpl/iter_fold.hpp:
+
+/usr/include/boost/preprocessor/tuple/eat.hpp:
+
+/usr/include/boost/predef/compiler/compaq.h:
+
+/usr/include/c++/11/tuple:
+
+/usr/include/boost/random/linear_feedback_shift.hpp:
+
+/usr/include/boost/predef/compiler/clang.h:
+
+/usr/include/c++/11/atomic:
+
+/usr/include/boost/blank_fwd.hpp:
+
+/home/mike/CGAL-5.5/include/CGAL/Cartesian/Scaling_rep_2.h:
+
+/usr/include/boost/predef/os.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/boost/predef/hardware/simd/x86/versions.h:
+
+/usr/include/boost/numeric/conversion/numeric_cast_traits.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp:
+
+/usr/include/boost/multiprecision/detail/digits.hpp:
+
+/usr/include/boost/predef/compiler/hp_acc.h:
+
+/home/mike/CGAL-5.5/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h:
+
+/usr/include/boost/predef/compiler.h:
+
+/usr/include/c++/11/bits/invoke.h:
+
+/usr/include/boost/predef/architecture/z.h:
+
+/usr/include/boost/type_traits/type_identity.hpp:
+
+/usr/include/boost/predef/architecture/sys390.h:
+
+/usr/include/c++/11/bits/stl_multimap.h:
+
 /usr/include/boost/predef/library/c/gnu.h:
 
 /usr/include/boost/predef/platform/mingw32.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
-/usr/include/c++/11/bits/invoke.h:
+/usr/include/boost/math/special_functions/pow.hpp:
 
-/usr/include/boost/predef/architecture/z.h:
+/home/mike/CGAL-5.5/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h:
+
+/usr/include/boost/predef/architecture/x86.h:
+
+/usr/include/boost/mpl/aux_/config/intel.hpp:
+
+/usr/include/boost/mpl/vector/aux_/pop_back.hpp:
+
+/usr/include/c++/11/bits/basic_string.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h:
 
@@ -7512,15 +7520,23 @@ incrementing.h:
 
 /usr/include/c++/11/bits/node_handle.h:
 
-/usr/include/boost/type_traits/has_trivial_assign.hpp:
-
-/usr/include/boost/range/rend.hpp:
-
-/usr/include/boost/mpl/arg.hpp:
-
 /usr/include/boost/random/seed_seq.hpp:
 
 /usr/include/boost/predef/version.h:
+
+/usr/include/boost/predef/os/cygwin.h:
+
+/usr/include/boost/predef/compiler/dignus.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/c++/11/bits/deque.tcc:
+
+/usr/include/boost/multiprecision/detail/atomic.hpp:
+
+/home/mike/CGAL-5.5/include/CGAL/Cartesian/Direction_2.h:
+
+/usr/include/boost/mpl/aux_/config/msvc_typename.hpp:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h:
 
@@ -7545,22 +7561,6 @@ incrementing.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/c++/11/ext/new_allocator.h:
-
-/usr/include/boost/mpl/bool_fwd.hpp:
-
-/home/mike/CGAL-5.5/include/CGAL/Intersections_3/Point_3_Segment_3.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/c++/11/bits/stl_bvector.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/boost/iterator/detail/enable_if.hpp:
 
 /usr/include/boost/predef/compiler/intel.h:
 
@@ -7588,6 +7588,8 @@ util.cpp:
 
 /usr/include/boost/preprocessor/punctuation/comma.hpp:
 
+incrementing.h:
+
 /usr/include/pthread.h:
 
 /usr/include/boost/utility/binary.hpp:
@@ -7595,6 +7597,14 @@ util.cpp:
 /usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/boost/mpl/vector/aux_/size.hpp:
+
+/home/mike/CGAL-5.5/include/CGAL/Intersections_3/Point_3_Segment_3.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/boost/mpl/bool_fwd.hpp:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h:
 
@@ -7612,7 +7622,13 @@ util.cpp:
 
 /usr/include/boost/predef/os/unix.h:
 
+/usr/include/c++/11/bits/stl_deque.h:
+
 /usr/include/boost/preprocessor/slot/detail/def.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/boost/predef/library/std/vacpp.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h:
 
@@ -7626,21 +7642,11 @@ util.cpp:
 
 /home/mike/CGAL-5.5/include/CGAL/functional.h:
 
-/usr/include/boost/preprocessor/tuple/eat.hpp:
-
-/usr/include/boost/predef/compiler/compaq.h:
-
 /usr/include/boost/math/special_functions/asinh.hpp:
 
 /usr/include/boost/predef/architecture/m68k.h:
 
 /usr/include/boost/mpl/list/aux_/push_back.hpp:
-
-/usr/include/boost/predef/os/cygwin.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/boost/predef/compiler/dignus.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
@@ -7668,9 +7674,9 @@ util.cpp:
 
 /usr/include/boost/mpl/aux_/template_arity_fwd.hpp:
 
-/usr/include/boost/mpl/aux_/value_wknd.hpp:
-
 /home/mike/CGAL-5.5/include/CGAL/Profile_counter.h:
+
+/usr/include/boost/mpl/aux_/value_wknd.hpp:
 
 /usr/include/c++/11/new:
 
@@ -7687,24 +7693,6 @@ util.cpp:
 /usr/include/boost/config/user.hpp:
 
 /usr/include/boost/iterator/detail/config_def.hpp:
-
-/home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h:
-
-/usr/include/wchar.h:
-
-/usr/include/boost/predef/library/std/vacpp.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/boost/predef/compiler/edg.h:
-
-/usr/include/boost/multiprecision/detail/digits.hpp:
-
-/usr/include/boost/predef/compiler/hp_acc.h:
-
-/home/mike/CGAL-5.5/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h:
-
-/usr/include/boost/predef/compiler.h:
 
 /usr/include/boost/predef/library/c/vms.h:
 
@@ -7780,8 +7768,6 @@ util.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/boost/predef/architecture/sys390.h:
-
 /usr/include/boost/multiprecision/cpp_int.hpp:
 
 /home/mike/CGAL-5.5/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h:
@@ -7809,6 +7795,8 @@ util.cpp:
 /usr/include/boost/type_traits/remove_const.hpp:
 
 /usr/include/boost/mpl/aux_/has_type.hpp:
+
+/usr/include/boost/optional/optional_io.hpp:
 
 /home/mike/CGAL-5.5/include/CGAL/Aff_transformation_3.h:
 
@@ -7858,6 +7846,12 @@ util.cpp:
 
 /usr/include/features.h:
 
+/usr/include/c++/11/bits/vector.tcc:
+
+/usr/include/boost/math/special_functions/next.hpp:
+
+/usr/include/boost/concept/assert.hpp:
+
 /usr/include/c++/11/unordered_set:
 
 /usr/include/boost/predef/compiler/visualc.h:
@@ -7869,6 +7863,14 @@ util.cpp:
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/boost/concept/usage.hpp:
+
+/home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h:
+
+/usr/include/boost/predef/architecture/sys370.h:
+
+/usr/include/boost/mpl/distance_fwd.hpp:
+
+/usr/include/c++/11/queue:
 
 /usr/include/c++/11/type_traits:
 
@@ -7883,6 +7885,8 @@ util.cpp:
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/boost/predef/architecture/x86/32.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -7968,6 +7972,12 @@ util.cpp:
 
 /usr/include/boost/mpl/aux_/arity.hpp:
 
+/usr/include/boost/math/special_functions/detail/erf_inv.hpp:
+
+/usr/include/boost/predef/compiler/borland.h:
+
+/usr/include/boost/iterator/iterator_concepts.hpp:
+
 /home/mike/CGAL-5.5/include/CGAL/Intersections_2/Segment_2_Segment_2.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
@@ -7976,17 +7986,17 @@ util.cpp:
 
 /usr/include/boost/range/detail/misc_concept.hpp:
 
-/usr/include/boost/predef/compiler/digitalmars.h:
-
-/usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector20.hpp:
-
-/usr/include/boost/mpl/iter_fold.hpp:
-
 /usr/include/boost/mpl/vector/aux_/clear.hpp:
 
 /usr/include/c++/11/cwchar:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
+/home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h:
+
+/usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp:
+
+/usr/include/unistd.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h:
 
@@ -8002,17 +8012,11 @@ util.cpp:
 
 /usr/include/boost/mpl/aux_/config/ctps.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/quadmath.h:
-
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h:
 
 /usr/include/boost/mpl/begin_end_fwd.hpp:
-
-/usr/include/c++/11/cstddef:
 
 /usr/include/boost/version.hpp:
 
@@ -8023,6 +8027,12 @@ util.cpp:
 /usr/include/boost/config/detail/select_compiler_config.hpp:
 
 /usr/include/boost/mpl/apply.hpp:
+
+/home/mike/CGAL-5.5/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h:
+
+/usr/include/boost/predef/architecture/x86/64.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Distance_3/Point_3_Line_3.h:
 
@@ -8122,6 +8132,14 @@ util.h:
 
 /usr/include/endian.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/quadmath.h:
+
+/usr/include/boost/predef/hardware/simd/x86_amd.h:
+
+/usr/include/c++/11/bits/stl_queue.h:
+
 /usr/include/c++/11/bits/functional_hash.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h:
@@ -8188,12 +8206,6 @@ util.h:
 
 /usr/include/boost/variant/detail/initializer.hpp:
 
-/usr/include/boost/multiprecision/cpp_int/cpp_int_config.hpp:
-
-/usr/include/boost/move/detail/config_end.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
 /usr/include/boost/type_traits/has_logical_not.hpp:
 
 /usr/include/boost/predef/platform/mingw64.h:
@@ -8205,16 +8217,6 @@ util.h:
 /home/mike/CGAL-5.5/include/CGAL/Cartesian/Point_2.h:
 
 /usr/include/alloca.h:
-
-/usr/include/c++/11/bits/stl_heap.h:
-
-/home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h:
-
-/usr/include/unistd.h:
-
-/usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp:
-
-/usr/include/boost/predef/architecture/x86/32.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Distance_3/Point_3_Plane_3.h:
 
@@ -8254,12 +8256,6 @@ util.h:
 
 /usr/include/boost/range/algorithm/equal.hpp:
 
-/home/mike/CGAL-5.5/include/CGAL/Gmp_coercion_traits.h:
-
-/usr/include/c++/11/deque:
-
-/home/mike/CGAL-5.5/include/CGAL/Installation/internal/enable_third_party_libraries.h:
-
 /usr/include/boost/mpl/aux_/preprocessed/gcc/times.hpp:
 
 /usr/include/boost/predef/other.h:
@@ -8294,6 +8290,8 @@ util.h:
 
 /usr/include/boost/mpl/list/aux_/iterator.hpp:
 
+/usr/include/c++/11/cstddef:
+
 /usr/include/boost/predef/platform/windows_desktop.h:
 
 /usr/include/boost/iterator/distance.hpp:
@@ -8317,6 +8315,10 @@ util.h:
 /usr/include/c++/11/bits/concept_check.h:
 
 /usr/include/boost/mpl/limits/list.hpp:
+
+/usr/include/boost/variant/static_visitor.hpp:
+
+/usr/include/boost/type_index/stl_type_index.hpp:
 
 /home/mike/CGAL-5.5/include/CGAL/GMPXX_arithmetic_kernel.h:
 
@@ -8374,10 +8376,6 @@ util.h:
 
 /usr/include/boost/predef/detail/test.h:
 
-/home/mike/CGAL-5.5/include/CGAL/Kernel/interface_macros.h:
-
-/usr/include/boost/variant/detail/visitation_impl.hpp:
-
 /usr/include/c++/11/istream:
 
 /usr/include/c++/11/clocale:
@@ -8397,6 +8395,78 @@ util.h:
 /home/mike/CGAL-5.5/include/CGAL/basic.h:
 
 /usr/include/boost/mpl/aux_/config/forwarding.hpp:
+
+/usr/include/c++/11/sstream:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
+
+/usr/include/boost/random/chi_squared_distribution.hpp:
+
+/usr/include/boost/predef/compiler/sunpro.h:
+
+/home/mike/CGAL-5.5/include/CGAL/Cartesian/Segment_3.h:
+
+/usr/include/boost/optional/optional_fwd.hpp:
+
+/usr/include/boost/numeric/conversion/udt_builtin_mixture_enum.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
+
+/usr/include/boost/type_traits/add_pointer.hpp:
+
+/usr/include/c++/11/set:
+
+/usr/include/boost/optional/detail/optional_aligned_storage.hpp:
+
+/usr/include/boost/preprocessor/identity.hpp:
+
+/usr/include/boost/mpl/quote.hpp:
+
+/usr/include/boost/type_traits/has_trivial_assign.hpp:
+
+/usr/include/boost/mpl/arg.hpp:
+
+/usr/include/boost/range/rend.hpp:
+
+/home/mike/CGAL-5.5/include/CGAL/Coercion_traits.h:
+
+/usr/include/boost/multiprecision/cpp_int/cpp_int_config.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/boost/move/detail/config_end.hpp:
+
+/home/mike/CGAL-5.5/include/CGAL/Kernel/function_objects.h:
+
+/usr/include/c++/11/bits/stl_uninitialized.h:
+
+/usr/include/boost/mpl/aux_/reverse_fold_impl.hpp:
+
+/usr/include/boost/predef/compiler/tendra.h:
+
+/usr/include/boost/config/detail/select_platform_config.hpp:
+
+/usr/include/boost/mpl/aux_/traits_lambda_spec.hpp:
+
+/usr/include/c++/11/vector:
+
+/home/mike/CGAL-5.5/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h:
+
+/usr/include/boost/mpl/aux_/size_impl.hpp:
+
+/usr/include/boost/detail/basic_pointerbuf.hpp:
+
+/usr/include/boost/range/config.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/boost/iterator/detail/enable_if.hpp:
+
+/usr/include/c++/11/bits/stl_bvector.h:
+
+/usr/include/c++/11/bits/stl_heap.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Cartesian/Cartesian_base.h:
 
@@ -8420,6 +8490,46 @@ util.h:
 
 /usr/include/boost/mpl/aux_/config/eti.hpp:
 
+/home/mike/CGAL-5.5/include/CGAL/Gmp_coercion_traits.h:
+
+/home/mike/CGAL-5.5/include/CGAL/Installation/internal/enable_third_party_libraries.h:
+
+/usr/include/c++/11/deque:
+
+/home/mike/CGAL-5.5/include/CGAL/Homogeneous/predicates_on_directionsH2.h:
+
+/usr/include/boost/mpl/negate.hpp:
+
+/home/mike/CGAL-5.5/include/CGAL/int.h:
+
+/home/mike/CGAL-5.5/include/CGAL/rational_rotation.h:
+
+/home/mike/CGAL-5.5/include/CGAL/Dimension.h:
+
+/usr/include/boost/mpl/same_as.hpp:
+
+/usr/include/c++/11/bits/sstream.tcc:
+
+/usr/include/boost/mpl/limits/arity.hpp:
+
+/home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h:
+
+/home/mike/CGAL-5.5/include/CGAL/IO/io.h:
+
+/usr/include/time.h:
+
+/home/mike/CGAL-5.5/include/CGAL/Homogeneous/distance_predicatesH3.h:
+
+/usr/include/boost/mpl/aux_/config/adl.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp:
+
+/home/mike/CGAL-5.5/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h:
+
+/usr/include/boost/predef/architecture/arm.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/boost/config/stdlib/libstdcpp3.hpp:
@@ -8432,10 +8542,6 @@ util.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Rational_traits.h:
 
-/usr/include/boost/detail/basic_pointerbuf.hpp:
-
-/usr/include/boost/range/config.hpp:
-
 /usr/include/boost/config/no_tr1/complex.hpp:
 
 /usr/include/boost/predef/architecture/superh.h:
@@ -8443,10 +8549,6 @@ util.h:
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp:
-
-/usr/include/boost/predef/compiler/tendra.h:
-
-/usr/include/boost/config/detail/select_platform_config.hpp:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/Ray_3_Ray_3.h:
 
@@ -8532,16 +8634,6 @@ util.h:
 
 /home/mike/CGAL-5.5/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h:
 
-/usr/include/c++/11/tuple:
-
-/usr/include/boost/random/linear_feedback_shift.hpp:
-
-/usr/include/boost/predef/compiler/clang.h:
-
-/usr/include/c++/11/atomic:
-
-/usr/include/boost/blank_fwd.hpp:
-
 /usr/include/boost/multiprecision/cpp_int/comparison.hpp:
 
 /usr/include/boost/operators.hpp:
@@ -8558,85 +8650,35 @@ util.h:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp:
 
-/home/mike/CGAL-5.5/include/CGAL/rational_rotation.h:
+/usr/include/boost/type_traits/is_reference.hpp:
 
-/home/mike/CGAL-5.5/include/CGAL/Dimension.h:
+/home/mike/CGAL-5.5/include/CGAL/Iterator_range.h:
 
-/usr/include/boost/mpl/same_as.hpp:
+/home/mike/CGAL-5.5/include/CGAL/Kernel/Conic_misc.h:
 
-/usr/include/c++/11/bits/sstream.tcc:
+/usr/include/boost/type_traits/is_lvalue_reference.hpp:
 
-/usr/include/boost/mpl/limits/arity.hpp:
+/usr/include/boost/type_traits/is_rvalue_reference.hpp:
 
-/home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h:
+/usr/include/boost/math/special_functions/gamma.hpp:
 
-/home/mike/CGAL-5.5/include/CGAL/IO/io.h:
+/usr/include/boost/type_traits/remove_reference.hpp:
 
-/usr/include/time.h:
+/home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h:
 
-/home/mike/CGAL-5.5/include/CGAL/Homogeneous/distance_predicatesH3.h:
+/usr/include/boost/preprocessor/array/data.hpp:
 
-/usr/include/boost/mpl/aux_/config/adl.hpp:
+/home/mike/CGAL-5.5/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h:
 
-/usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp:
+/usr/include/boost/type_traits/is_function.hpp:
 
-/home/mike/CGAL-5.5/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h:
+/usr/include/boost/type_traits/detail/is_function_cxx_11.hpp:
 
-/usr/include/boost/predef/architecture/arm.h:
+/usr/include/boost/variant/detail/apply_visitor_delayed.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+/usr/include/fenv.h:
 
-/usr/include/c++/11/bits/stl_multimap.h:
-
-/home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h:
-
-/usr/include/boost/predef/architecture/sys370.h:
-
-/usr/include/boost/mpl/distance_fwd.hpp:
-
-/usr/include/c++/11/bits/basic_string.h:
-
-/usr/include/boost/math/special_functions/pow.hpp:
-
-/home/mike/CGAL-5.5/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h:
-
-/usr/include/boost/predef/architecture/x86.h:
-
-/usr/include/boost/mpl/aux_/config/intel.hpp:
-
-/usr/include/boost/mpl/vector/aux_/pop_back.hpp:
-
-/home/mike/CGAL-5.5/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
-
-/usr/include/boost/predef/architecture/x86/64.h:
-
-/usr/include/boost/type_traits/type_identity.hpp:
-
-/home/mike/CGAL-5.5/include/CGAL/Cartesian/Scaling_rep_2.h:
-
-/usr/include/boost/predef/os.h:
-
-/usr/include/boost/math/special_functions/detail/erf_inv.hpp:
-
-/usr/include/boost/iterator/iterator_concepts.hpp:
-
-/usr/include/boost/predef/compiler/borland.h:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/usr/include/boost/predef/hardware/simd/x86/versions.h:
-
-/usr/include/boost/numeric/conversion/numeric_cast_traits.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp:
-
-/usr/include/boost/type_traits/has_right_shift_assign.hpp:
-
-/usr/include/boost/predef/os/windows.h:
-
-/usr/include/boost/predef/os/bsd.h:
+/usr/include/boost/type_traits/is_array.hpp:
 
 /home/mike/CGAL-5.5/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h:
 
@@ -8809,12 +8851,6 @@ incrementing.cpp:
 /usr/include/boost/mpl/aux_/clear_impl.hpp:
 
 /usr/include/boost/mpl/aux_/has_apply.hpp:
-
-/usr/include/boost/multiprecision/detail/atomic.hpp:
-
-/home/mike/CGAL-5.5/include/CGAL/Cartesian/Direction_2.h:
-
-/usr/include/boost/mpl/aux_/config/msvc_typename.hpp:
 
 /usr/include/c++/11/bits/stl_pair.h:
 
@@ -9592,12 +9628,6 @@ main.cpp:
 
 /usr/include/boost/mpl/advance.hpp:
 
-/home/mike/CGAL-5.5/include/CGAL/Homogeneous/predicates_on_directionsH2.h:
-
-/usr/include/boost/mpl/negate.hpp:
-
-/home/mike/CGAL-5.5/include/CGAL/int.h:
-
 /usr/include/boost/mpl/aux_/advance_forward.hpp:
 
 /usr/include/boost/mpl/size.hpp:
@@ -9708,12 +9738,6 @@ main.cpp:
 
 /home/mike/CGAL-5.5/include/CGAL/FPU.h:
 
-/usr/include/boost/variant/detail/apply_visitor_delayed.hpp:
-
-/usr/include/boost/type_traits/is_array.hpp:
-
-/usr/include/fenv.h:
-
 /usr/include/x86_64-linux-gnu/bits/fenv.h:
 
 /home/mike/CGAL-5.5/include/CGAL/test_FPU_rounding_mode_impl.h:
@@ -9809,9 +9833,3 @@ main.cpp:
 /usr/include/boost/move/detail/meta_utils_core.hpp:
 
 /usr/include/boost/variant/detail/make_variant_list.hpp:
-
-/usr/include/boost/type_index/stl_type_index.hpp:
-
-/usr/include/boost/variant/static_visitor.hpp:
-
-/usr/include/boost/variant/apply_visitor.hpp:
