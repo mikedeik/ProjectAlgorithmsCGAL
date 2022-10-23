@@ -1,18 +1,28 @@
 #include <iostream>
-#include <CGAL/Exact_predicates_exact_constructions_kernel.h>
-#include <CGAL/Polygon_2.h>
 #include "util.h"
 #include "incrementing.h"
+#include <map>
 
-typedef CGAL::Exact_predicates_exact_constructions_kernel Kernel;
-typedef Kernel::Point_2 Point;
+using namespace std;
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
+
+    map<string, Sorter> sorter;
+
+    string inp = argv[1];
+
+    sorter.insert(pair<string, Sorter>("1a", X_ASCENDING));
+    sorter.insert(pair<string, Sorter>("1b", X_DESCENDING));
+    sorter.insert(pair<string, Sorter>("2a", Y_ASCENDING));
+    sorter.insert(pair<string, Sorter>("2b", Y_DESCENDING));
 
     vector<Point> points;
     get_points_from_file("data/images/euro-night-0000010.instance", &points);
-    incrementing_algorithm(points);
+
+    Incrementing algo = Incrementing(points, sorter[inp]);
+    algo.Print_Points();
+    Point p(2, 3);
 
     return 0;
 }
