@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     sorter.insert(pair<string, Sorter>("2b", Y_DESCENDING));
 
     vector<Point> points;
-    get_points_from_file("data/images/euro-night-0000010.instance", &points);
+    get_points_from_file("data/images/euro-night-0001000.instance", &points);
     // get_points_from_file("test.txt", &points);
 
     Incrementing algo = Incrementing(points, sorter[inp]);
@@ -30,13 +30,9 @@ int main(int argc, char **argv)
 
     algo.testing();
     algo.Create_Polygon_Line();
-    algo.testing();
-    algo.Create_Polygon_Line();
-    algo.testing();
-    algo.Create_Polygon_Line();
-    algo.testing();
-    algo.Create_Polygon_Line();
+    algo.Print_Edges();
     algo.testing();
 
+    cout << algo.Simple() << "\n";
     return 0;
 }

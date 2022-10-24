@@ -27,7 +27,6 @@ private:
     int top_red_edge_index;
     int bottom_red_edge_index;
     void set_red_edges(int s1_index, int s2_index);
-    bool instersects(int s1_index, int s2_index);
 
 public:
     Incrementing(vector<Point> inc_points, Sorter inc_sorter);

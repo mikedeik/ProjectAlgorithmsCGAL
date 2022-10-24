@@ -26,20 +26,21 @@ bool Sort_Asc_Y(Point p1, Point p2)
 
 void get_points_from_file(string filename, vector<Point> *points)
 {
-    string temp;
+    string line;
     std::ifstream myfile(filename);
     Point p;
-    while (getline(myfile, temp))
+    while (getline(myfile, line))
     {
-        if (temp[0] == '#')
+        if (line[0] == '#')
         {
             continue;
         }
-
-        temp.erase(0, 2);
-        std::istringstream input(temp);
+        std::istringstream input(line);
+        int to_drop;
+        input >> to_drop;
         input >> p;
-
+        // cout << p << "\n";
+        // getchar();
         points->push_back(p);
     }
 }
