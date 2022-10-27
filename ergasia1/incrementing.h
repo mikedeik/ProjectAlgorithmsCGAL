@@ -37,6 +37,7 @@ public:
     const bool Simple();
     const void Create_Polygon_Line();
     const void testing();
+    void Create_Polygon_Line_2();
 };
 
 #endif // INCREMENTING

@@ -1,7 +1,11 @@
 #include <iostream>
 #include "util.h"
 #include "incrementing.h"
+<<<<<<< HEAD
 #include "convexhull.h"
+=======
+
+>>>>>>> 124b520 (elegxos suneutheiakwn simeiwn)
 #include <map>
 
 using namespace std;
@@ -18,9 +22,13 @@ int main(int argc, char **argv)
     sorter.insert(pair<string, Sorter>("2a", Y_ASCENDING));
     sorter.insert(pair<string, Sorter>("2b", Y_DESCENDING));
     vector<Point> points;
+<<<<<<< HEAD
     get_points_from_file("data/images/euro-night-0000010.instance", &points);
     // get_points_from_file("..data/images/euro-night-0000010.instance", &points);
    
+=======
+    get_points_from_file("data/images/euro-night-0010000.instance", &points);
+>>>>>>> 124b520 (elegxos suneutheiakwn simeiwn)
     // get_points_from_file("test.txt", &points);
 
     Incrementing algo = Incrementing(points, sorter[inp]);
@@ -29,10 +37,15 @@ int main(int argc, char **argv)
     algo.Print_Edges();
 
     cout << algo.Simple() << "\n";
+<<<<<<< HEAD
     algo.testing();
+=======
+
+    // algo.testing();
+>>>>>>> 124b520 (elegxos suneutheiakwn simeiwn)
     algo.Create_Polygon_Line();
-    algo.Print_Edges();
-    algo.testing();
+    // algo.Print_Edges();
+    // algo.testing();
 
     cout << algo.Simple() << "\n";
 

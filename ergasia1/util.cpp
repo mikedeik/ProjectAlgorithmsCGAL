@@ -1,14 +1,26 @@
 #include "util.h"
 
 // sorting vasi x fthinousa
+// an einai suneutheiaka sort kata y
 bool Sort_Desc_X(Point p1, Point p2)
 {
+
+    if (!(CGAL::compare_x(p1, p2)))
+    {
+        return CGAL::compare_y(p1, p2) < 0;
+    }
+
     return CGAL::compare_x(p1, p2) < 0;
 }
 
 // sorting vasi x auksousa
+// an einai suneutheiaka sort kata y
 bool Sort_Asc_X(Point p1, Point p2)
 {
+    if (!(CGAL::compare_x(p1, p2)))
+    {
+        return CGAL::compare_y(p1, p2) < 0;
+    }
     return CGAL::compare_x(p1, p2) > 0;
 }
 
@@ -39,8 +51,6 @@ void get_points_from_file(string filename, vector<Point> *points)
         int to_drop;
         input >> to_drop;
         input >> p;
-        // cout << p << "\n";
-        // getchar();
         points->push_back(p);
     }
 }
