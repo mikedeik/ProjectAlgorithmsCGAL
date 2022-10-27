@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/new.o.dir/convexhull.cpp.o"
+  "CMakeFiles/new.o.dir/convexhull.cpp.o.d"
   "CMakeFiles/new.o.dir/incrementing.cpp.o"
   "CMakeFiles/new.o.dir/incrementing.cpp.o.d"
   "CMakeFiles/new.o.dir/main.cpp.o"

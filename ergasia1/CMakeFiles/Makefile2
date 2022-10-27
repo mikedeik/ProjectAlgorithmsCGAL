@@ -81,12 +81,12 @@ clean: CMakeFiles/new.o.dir/clean
 CMakeFiles/new.o.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mike/Documents/Project_Emiris/project-emiris/ergasia1/CMakeFiles --progress-num=1,2,3,4 "Built target new.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mike/Documents/Project_Emiris/project-emiris/ergasia1/CMakeFiles --progress-num=1,2,3,4,5 "Built target new.o"
 .PHONY : CMakeFiles/new.o.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/new.o.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/new.o.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/CMakeFiles 0
 .PHONY : CMakeFiles/new.o.dir/rule
