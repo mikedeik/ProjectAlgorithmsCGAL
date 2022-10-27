@@ -1761,4 +1761,21 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
  /usr/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
  /usr/include/CGAL/Polygon_2/Polygon_2_impl.h /usr/include/c++/11/queue \
- /usr/include/c++/11/bits/stl_queue.h
+ /usr/include/c++/11/bits/stl_queue.h \
+ /home/johnpsar/Desktop/project-emiris/ergasia1/convexhull.h \
+ /usr/include/CGAL/convex_hull_2.h \
+ /usr/include/CGAL/license/Convex_hull_2.h \
+ /usr/include/CGAL/convex_hull_traits_2.h \
+ /usr/include/CGAL/distance_predicates_2.h \
+ /usr/include/CGAL/ch_akl_toussaint.h \
+ /usr/include/CGAL/Convex_hull_2/ch_akl_toussaint_impl.h \
+ /usr/include/CGAL/convexity_check_2.h \
+ /usr/include/CGAL/Convex_hull_2/convexity_check_2_impl.h \
+ /usr/include/CGAL/Convex_hull_2/ch_assertions.h \
+ /usr/include/CGAL/ch_selected_extreme_points_2.h \
+ /usr/include/CGAL/Convex_hull_2/ch_selected_extreme_points_2_impl.h \
+ /usr/include/CGAL/ch_graham_andrew.h \
+ /usr/include/CGAL/Convex_hull_2/ch_graham_andrew_impl.h \
+ /usr/include/CGAL/IO/Tee_for_output_iterator.h /usr/include/CGAL/tuple.h \
+ /usr/include/CGAL/ch_bykat.h \
+ /usr/include/CGAL/Convex_hull_2/ch_bykat_impl.h

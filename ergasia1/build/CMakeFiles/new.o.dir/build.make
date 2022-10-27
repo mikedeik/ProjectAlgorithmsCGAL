@@ -73,47 +73,62 @@ CMakeFiles/new.o.dir/incrementing.cpp.o: CMakeFiles/new.o.dir/flags.make
 CMakeFiles/new.o.dir/incrementing.cpp.o: ../incrementing.cpp
 CMakeFiles/new.o.dir/incrementing.cpp.o: CMakeFiles/new.o.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/new.o.dir/incrementing.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/new.o.dir/incrementing.cpp.o -MF CMakeFiles/new.o.dir/incrementing.cpp.o.d -o CMakeFiles/new.o.dir/incrementing.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/new.o.dir/incrementing.cpp.o -MF CMakeFiles/new.o.dir/incrementing.cpp.o.d -o CMakeFiles/new.o.dir/incrementing.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp
 
 CMakeFiles/new.o.dir/incrementing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/new.o.dir/incrementing.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp > CMakeFiles/new.o.dir/incrementing.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp > CMakeFiles/new.o.dir/incrementing.cpp.i
 
 CMakeFiles/new.o.dir/incrementing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/new.o.dir/incrementing.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp -o CMakeFiles/new.o.dir/incrementing.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp -o CMakeFiles/new.o.dir/incrementing.cpp.s
+
+CMakeFiles/new.o.dir/convexhull.cpp.o: CMakeFiles/new.o.dir/flags.make
+CMakeFiles/new.o.dir/convexhull.cpp.o: ../convexhull.cpp
+CMakeFiles/new.o.dir/convexhull.cpp.o: CMakeFiles/new.o.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/new.o.dir/convexhull.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/new.o.dir/convexhull.cpp.o -MF CMakeFiles/new.o.dir/convexhull.cpp.o.d -o CMakeFiles/new.o.dir/convexhull.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/convexhull.cpp
+
+CMakeFiles/new.o.dir/convexhull.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/new.o.dir/convexhull.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/convexhull.cpp > CMakeFiles/new.o.dir/convexhull.cpp.i
+
+CMakeFiles/new.o.dir/convexhull.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/new.o.dir/convexhull.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/convexhull.cpp -o CMakeFiles/new.o.dir/convexhull.cpp.s
 
 CMakeFiles/new.o.dir/main.cpp.o: CMakeFiles/new.o.dir/flags.make
 CMakeFiles/new.o.dir/main.cpp.o: ../main.cpp
 CMakeFiles/new.o.dir/main.cpp.o: CMakeFiles/new.o.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/new.o.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/new.o.dir/main.cpp.o -MF CMakeFiles/new.o.dir/main.cpp.o.d -o CMakeFiles/new.o.dir/main.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/new.o.dir/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/new.o.dir/main.cpp.o -MF CMakeFiles/new.o.dir/main.cpp.o.d -o CMakeFiles/new.o.dir/main.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp
 
 CMakeFiles/new.o.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/new.o.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp > CMakeFiles/new.o.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp > CMakeFiles/new.o.dir/main.cpp.i
 
 CMakeFiles/new.o.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/new.o.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp -o CMakeFiles/new.o.dir/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp -o CMakeFiles/new.o.dir/main.cpp.s
 
 CMakeFiles/new.o.dir/util.cpp.o: CMakeFiles/new.o.dir/flags.make
 CMakeFiles/new.o.dir/util.cpp.o: ../util.cpp
 CMakeFiles/new.o.dir/util.cpp.o: CMakeFiles/new.o.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/new.o.dir/util.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/new.o.dir/util.cpp.o -MF CMakeFiles/new.o.dir/util.cpp.o.d -o CMakeFiles/new.o.dir/util.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/new.o.dir/util.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/new.o.dir/util.cpp.o -MF CMakeFiles/new.o.dir/util.cpp.o.d -o CMakeFiles/new.o.dir/util.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp
 
 CMakeFiles/new.o.dir/util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/new.o.dir/util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp > CMakeFiles/new.o.dir/util.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp > CMakeFiles/new.o.dir/util.cpp.i
 
 CMakeFiles/new.o.dir/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/new.o.dir/util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp -o CMakeFiles/new.o.dir/util.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp -o CMakeFiles/new.o.dir/util.cpp.s
 
 # Object files for target new.o
 new_o_OBJECTS = \
 "CMakeFiles/new.o.dir/incrementing.cpp.o" \
+"CMakeFiles/new.o.dir/convexhull.cpp.o" \
 "CMakeFiles/new.o.dir/main.cpp.o" \
 "CMakeFiles/new.o.dir/util.cpp.o"
 
@@ -121,6 +136,7 @@ new_o_OBJECTS = \
 new_o_EXTERNAL_OBJECTS =
 
 new.o: CMakeFiles/new.o.dir/incrementing.cpp.o
+new.o: CMakeFiles/new.o.dir/convexhull.cpp.o
 new.o: CMakeFiles/new.o.dir/main.cpp.o
 new.o: CMakeFiles/new.o.dir/util.cpp.o
 new.o: CMakeFiles/new.o.dir/build.make
@@ -128,7 +144,7 @@ new.o: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 new.o: /usr/lib/x86_64-linux-gnu/libmpfr.so
 new.o: /usr/lib/x86_64-linux-gnu/libgmp.so
 new.o: CMakeFiles/new.o.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable new.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable new.o"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/new.o.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

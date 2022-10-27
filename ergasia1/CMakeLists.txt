@@ -16,7 +16,6 @@ if ( NOT CGAL_FOUND )
 
 endif()
 
-
 # Boost and its components
 find_package( Boost REQUIRED )
 
@@ -36,7 +35,7 @@ endif()
 # Creating entries for target: new.o
 # ############################
 
-add_executable( new.o  incrementing.cpp main.cpp util.cpp )
+add_executable( new.o  incrementing.cpp convexhull.cpp main.cpp util.cpp )
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS new.o )
 

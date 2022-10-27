@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/johnpsar/Desktop/project-emiris/ergasia1/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DCGAL_USE_GMPXX=1  -g -frounding-math -o CMakeFiles/new.o.dir/incrementing.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp",
+  "file": "/home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp"
+},
+{
+  "directory": "/home/johnpsar/Desktop/project-emiris/ergasia1/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DCGAL_USE_GMPXX=1  -g -frounding-math -o CMakeFiles/new.o.dir/convexhull.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/convexhull.cpp",
+  "file": "/home/johnpsar/Desktop/project-emiris/ergasia1/convexhull.cpp"
+},
+{
+  "directory": "/home/johnpsar/Desktop/project-emiris/ergasia1/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DCGAL_USE_GMPXX=1  -g -frounding-math -o CMakeFiles/new.o.dir/main.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp",
+  "file": "/home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp"
+},
+{
+  "directory": "/home/johnpsar/Desktop/project-emiris/ergasia1/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DCGAL_USE_GMPXX=1  -g -frounding-math -o CMakeFiles/new.o.dir/util.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp",
+  "file": "/home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp"
+}
+]

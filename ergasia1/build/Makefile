@@ -129,6 +129,30 @@ new.o/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/build
 .PHONY : new.o/fast
 
+convexhull.o: convexhull.cpp.o
+.PHONY : convexhull.o
+
+# target to build an object file
+convexhull.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/convexhull.cpp.o
+.PHONY : convexhull.cpp.o
+
+convexhull.i: convexhull.cpp.i
+.PHONY : convexhull.i
+
+# target to preprocess a source file
+convexhull.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/convexhull.cpp.i
+.PHONY : convexhull.cpp.i
+
+convexhull.s: convexhull.cpp.s
+.PHONY : convexhull.s
+
+# target to generate assembly for a file
+convexhull.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/convexhull.cpp.s
+.PHONY : convexhull.cpp.s
+
 incrementing.o: incrementing.cpp.o
 .PHONY : incrementing.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... new.o"
+	@echo "... convexhull.o"
+	@echo "... convexhull.i"
+	@echo "... convexhull.s"
 	@echo "... incrementing.o"
 	@echo "... incrementing.i"
 	@echo "... incrementing.s"
