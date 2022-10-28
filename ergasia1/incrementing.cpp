@@ -157,15 +157,15 @@ const void Incrementing::Create_Polygon_Line()
          << "\n";
 
     // ftiaxnw etsi tin eksodo gia sxediasmo se google colab
-    for (Point p : polygon.vertices())
-    {
-        f << "[";
-        f << p.x();
-        f << " , ";
-        f << p.y();
-        f << "],";
-        f << "\n";
-    }
+    // for (Point p : polygon.vertices())
+    // {
+    //     f << "[";
+    //     f << p.x();
+    //     f << " , ";
+    //     f << p.y();
+    //     f << "],";
+    //     f << "\n";
+    // }
 }
 
 const void Incrementing::testing()

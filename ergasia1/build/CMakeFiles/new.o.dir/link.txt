@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/new.o.dir/incrementing.cpp.o CMakeFiles/new.o.dir/convexhull.cpp.o CMakeFiles/new.o.dir/main.cpp.o CMakeFiles/new.o.dir/util.cpp.o -o new.o  /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so 
+/usr/bin/c++ CMakeFiles/new.o.dir/incrementing.cpp.o CMakeFiles/new.o.dir/visibleedge.cpp.o CMakeFiles/new.o.dir/main.cpp.o CMakeFiles/new.o.dir/util.cpp.o -o new.o  /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so 

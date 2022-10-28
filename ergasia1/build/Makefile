@@ -129,30 +129,6 @@ new.o/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/build
 .PHONY : new.o/fast
 
-convexhull.o: convexhull.cpp.o
-.PHONY : convexhull.o
-
-# target to build an object file
-convexhull.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/convexhull.cpp.o
-.PHONY : convexhull.cpp.o
-
-convexhull.i: convexhull.cpp.i
-.PHONY : convexhull.i
-
-# target to preprocess a source file
-convexhull.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/convexhull.cpp.i
-.PHONY : convexhull.cpp.i
-
-convexhull.s: convexhull.cpp.s
-.PHONY : convexhull.s
-
-# target to generate assembly for a file
-convexhull.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/convexhull.cpp.s
-.PHONY : convexhull.cpp.s
-
 incrementing.o: incrementing.cpp.o
 .PHONY : incrementing.o
 
@@ -225,6 +201,30 @@ util.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/util.cpp.s
 .PHONY : util.cpp.s
 
+visibleedge.o: visibleedge.cpp.o
+.PHONY : visibleedge.o
+
+# target to build an object file
+visibleedge.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/visibleedge.cpp.o
+.PHONY : visibleedge.cpp.o
+
+visibleedge.i: visibleedge.cpp.i
+.PHONY : visibleedge.i
+
+# target to preprocess a source file
+visibleedge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/visibleedge.cpp.i
+.PHONY : visibleedge.cpp.i
+
+visibleedge.s: visibleedge.cpp.s
+.PHONY : visibleedge.s
+
+# target to generate assembly for a file
+visibleedge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/visibleedge.cpp.s
+.PHONY : visibleedge.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -234,9 +234,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... new.o"
-	@echo "... convexhull.o"
-	@echo "... convexhull.i"
-	@echo "... convexhull.s"
 	@echo "... incrementing.o"
 	@echo "... incrementing.i"
 	@echo "... incrementing.s"
@@ -246,6 +243,9 @@ help:
 	@echo "... util.o"
 	@echo "... util.i"
 	@echo "... util.s"
+	@echo "... visibleedge.o"
+	@echo "... visibleedge.i"
+	@echo "... visibleedge.s"
 .PHONY : help
 
 
