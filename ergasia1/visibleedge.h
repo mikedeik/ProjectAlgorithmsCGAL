@@ -16,14 +16,17 @@ typedef std::vector<Point> Points;
 class VisibleEdge
 {
 private:
-    std::vector<Point> points,result;//result has the convex hull
+    std::vector<Point> points, convex_hull_points; // result has the convex hull
     Polygon polygon;
+    vector<Segment> edges;
+    void Create_Convex_Hull();
+    void Initialize_Polygonal_Chain();
 
 public:
     VisibleEdge(std::vector<Point> points);
     ~VisibleEdge();
-    void Create_ConvexHull();
     void Add_Point(Point);
+    void Print_Edges();
 };
 
 #endif
