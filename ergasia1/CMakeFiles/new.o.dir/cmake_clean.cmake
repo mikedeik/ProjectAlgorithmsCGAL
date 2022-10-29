@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/new.o.dir/convexhull.cpp.o"
-  "CMakeFiles/new.o.dir/convexhull.cpp.o.d"
   "CMakeFiles/new.o.dir/incrementing.cpp.o"
   "CMakeFiles/new.o.dir/incrementing.cpp.o.d"
   "CMakeFiles/new.o.dir/main.cpp.o"
   "CMakeFiles/new.o.dir/main.cpp.o.d"
   "CMakeFiles/new.o.dir/util.cpp.o"
   "CMakeFiles/new.o.dir/util.cpp.o.d"
+  "CMakeFiles/new.o.dir/visibleedge.cpp.o"
+  "CMakeFiles/new.o.dir/visibleedge.cpp.o.d"
   "new.o"
   "new.o.pdb"
 )

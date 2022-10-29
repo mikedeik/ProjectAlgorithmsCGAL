@@ -6,11 +6,10 @@
 #include <CGAL/Polygon_2.h>
 #include <queue>
 #include "util.h"
+#include <CGAL/convex_hull_2.h>
 
 using std::vector;
 
-typedef CGAL::Exact_predicates_exact_constructions_kernel Kernel;
-typedef Kernel::Point_2 Point;
 typedef CGAL::Polygon_2<Kernel> Polygon;
 typedef Kernel::Segment_2 Segment;
 
@@ -19,14 +18,12 @@ void incrementing_algorithm(vector<Point> points);
 class Incrementing
 {
 private:
-    vector<Point> points;
-    Polygon polygon;
+    vector<Point> points, convex_hull;
+    Polygon polygon, ch_polygon;
     Sorter sorter;
     int point_position;
-    vector<Segment> edges;
-    int top_red_edge_index;
-    int bottom_red_edge_index;
-    void set_red_edges(int s1_index, int s2_index);
+    vector<Segment> edges, red_edges;
+    const void find_red_edges(Point p);
 
 public:
     Incrementing(vector<Point> inc_points, Sorter inc_sorter);

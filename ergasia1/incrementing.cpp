@@ -1,6 +1,4 @@
 #include <iostream>
-// #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
-// #include <CGAL/Polygon_2.h>
 #include <sstream>
 #include <fstream>
 #include <queue>
@@ -13,41 +11,24 @@ using std::priority_queue;
 using std::vector;
 using namespace std::chrono;
 
-typedef Kernel::Triangle_2 Triangle;
-
 Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter) : points(inc_points),
-                                                                          sorter(inc_sorter),
-                                                                          top_red_edge_index(-1),
-                                                                          bottom_red_edge_index(-1)
+                                                                          sorter(inc_sorter)
 {
-    sort_points(&points, sorter);
 
-    if (CGAL::compare_y(points[2], points[1]) == 1)
+    CGAL::convex_hull_2(points.begin(), points.begin() + 3, std::back_inserter(convex_hull));
+
+    for (Point p : convex_hull)
     {
-        edges.push_back(Segment(points[0], points[1]));
-        edges.push_back(Segment(points[1], points[2]));
-        edges.push_back(Segment(points[2], points[0]));
-        set_red_edges(1, 2);
-    }
-    else
-    {
-        edges.push_back(Segment(points[0], points[2]));
-        edges.push_back(Segment(points[2], points[1]));
-        edges.push_back(Segment(points[1], points[0]));
-        set_red_edges(0, 1);
+        cout << p << "\n";
     }
 
-    // int index = 1;
-    // while (index < 3)
-    // {
+    // TODO arxika suneutheiaka simeia
 
-    //     edges.push_back(Segment(points[index - 1], points[index]));
-    //     index++;
-    // }
-    // edges.push_back(Segment(points[index - 1], points[0]));
+    for (auto it = points.begin(); it < points.begin() + 3; ++it)
+        polygon.push_back(*it);
+
     point_position = 3;
 }
-
 Incrementing::~Incrementing()
 {
 }
@@ -80,103 +61,155 @@ const bool Incrementing::Simple()
 
 const void Incrementing::Create_Polygon_Line()
 {
-    // keep timer
-    auto start = high_resolution_clock::now();
+    find_red_edges(points[point_position]);
 
-    while (point_position < points.size())
+    for (Segment edge : red_edges)
     {
-
-        Point t_source = edges[bottom_red_edge_index].source();
-        Point t_target = edges[bottom_red_edge_index].target();
-        Triangle triangle(t_source, points[point_position], t_target);
-
-        Segment s1(t_source, points[point_position]);
-        Segment s2(t_target, points[point_position]);
-
-        // an einai syneutheiaka epeidi exw sortarei kai stis duo kateythinseis dialegoume tin top akmi
-        if (!CGAL::compare_x(points[point_position], points[point_position - 1]))
-        {
-            t_source = edges[top_red_edge_index].source();
-            t_target = edges[top_red_edge_index].target();
-
-            edges.insert(edges.begin() + top_red_edge_index, Segment(points[point_position], t_target));
-            edges.insert(edges.begin() + top_red_edge_index, Segment(t_source, points[point_position]));
-
-            edges.erase(edges.begin() + top_red_edge_index + 2);
-            set_red_edges(top_red_edge_index, top_red_edge_index + 1);
-            point_position++;
-            continue;
-        }
-        // an to trigwno pou ftiaxnetai me tin katw akmi kovei tin panw
-        // tha paroume tin panw akmi
-        // alliws tha paroume tin katw
-
-        const auto result = CGAL::intersection(triangle, edges[top_red_edge_index]);
-
-        if (result)
-        {
-            if (const Segment *s = boost::get<Segment>(&*result))
-            {
-                t_source = edges[top_red_edge_index].source();
-                t_target = edges[top_red_edge_index].target();
-
-                edges.insert(edges.begin() + top_red_edge_index, Segment(points[point_position], t_target));
-                edges.insert(edges.begin() + top_red_edge_index, Segment(t_source, points[point_position]));
-
-                edges.erase(edges.begin() + top_red_edge_index + 2);
-                set_red_edges(top_red_edge_index, top_red_edge_index + 1);
-            }
-            else
-            {
-                edges.insert(edges.begin() + bottom_red_edge_index, Segment(points[point_position], t_target));
-                edges.insert(edges.begin() + bottom_red_edge_index, Segment(t_source, points[point_position]));
-
-                edges.erase(edges.begin() + bottom_red_edge_index + 2);
-                set_red_edges(bottom_red_edge_index, bottom_red_edge_index + 1);
-            }
-        }
-        point_position++;
+        cout << edge << "\n";
     }
-
-    // kwdikas gia na dimiourgisoume arxeio eksodou
-    std::ofstream f("data.txt");
-    CGAL::IO::set_binary_mode(f);
-
-    // vazw tis koryfes sto polygono
-    for (Segment edge : edges)
-    {
-        polygon.push_back(edge.source());
-    }
-
-    auto stop = high_resolution_clock::now();
-
-    auto duration = duration_cast<seconds>(stop - start);
-
-    cout << "Time taken by function: "
-         << duration.count() << " seconds"
-         << "\n";
-
-    // ftiaxnw etsi tin eksodo gia sxediasmo se google colab
-    // for (Point p : polygon.vertices())
-    // {
-    //     f << "[";
-    //     f << p.x();
-    //     f << " , ";
-    //     f << p.y();
-    //     f << "],";
-    //     f << "\n";
-    // }
 }
 
 const void Incrementing::testing()
 {
-
-    cout << "top is :" << top_red_edge_index << "\n";
-    cout << "bottom is :" << bottom_red_edge_index << "\n";
 }
 
-void Incrementing::set_red_edges(int s1_index, int s2_index)
+const void Incrementing::find_red_edges(Point p)
 {
-    bottom_red_edge_index = s1_index;
-    top_red_edge_index = s2_index;
+    // kathe fora pou prospathw na valw ena simeio to proigoumeno tou tha einai sigoura koryfi tou CH
+    int position = 0;
+    int position_to_start = 0;
+
+    for (auto it = convex_hull.begin(); it != convex_hull.end(); ++it)
+    {
+        // create the convex hull polygon
+        ch_polygon.push_back(*it);
+
+        // tha kratiwsw ti thesi tou proigoumenou simeiou sto convex hull
+        if (!CGAL::compare_yx(points[point_position - 1], *it))
+        {
+            position_to_start = position;
+        }
+        position++;
+        cout << "point position is " << position_to_start << "\n";
+    }
+    // ksekinaw apo to proigoumeno simeio kai paw pros ta pisw
+
+    for (auto edge_it = ch_polygon.edges().begin() + position_to_start; edge_it != ch_polygon.edges().end(); ++edge_it)
+    {
+        bool intersects = 0;
+
+        Triangle t((*edge_it).source(), p, (*edge_it).target());
+
+        // gia kathe epomeni akmi tsekarw an kanoun intersect
+
+        // const Polygon::Edges& ch_edges = ch_polygon.edges();
+        // check_intersection_BFS(ch_edges, )
+
+        for (auto intersect_it = edge_it + 1; intersect_it != ch_polygon.edges().end(); ++intersect_it)
+        {
+            // tha doume an to result einai apla ena simeio (diladi to )
+            const Segment to_test = *intersect_it;
+            const auto result = CGAL::intersection(t, to_test);
+
+            if (result)
+            {
+                if (const Segment *s = boost::get<Segment>(&*result))
+                {
+                    cout << "intersects\n";
+                    intersects = 1;
+                    break;
+                }
+            }
+        }
+        if (intersects)
+        {
+            break;
+        }
+
+        for (auto intersect_it = edge_it - 1; intersect_it != ch_polygon.edges().begin(); --intersect_it)
+        {
+            const Segment to_test = *intersect_it;
+            const auto result = CGAL::intersection(t, to_test);
+            if (result)
+            {
+                if (const Segment *s = boost::get<Segment>(&*result))
+                {
+                    cout << "intersects\n";
+                    intersects = 1;
+                    break;
+                }
+            }
+        }
+
+        if (!intersects)
+        {
+            red_edges.push_back(*edge_it);
+        }
+    }
+
+    // ksekinaw apo to proigoumeno simeio kai paw pros ta pisw
+
+    for (auto edge_it = ch_polygon.edges().begin() + position_to_start; edge_it != ch_polygon.edges().begin(); --edge_it)
+    {
+        bool intersects = 0;
+
+        Triangle t((*edge_it).source(), p, (*edge_it).target());
+
+        // gia kathe epomeni akmi tsekarw an kanoun intersect
+
+        // const Polygon::Edges& ch_edges = ch_polygon.edges();
+        // check_intersection_BFS(ch_edges, )
+
+        for (auto intersect_it = edge_it + 1; intersect_it != ch_polygon.edges().end(); ++intersect_it)
+        {
+            // tha doume an to result einai apla ena simeio (diladi to )
+            const Segment to_test = *intersect_it;
+            const auto result = CGAL::intersection(t, to_test);
+
+            if (result)
+            {
+                if (const Segment *s = boost::get<Segment>(&*result))
+                {
+                    cout << "intersects\n";
+                    intersects = 1;
+                    break;
+                }
+            }
+        }
+        if (intersects)
+        {
+            break;
+        }
+
+        for (auto intersect_it = edge_it - 1; intersect_it != ch_polygon.edges().begin(); --intersect_it)
+        {
+            const Segment to_test = *intersect_it;
+            const auto result = CGAL::intersection(t, to_test);
+            if (result)
+            {
+                if (const Segment *s = boost::get<Segment>(&*result))
+                {
+                    cout << "intersects\n";
+                    intersects = 1;
+                    break;
+                }
+            }
+        }
+
+        if (!intersects)
+        {
+            red_edges.push_back(*edge_it);
+        }
+    }
+
+    // for (auto itt = ch_polygon.vertices().begin() + position_to_start; itt < ch_polygon.vertices().end(); ++itt)
+    // {
+    //     Triangle triangle(*itt, p, *(itt + 1));
+    //     const auto result = CGAL::intersection(triangle, Segment(*itt , *(itt + 1)));
+    //     if (CGAL::intersection())
+    //     {
+    //         /* code */
+    //     }
+
+    // }
 }

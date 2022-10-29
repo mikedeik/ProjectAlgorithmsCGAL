@@ -83,19 +83,19 @@ CMakeFiles/new.o.dir/incrementing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/new.o.dir/incrementing.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/incrementing.cpp -o CMakeFiles/new.o.dir/incrementing.cpp.s
 
-CMakeFiles/new.o.dir/convexhull.cpp.o: CMakeFiles/new.o.dir/flags.make
-CMakeFiles/new.o.dir/convexhull.cpp.o: convexhull.cpp
-CMakeFiles/new.o.dir/convexhull.cpp.o: CMakeFiles/new.o.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mike/Documents/Project_Emiris/project-emiris/ergasia1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/new.o.dir/convexhull.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/new.o.dir/convexhull.cpp.o -MF CMakeFiles/new.o.dir/convexhull.cpp.o.d -o CMakeFiles/new.o.dir/convexhull.cpp.o -c /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/convexhull.cpp
+CMakeFiles/new.o.dir/visibleedge.cpp.o: CMakeFiles/new.o.dir/flags.make
+CMakeFiles/new.o.dir/visibleedge.cpp.o: visibleedge.cpp
+CMakeFiles/new.o.dir/visibleedge.cpp.o: CMakeFiles/new.o.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mike/Documents/Project_Emiris/project-emiris/ergasia1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/new.o.dir/visibleedge.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/new.o.dir/visibleedge.cpp.o -MF CMakeFiles/new.o.dir/visibleedge.cpp.o.d -o CMakeFiles/new.o.dir/visibleedge.cpp.o -c /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/visibleedge.cpp
 
-CMakeFiles/new.o.dir/convexhull.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/new.o.dir/convexhull.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/convexhull.cpp > CMakeFiles/new.o.dir/convexhull.cpp.i
+CMakeFiles/new.o.dir/visibleedge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/new.o.dir/visibleedge.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/visibleedge.cpp > CMakeFiles/new.o.dir/visibleedge.cpp.i
 
-CMakeFiles/new.o.dir/convexhull.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/new.o.dir/convexhull.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/convexhull.cpp -o CMakeFiles/new.o.dir/convexhull.cpp.s
+CMakeFiles/new.o.dir/visibleedge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/new.o.dir/visibleedge.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/visibleedge.cpp -o CMakeFiles/new.o.dir/visibleedge.cpp.s
 
 CMakeFiles/new.o.dir/main.cpp.o: CMakeFiles/new.o.dir/flags.make
 CMakeFiles/new.o.dir/main.cpp.o: main.cpp
@@ -128,7 +128,7 @@ CMakeFiles/new.o.dir/util.cpp.s: cmake_force
 # Object files for target new.o
 new_o_OBJECTS = \
 "CMakeFiles/new.o.dir/incrementing.cpp.o" \
-"CMakeFiles/new.o.dir/convexhull.cpp.o" \
+"CMakeFiles/new.o.dir/visibleedge.cpp.o" \
 "CMakeFiles/new.o.dir/main.cpp.o" \
 "CMakeFiles/new.o.dir/util.cpp.o"
 
@@ -136,7 +136,7 @@ new_o_OBJECTS = \
 new_o_EXTERNAL_OBJECTS =
 
 new.o: CMakeFiles/new.o.dir/incrementing.cpp.o
-new.o: CMakeFiles/new.o.dir/convexhull.cpp.o
+new.o: CMakeFiles/new.o.dir/visibleedge.cpp.o
 new.o: CMakeFiles/new.o.dir/main.cpp.o
 new.o: CMakeFiles/new.o.dir/util.cpp.o
 new.o: CMakeFiles/new.o.dir/build.make
