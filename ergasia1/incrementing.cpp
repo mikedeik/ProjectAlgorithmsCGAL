@@ -201,15 +201,4 @@ const void Incrementing::find_red_edges(Point p)
             red_edges.push_back(*edge_it);
         }
     }
-
-    // for (auto itt = ch_polygon.vertices().begin() + position_to_start; itt < ch_polygon.vertices().end(); ++itt)
-    // {
-    //     Triangle triangle(*itt, p, *(itt + 1));
-    //     const auto result = CGAL::intersection(triangle, Segment(*itt , *(itt + 1)));
-    //     if (CGAL::intersection())
-    //     {
-    //         /* code */
-    //     }
-
-    // }
 }
