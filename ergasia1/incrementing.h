@@ -22,7 +22,7 @@ private:
     Polygon polygon, ch_polygon;
     Sorter sorter;
     int point_position;
-    vector<Segment> edges, red_edges;
+    vector<Segment> edges, red_edges, visible_edges;
     const void find_red_edges(Point p);
     const void find_visible_edges(Point p);
 

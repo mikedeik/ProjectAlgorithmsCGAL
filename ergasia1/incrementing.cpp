@@ -9,6 +9,7 @@
 using std::cout;
 using std::priority_queue;
 using std::vector;
+typedef std::vector<Point>::const_iterator PointIterator;
 using namespace std::chrono;
 
 Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter) : points(inc_points),
@@ -65,6 +66,21 @@ const void Incrementing::Create_Polygon_Line()
     }
 
     find_visible_edges(points[point_position]);
+    int random_edge = random() % visible_edges.size();
+
+    PointIterator position_to_insert = find(polygon.vertices().begin(), polygon.vertices().end(), visible_edges[random_edge].target());
+    int index = position_to_insert - polygon.vertices().begin();
+
+    polygon.insert(polygon.begin() + index, points[point_position]);
+
+    cout << "----- Polygon Edges ------\n";
+    for (Segment edge : polygon.edges())
+    {
+        cout << edge << "\n";
+    }
+
+    getchar();
+    visible_edges.clear();
     red_edges.clear();
     ch_polygon.clear();
     convex_hull.clear();
@@ -210,27 +226,58 @@ const void Incrementing::find_visible_edges(Point p)
     Point end_point = red_edges[red_edges.size() - 1].target();
     cout << "Starting Point: " << starting_point << "\n";
     cout << "Ending Point: " << end_point << "\n";
+    int first, last;
 
-    vector<Segment> edges_to_check;
-    for (auto it = polygon.vertices().begin(); it != polygon.vertices().end(); it++)
+    // vriskw tis theseis twn simeiwn pou tha prepei na ksekinisw kai na stamatisw apo tis kokkines akmes
+    for (auto it = polygon.begin(); it != polygon.end(); it++)
     {
+        cout << "this is the iterator : " << *it << "\n";
+        getchar();
         if (*it == end_point)
         {
-            break;
+            last = it - polygon.begin();
+            getchar();
         }
 
         if (*it == starting_point)
         {
-            edges_to_check.push_back(Segment(*it, *(it + 1)));
-            starting_point = *(it + 1);
+            first = it - polygon.begin();
+        }
+    }
+
+    getchar();
+    for (auto itt = polygon.begin() + first; itt != polygon.begin() + last; ++itt)
+    {
+        cout << "checking for edge: " << *itt << " - " << *(itt + 1) << "\n";
+        bool intersects = 0;
+        for (auto intersect_it = polygon.begin() + first; intersect_it != polygon.begin() + last; ++intersect_it)
+        {
+            cout << "edge: " << *intersect_it << " - " << *(intersect_it + 1) << "\n";
+            getchar();
+            // den thelw na tsekarw an kanei intersect me ton euato tou
+            if (itt == intersect_it)
+            {
+                cout << "skip\n";
+                continue;
+            }
+
+            if (check_intersection(Triangle(*itt, p, *(itt + 1)), Segment(*intersect_it, *(intersect_it + 1))))
+            {
+                intersects = 1;
+                break;
+            }
+        }
+        if (!intersects)
+        {
+            visible_edges.push_back(Segment(*itt, *(itt + 1)));
         }
     }
 
     cout << "edges to check\n";
 
-    for (Segment e : edges_to_check)
+    for (Segment e : visible_edges)
     {
         cout << e << "\n";
     }
-    // TODO find the visible edges and pick one at random
+    // TODO na tsekarw an to teleutaio point einai to arxiko tou polygwnou
 }
