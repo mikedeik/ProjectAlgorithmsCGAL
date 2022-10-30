@@ -24,6 +24,7 @@ private:
     int point_position;
     vector<Segment> edges, red_edges;
     const void find_red_edges(Point p);
+    const void find_visible_edges(Point p);
 
 public:
     Incrementing(vector<Point> inc_points, Sorter inc_sorter);

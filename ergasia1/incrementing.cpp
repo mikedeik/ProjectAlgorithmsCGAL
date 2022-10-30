@@ -17,11 +17,6 @@ Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter) : points
 
     CGAL::convex_hull_2(points.begin(), points.begin() + 3, std::back_inserter(convex_hull));
 
-    for (Point p : convex_hull)
-    {
-        cout << p << "\n";
-    }
-
     // TODO arxika suneutheiaka simeia
 
     for (auto it = points.begin(); it < points.begin() + 3; ++it)
@@ -62,11 +57,20 @@ const bool Incrementing::Simple()
 const void Incrementing::Create_Polygon_Line()
 {
     find_red_edges(points[point_position]);
-
+    cout << "New point: " << points[point_position] << "\n";
+    cout << "---- Red Edges ----\n";
     for (Segment edge : red_edges)
     {
         cout << edge << "\n";
     }
+
+    find_visible_edges(points[point_position]);
+    red_edges.clear();
+    ch_polygon.clear();
+    convex_hull.clear();
+    // sto telos ftiaxnw to neo convex hull kai paw na prosthesw to epomeno simeio
+    point_position++;
+    CGAL::convex_hull_2(points.begin(), points.begin() + point_position, std::back_inserter(convex_hull));
 }
 
 const void Incrementing::testing()
@@ -76,6 +80,7 @@ const void Incrementing::testing()
 const void Incrementing::find_red_edges(Point p)
 {
     // kathe fora pou prospathw na valw ena simeio to proigoumeno tou tha einai sigoura koryfi tou CH
+
     int position = 0;
     int position_to_start = 0;
 
@@ -90,14 +95,21 @@ const void Incrementing::find_red_edges(Point p)
             position_to_start = position;
         }
         position++;
-        cout << "point position is " << position_to_start << "\n";
     }
-    // ksekinaw apo to proigoumeno simeio kai paw pros ta pisw
+    cout << "--------- Convex Hull edges -----------\n";
+    for (Segment edge : ch_polygon.edges())
+    {
+        cout << edge << "\n";
+    }
+
+    cout << "point position is " << position_to_start << "\n";
+    // ksekinaw apo to proigoumeno simeio kai paw pros ta mprosta
 
     for (auto edge_it = ch_polygon.edges().begin() + position_to_start; edge_it != ch_polygon.edges().end(); ++edge_it)
     {
         bool intersects = 0;
 
+        // ftiaxnw trigwno me tin kainourgia akmi
         Triangle t((*edge_it).source(), p, (*edge_it).target());
 
         // gia kathe epomeni akmi tsekarw an kanoun intersect
@@ -105,51 +117,49 @@ const void Incrementing::find_red_edges(Point p)
         // const Polygon::Edges& ch_edges = ch_polygon.edges();
         // check_intersection_BFS(ch_edges, )
 
+        // gia kathe epomeni tou akmi koitaw an tin kovei (pou simainei pws den einai orati)
         for (auto intersect_it = edge_it + 1; intersect_it != ch_polygon.edges().end(); ++intersect_it)
         {
             // tha doume an to result einai apla ena simeio (diladi to )
             const Segment to_test = *intersect_it;
-            const auto result = CGAL::intersection(t, to_test);
 
-            if (result)
+            if (check_intersection(t, to_test))
             {
-                if (const Segment *s = boost::get<Segment>(&*result))
-                {
-                    cout << "intersects\n";
-                    intersects = 1;
-                    break;
-                }
+                cout << "intersects\n";
+                intersects = 1;
+                break;
             }
         }
+        // opote paw stin epomeni
         if (intersects)
         {
             break;
         }
 
+        // paw twra pros tin antitheti kateuthinsi kai kanw to idio
         for (auto intersect_it = edge_it - 1; intersect_it != ch_polygon.edges().begin(); --intersect_it)
         {
             const Segment to_test = *intersect_it;
-            const auto result = CGAL::intersection(t, to_test);
-            if (result)
+            if (check_intersection(t, to_test))
             {
-                if (const Segment *s = boost::get<Segment>(&*result))
-                {
-                    cout << "intersects\n";
-                    intersects = 1;
-                    break;
-                }
+                cout << "intersects\n";
+                intersects = 1;
+                break;
             }
         }
 
-        if (!intersects)
+        if (intersects)
         {
-            red_edges.push_back(*edge_it);
+            break;
         }
+        // an den kovei kamia akmi tote einai kokkini
+        red_edges.push_back(*edge_it);
     }
 
     // ksekinaw apo to proigoumeno simeio kai paw pros ta pisw
+    // edw kathe fora pou vazw ena kainourio red edge thelw na mpainei prin apo auta pou exw prosthesei gia na einai sorted
 
-    for (auto edge_it = ch_polygon.edges().begin() + position_to_start; edge_it != ch_polygon.edges().begin(); --edge_it)
+    for (auto edge_it = ch_polygon.edges().begin() + position_to_start - 1; edge_it != ch_polygon.edges().begin(); --edge_it)
     {
         bool intersects = 0;
 
@@ -164,41 +174,63 @@ const void Incrementing::find_red_edges(Point p)
         {
             // tha doume an to result einai apla ena simeio (diladi to )
             const Segment to_test = *intersect_it;
-            const auto result = CGAL::intersection(t, to_test);
-
-            if (result)
+            if (check_intersection(t, to_test))
             {
-                if (const Segment *s = boost::get<Segment>(&*result))
-                {
-                    cout << "intersects\n";
-                    intersects = 1;
-                    break;
-                }
+                cout << "intersects\n";
+                intersects = 1;
+                break;
             }
         }
         if (intersects)
         {
             break;
         }
-
+        // to idio kai gia tis proigoumenes
         for (auto intersect_it = edge_it - 1; intersect_it != ch_polygon.edges().begin(); --intersect_it)
         {
             const Segment to_test = *intersect_it;
-            const auto result = CGAL::intersection(t, to_test);
-            if (result)
+            if (check_intersection(t, to_test))
             {
-                if (const Segment *s = boost::get<Segment>(&*result))
-                {
-                    cout << "intersects\n";
-                    intersects = 1;
-                    break;
-                }
+                cout << "intersects\n";
+                intersects = 1;
+                break;
             }
         }
 
         if (!intersects)
         {
-            red_edges.push_back(*edge_it);
+            red_edges.insert(red_edges.begin(), *edge_it);
         }
     }
+}
+
+const void Incrementing::find_visible_edges(Point p)
+{
+    Point starting_point = red_edges[0].source();
+    Point end_point = red_edges[red_edges.size() - 1].target();
+    cout << "Starting Point: " << starting_point << "\n";
+    cout << "Ending Point: " << end_point << "\n";
+
+    vector<Segment> edges_to_check;
+    for (auto it = polygon.vertices().begin(); it != polygon.vertices().end(); it++)
+    {
+        if (*it == end_point)
+        {
+            break;
+        }
+
+        if (*it == starting_point)
+        {
+            edges_to_check.push_back(Segment(*it, *(it + 1)));
+            starting_point = *(it + 1);
+        }
+    }
+
+    cout << "edges to check\n";
+
+    for (Segment e : edges_to_check)
+    {
+        cout << e << "\n";
+    }
+    // TODO find the visible edges and pick one at random
 }

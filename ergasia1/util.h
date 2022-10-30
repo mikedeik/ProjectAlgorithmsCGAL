@@ -26,5 +26,6 @@ typedef Kernel::Triangle_2 Triangle;
 void get_points_from_file(string filename, vector<Point> *points);
 void sort_points(vector<Point> *points, Sorter sorter);
 bool check_intersection_BFS(vector<Segment> edges);
+bool check_intersection(Triangle t, Segment e);
 
 #endif // UTIL

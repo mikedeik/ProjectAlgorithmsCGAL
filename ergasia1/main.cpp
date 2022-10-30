@@ -32,7 +32,10 @@ int main(int argc, char **argv)
     // cout << algo.Simple() << "\n";
 
     algo.Create_Polygon_Line();
-
+    algo.Create_Polygon_Line();
+    algo.Create_Polygon_Line();
+    algo.Create_Polygon_Line();
+    algo.Create_Polygon_Line();
     // cout << algo.Simple() << "\n";
     // VisibleEdge algo2(points);
     return 0;

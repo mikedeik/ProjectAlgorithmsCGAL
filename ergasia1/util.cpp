@@ -84,6 +84,21 @@ void sort_points(vector<Point> *points, Sorter sorter)
     }
 }
 
+bool check_intersection(Triangle t, Segment e)
+{
+    const auto result = CGAL::intersection(t, e);
+
+    if (result)
+    {
+        // an to apotelesma einai euthigramo tmima tote i akmi den einai kokkini
+        if (const Segment *s = boost::get<Segment>(&*result))
+        {
+            return 1;
+        }
+    }
+    return 0;
+}
+
 bool check_intersection_BFS(vector<Segment> edges, int position, Triangle t)
 {
     queue<Segment> bag;
