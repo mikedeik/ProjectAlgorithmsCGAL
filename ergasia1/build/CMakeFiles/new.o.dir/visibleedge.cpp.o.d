@@ -1527,8 +1527,8 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h \
  /home/johnpsar/CGAL/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h \
  /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h \
- /home/johnpsar/CGAL/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h \
  /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h \
  /home/johnpsar/CGAL/include/CGAL/Kernel/Type_equality_wrapper.h \
  /home/johnpsar/CGAL/include/CGAL/Kernel/interface_macros.h \
  /home/johnpsar/CGAL/include/CGAL/Filtered_kernel.h \

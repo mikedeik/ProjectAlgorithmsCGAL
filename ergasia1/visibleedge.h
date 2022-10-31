@@ -20,7 +20,6 @@ private:
     Polygon polygon;
     vector<Segment> edges;
     void Create_Convex_Hull();
-    void Initialize_Polygonal_Chain();
 
 public:
     VisibleEdge(std::vector<Point> points);

@@ -10,6 +10,41 @@ using namespace std;
 int main(int argc, char **argv)
 {
 
+    string input_file_path = "", output_file_path = "", algorithm = "", initialization = "";
+    int edge_selection = -1;
+    for (int i = 1; i < argc; i = i + 2)
+    {
+
+        if (argv[i] && argv[i + 1])
+        {
+            if (!strcmp(argv[i], "-i"))
+            {
+                input_file_path = argv[i + 1];
+            }
+            if (!strcmp(argv[i], "-o"))
+            {
+                output_file_path = argv[i + 1];
+            }
+            if (!strcmp(argv[i], "-algorithm"))
+            {
+                algorithm = argv[i + 1];
+            }
+            if (!strcmp(argv[i], "-edge_selection"))
+            {
+                edge_selection = stoi(argv[i + 1]);
+            }
+            if (!strcmp(argv[i], "-initialization"))
+            {
+                initialization = argv[i + 1];
+            }
+        }
+    }
+    cout << "input_file_path :" << input_file_path << endl;
+    cout << "output_file_path :" << output_file_path << endl;
+    cout << "Algorithm :" << algorithm << endl;
+    cout << "ES :" << edge_selection << endl;
+    cout << "Initialization :" << initialization << endl;
+
     map<string, Sorter> sorter;
 
     string inp = argv[1];

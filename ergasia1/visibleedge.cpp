@@ -9,7 +9,6 @@ VisibleEdge::VisibleEdge(std::vector<Point> points)
         Add_Point(point);
     }
     Create_Convex_Hull();
-    Initialize_Polygonal_Chain();
 }
 
 VisibleEdge::~VisibleEdge()
@@ -20,7 +19,7 @@ void VisibleEdge::Add_Point(Point p1)
 {
     polygon.push_back(p1);
 }
-
+//Initializes convex_hull_points and adds them to the polygon class
 void VisibleEdge::Create_Convex_Hull()
 {
     CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull_points));
@@ -29,22 +28,17 @@ void VisibleEdge::Create_Convex_Hull()
     {
         polygon.push_back(point);
     }
-    // cout << "Printing Polygon" << std::endl;
-    // for (Segment segment : polygon.edges())
-    // {
-    //     cout << segment << "\n";
-    // }
-}
-
-void VisibleEdge::Initialize_Polygonal_Chain()
-{
-    for (int i = 0; i < convex_hull_points.size() - 1; i++)
+     for (int i = 0; i < convex_hull_points.size() - 1; i++)
     {
         edges.push_back(Segment(convex_hull_points[i], convex_hull_points[i + 1]));
     }
     edges.push_back(Segment(convex_hull_points.back(), convex_hull_points.front()));
     Print_Edges();
+
+
+  
 }
+
 
 void VisibleEdge::Print_Edges()
 {
