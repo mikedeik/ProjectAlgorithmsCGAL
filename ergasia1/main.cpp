@@ -73,5 +73,6 @@ int main(int argc, char **argv)
     // algo.Create_Polygon_Line();
     // cout << algo.Simple() << "\n";
     VisibleEdge algo2(points);
+    algo2.Create_Polygon();
     return 0;
 }

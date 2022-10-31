@@ -12,20 +12,29 @@ typedef Kernel::Point_2 Point;
 typedef CGAL::Polygon_2<Kernel> Polygon;
 typedef Kernel::Segment_2 Segment;
 typedef std::vector<Point> Points;
+typedef Kernel::FT FT;
+typedef std::vector<Point>::const_iterator PointIterator;
 
 class VisibleEdge
 {
 private:
-    std::vector<Point> points, convex_hull_points; // result has the convex hull
+    vector<Point> points, convex_hull_points,points_not_in_chain; // result has the convex hull
     Polygon polygon;
     vector<Segment> edges;
     void Create_Convex_Hull();
+    bool Is_Point_Included_In_Polygonal_Chain(Point);
+    Point Find_Nearest_Point_To_Segment(Segment);
+    int Find_Index_Of_Point_In_Vector(Point,vector<Point>);
+
 
 public:
     VisibleEdge(std::vector<Point> points);
     ~VisibleEdge();
     void Add_Point(Point);
     void Print_Edges();
+    // Create_Polygon requires initialization with create_convex_hull
+    // and adds the internal points to the polygonal chain
+    void Create_Polygon();
 };
 
 #endif
