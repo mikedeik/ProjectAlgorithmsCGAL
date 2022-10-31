@@ -42,9 +42,6 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -DNDEBUG"
-				},
-				{
 					"backtrace" : 2,
 					"fragment" : "-frounding-math"
 				}
@@ -65,7 +62,7 @@
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
-					"path" : "/home/johnpsar/Downloads/CGAL/include"
+					"path" : "/home/johnpsar/CGAL/include"
 				}
 			],
 			"language" : "CXX",
@@ -83,10 +80,6 @@
 	{
 		"commandFragments" : 
 		[
-			{
-				"fragment" : "-O3 -DNDEBUG",
-				"role" : "flags"
-			},
 			{
 				"fragment" : "",
 				"role" : "flags"

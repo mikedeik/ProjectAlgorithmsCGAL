@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     sorter.insert(pair<string, Sorter>("2b", Y_DESCENDING));
     vector<Point> points;
     // get_points_from_file("data/images/euro-night-0000010.instance", &points);
-    get_points_from_file("data/images/euro-night-0000010.instance", &points);
+    get_points_from_file("../data/images/euro-night-0000010.instance", &points);
 
     // get_points_from_file("test.txt", &points);
 
@@ -37,6 +37,6 @@ int main(int argc, char **argv)
     // algo.Create_Polygon_Line();
     // algo.Create_Polygon_Line();
     // cout << algo.Simple() << "\n";
-    // VisibleEdge algo2(points);
+    VisibleEdge algo2(points);
     return 0;
 }

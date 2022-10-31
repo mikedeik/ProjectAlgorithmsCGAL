@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DCGAL_USE_GMPXX=1
 
-CXX_INCLUDES = -isystem /home/johnpsar/Downloads/CGAL/include
+CXX_INCLUDES = -isystem /home/johnpsar/CGAL/include
 
-CXX_FLAGS = -O3 -DNDEBUG -frounding-math
+CXX_FLAGS = -frounding-math
 

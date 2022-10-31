@@ -29,7 +29,6 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/11/exception /usr/include/c++/11/bits/exception.h \
  /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/exception_defines.h \
@@ -118,20 +117,16 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/select.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/11/bits/std_abs.h /usr/include/c++/11/cstdio \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/11/cerrno \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/c++/11/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
@@ -156,12 +151,12 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Exact_predicates_exact_constructions_kernel.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Simple_cartesian.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Cartesian_base.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/basic.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/config.h \
- /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
+ /home/johnpsar/CGAL/include/CGAL/Exact_predicates_exact_constructions_kernel.h \
+ /home/johnpsar/CGAL/include/CGAL/Simple_cartesian.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Cartesian_base.h \
+ /home/johnpsar/CGAL/include/CGAL/basic.h \
+ /home/johnpsar/CGAL/include/CGAL/config.h /usr/include/boost/config.hpp \
+ /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
  /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/11/cstddef \
  /usr/include/boost/config/detail/select_stdlib_config.hpp \
@@ -172,7 +167,6 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /usr/include/boost/config/detail/select_platform_config.hpp \
@@ -181,14 +175,14 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/boost/config/detail/suffix.hpp \
  /usr/include/boost/config/helper_macros.hpp \
  /usr/include/boost/version.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/version.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/version_macros.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Installation/internal/enable_third_party_libraries.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/export/CGAL.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/export/helpers.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/functional.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/auto_link/CGAL.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/auto_link/auto_link.h \
+ /home/johnpsar/CGAL/include/CGAL/version.h \
+ /home/johnpsar/CGAL/include/CGAL/version_macros.h \
+ /home/johnpsar/CGAL/include/CGAL/Installation/internal/enable_third_party_libraries.h \
+ /home/johnpsar/CGAL/include/CGAL/export/CGAL.h \
+ /home/johnpsar/CGAL/include/CGAL/export/helpers.h \
+ /home/johnpsar/CGAL/include/CGAL/functional.h \
+ /home/johnpsar/CGAL/include/CGAL/auto_link/CGAL.h \
+ /home/johnpsar/CGAL/include/CGAL/auto_link/auto_link.h \
  /usr/include/boost/predef.h /usr/include/boost/predef/language.h \
  /usr/include/boost/predef/language/stdc.h \
  /usr/include/boost/predef/version_number.h \
@@ -346,19 +340,19 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/license/lgpl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/license.h \
- /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
+ /home/johnpsar/CGAL/include/CGAL/license/lgpl.h \
+ /home/johnpsar/CGAL/include/CGAL/license.h /usr/include/c++/11/fstream \
+ /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/johnpsar/Downloads/CGAL/include/CGAL/assertions.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Uncertain.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/enum.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/Same_uncertainty.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Origin.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Origin_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Profile_counter.h \
+ /home/johnpsar/CGAL/include/CGAL/assertions.h \
+ /home/johnpsar/CGAL/include/CGAL/Uncertain.h \
+ /home/johnpsar/CGAL/include/CGAL/enum.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/Same_uncertainty.h \
+ /home/johnpsar/CGAL/include/CGAL/Origin.h \
+ /home/johnpsar/CGAL/include/CGAL/Origin_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/Profile_counter.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
  /usr/include/c++/11/iomanip /usr/include/c++/11/locale \
  /usr/include/c++/11/bits/locale_facets_nonio.h \
@@ -369,11 +363,11 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/map \
  /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/disable_warnings.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/enable_warnings.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/assertions_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/assertions_behaviour.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/exceptions.h \
+ /home/johnpsar/CGAL/include/CGAL/disable_warnings.h \
+ /home/johnpsar/CGAL/include/CGAL/enable_warnings.h \
+ /home/johnpsar/CGAL/include/CGAL/assertions_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/assertions_behaviour.h \
+ /home/johnpsar/CGAL/include/CGAL/exceptions.h \
  /usr/include/boost/lexical_cast.hpp \
  /usr/include/boost/range/iterator_range_core.hpp \
  /usr/include/boost/detail/workaround.hpp \
@@ -577,10 +571,8 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/boost/range/detail/implementation_help.hpp \
  /usr/include/boost/range/detail/common.hpp \
  /usr/include/boost/range/detail/sfinae.hpp /usr/include/string.h \
- /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /usr/include/boost/range/size.hpp /usr/include/boost/range/size_type.hpp \
+ /usr/include/strings.h /usr/include/boost/range/size.hpp \
+ /usr/include/boost/range/size_type.hpp \
  /usr/include/boost/range/difference_type.hpp \
  /usr/include/boost/range/has_range_iterator.hpp \
  /usr/include/boost/utility/enable_if.hpp \
@@ -885,14 +877,14 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/quadmath.h \
  /usr/include/boost/integer.hpp /usr/include/boost/integer_fwd.hpp \
  /usr/include/boost/detail/basic_pointerbuf.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/tags.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/IO/io_tags.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/number_type_basic.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/number_type_config.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Quotient_fwd.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/mpl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Coercion_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/boost/iterator/transform_iterator.hpp \
+ /home/johnpsar/CGAL/include/CGAL/tags.h \
+ /home/johnpsar/CGAL/include/CGAL/IO/io_tags.h \
+ /home/johnpsar/CGAL/include/CGAL/number_type_basic.h \
+ /home/johnpsar/CGAL/include/CGAL/number_type_config.h \
+ /home/johnpsar/CGAL/include/CGAL/Quotient_fwd.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/mpl.h \
+ /home/johnpsar/CGAL/include/CGAL/Coercion_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/utility/result_of.hpp \
  /usr/include/boost/preprocessor/iteration/iterate.hpp \
@@ -905,63 +897,59 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/boost/preprocessor/slot/detail/shared.hpp \
  /usr/include/boost/preprocessor/iteration/detail/bounds/upper1.hpp \
  /usr/include/boost/utility/detail/result_of_iterate.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Algebraic_structure_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/type_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/use.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Real_embeddable_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Fraction_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Rational_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/is_convertible.h \
- /usr/include/gmpxx.h /usr/include/x86_64-linux-gnu/gmp.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Scalar_factor_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Algebraic_extension_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Algebraic_structure_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/type_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/use.h \
+ /home/johnpsar/CGAL/include/CGAL/Real_embeddable_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Fraction_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Rational_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/is_convertible.h /usr/include/gmpxx.h \
+ /usr/include/x86_64-linux-gnu/gmp.h \
+ /home/johnpsar/CGAL/include/CGAL/Scalar_factor_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Algebraic_extension_traits.h \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/bit /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Needs_parens_as_product.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/IO/io.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/IO/Color.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/array.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/utils_classes.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/utils.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/FPU.h \
- /usr/include/c++/11/fenv.h /usr/include/fenv.h \
- /usr/include/x86_64-linux-gnu/bits/fenv.h \
+ /home/johnpsar/CGAL/include/CGAL/Needs_parens_as_product.h \
+ /home/johnpsar/CGAL/include/CGAL/IO/io.h \
+ /home/johnpsar/CGAL/include/CGAL/IO/Color.h \
+ /home/johnpsar/CGAL/include/CGAL/array.h \
+ /home/johnpsar/CGAL/include/CGAL/utils_classes.h \
+ /home/johnpsar/CGAL/include/CGAL/utils.h \
+ /home/johnpsar/CGAL/include/CGAL/FPU.h /usr/include/c++/11/fenv.h \
+ /usr/include/fenv.h /usr/include/x86_64-linux-gnu/bits/fenv.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/test_FPU_rounding_mode_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/float.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/double.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/number_utils.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/long_double.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Interval_nt.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Interval_traits.h \
- /usr/include/boost/operators.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/int.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Modular_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Modular_arithmetic/Residue_type.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/tss.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/long_long.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/gmpxx.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/mpz_class.h \
- /usr/include/mpfr.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/gmpxx_coercion_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Residue.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Quotient.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/mpq_class.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/GMPXX_arithmetic_kernel.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Get_arithmetic_kernel.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/number_utils_classes.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/kernel_basic.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/kernel_config.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/kernel_assertions.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/aff_transformation_tags.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/aff_transformation_tags_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Object.h \
- /usr/include/boost/variant.hpp /usr/include/boost/variant/variant.hpp \
- /usr/include/boost/type_index.hpp \
+ /home/johnpsar/CGAL/include/CGAL/test_FPU_rounding_mode_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/float.h \
+ /home/johnpsar/CGAL/include/CGAL/double.h \
+ /home/johnpsar/CGAL/include/CGAL/number_utils.h \
+ /home/johnpsar/CGAL/include/CGAL/long_double.h \
+ /home/johnpsar/CGAL/include/CGAL/Interval_nt.h \
+ /home/johnpsar/CGAL/include/CGAL/Interval_traits.h \
+ /usr/include/boost/operators.hpp /home/johnpsar/CGAL/include/CGAL/int.h \
+ /home/johnpsar/CGAL/include/CGAL/Modular_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Modular_arithmetic/Residue_type.h \
+ /home/johnpsar/CGAL/include/CGAL/tss.h \
+ /home/johnpsar/CGAL/include/CGAL/long_long.h \
+ /home/johnpsar/CGAL/include/CGAL/gmpxx.h \
+ /home/johnpsar/CGAL/include/CGAL/mpz_class.h /usr/include/mpfr.h \
+ /home/johnpsar/CGAL/include/CGAL/gmpxx_coercion_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Residue.h \
+ /home/johnpsar/CGAL/include/CGAL/Quotient.h \
+ /home/johnpsar/CGAL/include/CGAL/mpq_class.h \
+ /home/johnpsar/CGAL/include/CGAL/GMPXX_arithmetic_kernel.h \
+ /home/johnpsar/CGAL/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
+ /home/johnpsar/CGAL/include/CGAL/Get_arithmetic_kernel.h \
+ /home/johnpsar/CGAL/include/CGAL/number_utils_classes.h \
+ /home/johnpsar/CGAL/include/CGAL/kernel_basic.h \
+ /home/johnpsar/CGAL/include/CGAL/kernel_config.h \
+ /home/johnpsar/CGAL/include/CGAL/kernel_assertions.h \
+ /home/johnpsar/CGAL/include/CGAL/aff_transformation_tags.h \
+ /home/johnpsar/CGAL/include/CGAL/aff_transformation_tags_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/Object.h /usr/include/boost/variant.hpp \
+ /usr/include/boost/variant/variant.hpp /usr/include/boost/type_index.hpp \
  /usr/include/boost/type_index/stl_type_index.hpp \
  /usr/include/boost/type_index/type_index_facade.hpp \
  /usr/include/boost/container_hash/hash_fwd.hpp \
@@ -1093,58 +1081,58 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/c++/11/bits/shared_ptr_atomic.h \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel_traits_fwd.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/basic_classes.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Bbox_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Dimension.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel_traits_fwd.h \
+ /home/johnpsar/CGAL/include/CGAL/basic_classes.h \
+ /home/johnpsar/CGAL/include/CGAL/Bbox_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Dimension.h \
  /usr/include/boost/math/special_functions/next.hpp \
  /usr/include/boost/math/policies/error_handling.hpp \
  /usr/include/boost/math/tools/precision.hpp \
  /usr/include/boost/math/special_functions/trunc.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Bbox_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/representation_tags.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/global_functions.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/global_functions_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/user_classes.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/Return_base_tag.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Weighted_point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Vector_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Direction_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Line_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Segment_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Iso_rectangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Circle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Conic_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/Conic_misc.h \
+ /home/johnpsar/CGAL/include/CGAL/Bbox_3.h \
+ /home/johnpsar/CGAL/include/CGAL/representation_tags.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/global_functions.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/global_functions_2.h \
+ /home/johnpsar/CGAL/include/CGAL/user_classes.h \
+ /home/johnpsar/CGAL/include/CGAL/Point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/Return_base_tag.h \
+ /home/johnpsar/CGAL/include/CGAL/Weighted_point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Vector_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Direction_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Line_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Segment_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Iso_rectangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Circle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Conic_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/Conic_misc.h \
  /usr/include/boost/math/special_functions/cbrt.hpp \
  /usr/include/boost/math/tools/rational.hpp \
  /usr/include/boost/math/tools/detail/polynomial_horner3_20.hpp \
  /usr/include/boost/math/tools/detail/rational_horner3_20.hpp \
  /usr/include/boost/mpl/divides.hpp \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/divides.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Aff_transformation_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Weighted_point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Vector_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Direction_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Line_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Segment_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Iso_cuboid_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Circle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Aff_transformation_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/global_functions_internal_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/global_functions_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/global_functions_internal_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/hash_functions.h \
+ /home/johnpsar/CGAL/include/CGAL/Aff_transformation_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Weighted_point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Vector_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Direction_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Line_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Iso_cuboid_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Circle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Aff_transformation_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/global_functions_internal_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/global_functions_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/global_functions_internal_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/hash_functions.h \
  /usr/include/boost/functional/hash.hpp \
  /usr/include/boost/container_hash/hash.hpp \
  /usr/include/boost/container_hash/detail/hash_float.hpp \
@@ -1159,10 +1147,10 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/c++/11/bits/list.tcc /usr/include/c++/11/set \
  /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h /usr/include/c++/11/bitset \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Weighted_point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Handle_for.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/memory.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Weighted_point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Handle_for.h \
+ /home/johnpsar/CGAL/include/CGAL/memory.h \
  /usr/include/boost/tuple/tuple.hpp /usr/include/boost/ref.hpp \
  /usr/include/boost/core/ref.hpp \
  /usr/include/boost/tuple/detail/tuple_basic.hpp \
@@ -1170,12 +1158,12 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/boost/type_traits/add_cv.hpp \
  /usr/include/boost/type_traits/remove_volatile.hpp \
  /usr/include/boost/utility/swap.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Vector_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/constant.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Direction_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Line_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/predicates/kernel_ftC2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/algorithm.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Vector_2.h \
+ /home/johnpsar/CGAL/include/CGAL/constant.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Direction_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Line_2.h \
+ /home/johnpsar/CGAL/include/CGAL/predicates/kernel_ftC2.h \
+ /home/johnpsar/CGAL/include/CGAL/algorithm.h \
  /usr/include/boost/random/random_number_generator.hpp \
  /usr/include/boost/random/uniform_int_distribution.hpp \
  /usr/include/boost/random/detail/config.hpp \
@@ -1247,377 +1235,377 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/boost/random/uniform_on_sphere.hpp \
  /usr/include/boost/random/uniform_smallint.hpp \
  /usr/include/boost/random/weibull_distribution.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/predicates/sign_of_determinant.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/determinant.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/constructions/kernel_ftC2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Segment_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/predicates_on_points_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Circle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Iso_rectangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Aff_transformation_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Handle_for_virtual.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Aff_transformation_rep_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Translation_rep_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Rotation_rep_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/rational_rotation.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Scaling_rep_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Reflection_rep_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Data_accessor_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/ConicCPA2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/predicates_on_directions_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/basic_constructions_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/point_constructions_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/line_constructions_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/ft_constructions_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Weighted_point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Vector_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Direction_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/predicates/kernel_ftC3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/constructions/kernel_ftC3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Line_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/solve_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/solve.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/plane_constructions_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Segment_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Iso_cuboid_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/predicates_on_points_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Circle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Aff_transformation_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Aff_transformation_rep_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Translation_rep_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/Scaling_rep_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/predicates_on_planes_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/basic_constructions_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/point_constructions_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/ft_constructions_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian/function_objects.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/function_objects.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/squared_distance_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Point_2_Point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Point_2_Segment_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/internal/squared_distance_utils_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/wmult.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/Wutils.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Point_2_Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Point_2_Line_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Point_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Segment_2_Segment_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Segment_2_Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Segment_2_Line_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Segment_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Ray_2_Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Ray_2_Line_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Ray_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Line_2_Line_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Line_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_2/Triangle_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/squared_distance_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Point_3_Point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Point_3_Weighted_point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Point_3_Segment_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/internal/squared_distance_utils_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Point_3_Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Point_3_Line_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Point_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Point_3_Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Segment_3_Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/predicates/sign_of_determinant.h \
+ /home/johnpsar/CGAL/include/CGAL/determinant.h \
+ /home/johnpsar/CGAL/include/CGAL/constructions/kernel_ftC2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Segment_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/predicates_on_points_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Circle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Iso_rectangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Aff_transformation_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Handle_for_virtual.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Aff_transformation_rep_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Translation_rep_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Rotation_rep_2.h \
+ /home/johnpsar/CGAL/include/CGAL/rational_rotation.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Scaling_rep_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Reflection_rep_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Data_accessor_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/ConicCPA2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/predicates_on_directions_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/basic_constructions_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/point_constructions_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/line_constructions_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/ft_constructions_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Weighted_point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Vector_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Direction_3.h \
+ /home/johnpsar/CGAL/include/CGAL/predicates/kernel_ftC3.h \
+ /home/johnpsar/CGAL/include/CGAL/constructions/kernel_ftC3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Line_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/solve_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/solve.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/plane_constructions_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Iso_cuboid_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/predicates_on_points_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Circle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Aff_transformation_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Aff_transformation_rep_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Translation_rep_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/Scaling_rep_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/predicates_on_planes_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/basic_constructions_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/point_constructions_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/ft_constructions_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian/function_objects.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/function_objects.h \
+ /home/johnpsar/CGAL/include/CGAL/squared_distance_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Point_2_Point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Point_2_Segment_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/internal/squared_distance_utils_2.h \
+ /home/johnpsar/CGAL/include/CGAL/wmult.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/Wutils.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Point_2_Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Point_2_Line_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Point_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Segment_2_Segment_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Segment_2_Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Segment_2_Line_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Segment_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Ray_2_Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Ray_2_Line_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Ray_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Line_2_Line_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Line_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_2/Triangle_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/squared_distance_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Point_3_Point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Point_3_Weighted_point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Point_3_Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/internal/squared_distance_utils_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Point_3_Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Point_3_Line_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Point_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Point_3_Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Segment_3_Segment_3.h \
  /usr/include/boost/algorithm/clamp.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Segment_3_Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Segment_3_Line_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Segment_3_Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Ray_3_Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Ray_3_Line_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Ray_3_Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Line_3_Line_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Line_3_Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Triangle_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Distance_3/Plane_3_Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/intersection_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Bbox_2_Circle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersection_traits_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersection_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Bbox_2_Line_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Bbox_2_Point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Bbox_2_Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Circle_2_Circle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Circle_2_Line_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Circle_2_Point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Circle_2_Segment_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Circle_2_Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Circle_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Segment_2_Segment_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/predicates_on_points_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Line_2_Line_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Line_2_Point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Line_2_Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Line_2_Segment_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Line_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/internal/Straight_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Point_2_Point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Point_2_Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Point_2_Segment_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Point_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Ray_2_Ray_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Ray_2_Segment_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Ray_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Segment_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/Triangle_2_Triangle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/intersection_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Bbox_3_Bbox_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersection_traits_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Bbox_3_Line_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Bbox_3_Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/intersections.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/utility.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Bbox_3_Point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Bbox_3_Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Bbox_3_Segment_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Bbox_3_Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Bbox_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Line_3_Line_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Line_3_Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Line_3_Point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Point_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Line_3_Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Line_3_Segment_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Line_3_Sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Line_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Plane_3_Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Plane_3_Plane_3_Plane_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/rank.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Plane_3_Point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Point_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Plane_3_Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Plane_3_Segment_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Plane_3_Sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Plane_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Point_3_Point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Point_3_Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Ray_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Point_3_Segment_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Point_3_Sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Point_3_Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Point_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Ray_3_Ray_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Ray_3_Segment_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Ray_3_Sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Ray_3_Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Ray_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Segment_3_Segment_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Segment_3_Sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Segment_3_Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Segment_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Sphere_3_Sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Sphere_3_Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Sphere_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Tetrahedron_3_Tetrahedron_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/Type_equality_wrapper.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/interface_macros.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel_fwd.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_predicate.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian_converter.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cartesian_converter_fwd.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/NT_converter.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Enum_converter.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel/Type_mapper.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Segment_3_Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Segment_3_Line_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Segment_3_Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Ray_3_Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Ray_3_Line_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Ray_3_Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Line_3_Line_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Line_3_Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Triangle_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Distance_3/Plane_3_Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/intersection_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Bbox_2_Circle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersection_traits_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersection_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Bbox_2_Line_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Bbox_2_Point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Bbox_2_Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Circle_2_Circle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Circle_2_Line_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Circle_2_Point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Circle_2_Segment_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Circle_2_Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Circle_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Segment_2_Segment_2.h \
+ /home/johnpsar/CGAL/include/CGAL/predicates_on_points_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Line_2_Line_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Line_2_Point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Line_2_Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Line_2_Segment_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Line_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/internal/Straight_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Point_2_Point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Point_2_Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Point_2_Segment_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Point_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Ray_2_Ray_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Ray_2_Segment_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Ray_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Segment_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/Triangle_2_Triangle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/intersection_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Bbox_3_Bbox_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersection_traits_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Bbox_3_Line_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Bbox_3_Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/intersections.h \
+ /home/johnpsar/CGAL/include/CGAL/utility.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Bbox_3_Point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Bbox_3_Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Bbox_3_Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Bbox_3_Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Bbox_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Line_3_Line_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Line_3_Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Line_3_Point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Point_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Line_3_Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Line_3_Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Line_3_Sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Line_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Plane_3_Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Plane_3_Plane_3_Plane_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/rank.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Plane_3_Point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Point_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Plane_3_Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Plane_3_Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Plane_3_Sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Plane_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Point_3_Point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Point_3_Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Ray_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Point_3_Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Point_3_Sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Point_3_Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Point_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Ray_3_Ray_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Ray_3_Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Ray_3_Sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Ray_3_Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Ray_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Segment_3_Segment_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Segment_3_Sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Segment_3_Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Segment_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Sphere_3_Sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Sphere_3_Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Sphere_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Tetrahedron_3_Tetrahedron_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/Type_equality_wrapper.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/interface_macros.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel_fwd.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_predicate.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian_converter.h \
+ /home/johnpsar/CGAL/include/CGAL/Cartesian_converter_fwd.h \
+ /home/johnpsar/CGAL/include/CGAL/NT_converter.h \
+ /home/johnpsar/CGAL/include/CGAL/Enum_converter.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel/Type_mapper.h \
  /usr/include/boost/mpl/remove.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Exact_kernel_selector.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Simple_homogeneous.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/Homogeneous_base.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/Aff_transformationH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/DirectionH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/predicates_on_directionsH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/PointH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/VectorH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/predicates_on_pointsH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/Iso_rectangleH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/LineH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/Weighted_point_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/Data_accessorH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/ConicHPA2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/Aff_transformationH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/DirectionH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/Iso_cuboidH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/PlaneH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/PointH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/Weighted_point_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/RayH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/SphereH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/predicates_on_pointsH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/VectorH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/basic_constructionsH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/distance_predicatesH2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/basic_constructionsH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/distance_predicatesH3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous/function_objects.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Number_types/internal/Exact_type_selector.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/MP_Float.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Sqrt_extension_type.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Interval_arithmetic.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension_fwd.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Real_embeddable_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Fraction_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Coercion_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Modular_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Scalar_factor_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Chinese_remainder_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/extended_euclidean_algorithm.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/io.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/convert_to_bfi.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/convert_to_bfi.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Cache.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/function_objects.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Wang_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Sqrt_extension/Eigen_NumTraits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/MP_Float_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/MP_Float_arithmetic_kernel.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Lazy_exact_nt.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Handle.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Lazy.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/min_max_n.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Default.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/is_iterator.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/transforming_iterator.h \
+ /home/johnpsar/CGAL/include/CGAL/Exact_kernel_selector.h \
+ /home/johnpsar/CGAL/include/CGAL/Simple_homogeneous.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/Homogeneous_base.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/Aff_transformationH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/DirectionH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/predicates_on_directionsH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/PointH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/VectorH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/predicates_on_pointsH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/Iso_rectangleH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/LineH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/Weighted_point_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/Data_accessorH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/ConicHPA2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/Aff_transformationH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/DirectionH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/Iso_cuboidH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/PlaneH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/PointH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/Weighted_point_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/RayH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/SphereH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/predicates_on_pointsH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/VectorH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/basic_constructionsH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/distance_predicatesH2.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/basic_constructionsH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/distance_predicatesH3.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous/function_objects.h \
+ /home/johnpsar/CGAL/include/CGAL/Number_types/internal/Exact_type_selector.h \
+ /home/johnpsar/CGAL/include/CGAL/MP_Float.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Sqrt_extension_type.h \
+ /home/johnpsar/CGAL/include/CGAL/Interval_arithmetic.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension_fwd.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Real_embeddable_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Fraction_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Coercion_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Modular_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Scalar_factor_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Chinese_remainder_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/extended_euclidean_algorithm.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/io.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/convert_to_bfi.h \
+ /home/johnpsar/CGAL/include/CGAL/convert_to_bfi.h \
+ /home/johnpsar/CGAL/include/CGAL/Cache.h \
+ /home/johnpsar/CGAL/include/CGAL/function_objects.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Wang_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Sqrt_extension/Eigen_NumTraits.h \
+ /home/johnpsar/CGAL/include/CGAL/MP_Float_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/MP_Float_arithmetic_kernel.h \
+ /home/johnpsar/CGAL/include/CGAL/Lazy_exact_nt.h \
+ /home/johnpsar/CGAL/include/CGAL/Handle.h \
+ /home/johnpsar/CGAL/include/CGAL/Lazy.h \
+ /home/johnpsar/CGAL/include/CGAL/min_max_n.h \
+ /home/johnpsar/CGAL/include/CGAL/Default.h \
+ /home/johnpsar/CGAL/include/CGAL/is_iterator.h \
+ /home/johnpsar/CGAL/include/CGAL/transforming_iterator.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/boost_mp.h \
+ /home/johnpsar/CGAL/include/CGAL/boost_mp.h \
  /usr/include/boost/multiprecision/number.hpp \
  /usr/include/boost/mpl/max.hpp \
  /usr/include/boost/type_traits/is_complex.hpp \
@@ -1719,43 +1707,43 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/boost/math/special_functions/detail/gamma_inva.hpp \
  /usr/include/boost/math/special_functions/erf.hpp \
  /usr/include/boost/math/special_functions/detail/erf_inv.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/BOOST_MP_arithmetic_kernel.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Gmpz.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Gmp_coercion_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/GMP/Gmpz_type.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/gmp.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/GMP/Gmpzf_type.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/GMP/Gmpfr_type.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/ipower.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/GMP/Gmpfr_type_static.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/GMP/Gmpq_type.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Gmpq.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Gmpzf.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/GMP_arithmetic_kernel.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Mpzf.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Homogeneous_converter.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Is_degenerate_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_at_x_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_circle_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_squared_radius_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h \
+ /home/johnpsar/CGAL/include/CGAL/BOOST_MP_arithmetic_kernel.h \
+ /home/johnpsar/CGAL/include/CGAL/Gmpz.h \
+ /home/johnpsar/CGAL/include/CGAL/Gmp_coercion_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/GMP/Gmpz_type.h \
+ /home/johnpsar/CGAL/include/CGAL/gmp.h \
+ /home/johnpsar/CGAL/include/CGAL/GMP/Gmpzf_type.h \
+ /home/johnpsar/CGAL/include/CGAL/GMP/Gmpfr_type.h \
+ /home/johnpsar/CGAL/include/CGAL/ipower.h \
+ /home/johnpsar/CGAL/include/CGAL/GMP/Gmpfr_type_static.h \
+ /home/johnpsar/CGAL/include/CGAL/GMP/Gmpq_type.h \
+ /home/johnpsar/CGAL/include/CGAL/Gmpq.h \
+ /home/johnpsar/CGAL/include/CGAL/Gmpzf.h \
+ /home/johnpsar/CGAL/include/CGAL/GMP_arithmetic_kernel.h \
+ /home/johnpsar/CGAL/include/CGAL/Mpzf.h \
+ /home/johnpsar/CGAL/include/CGAL/Homogeneous_converter.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Is_degenerate_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_at_x_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_circle_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_squared_radius_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h \
  /usr/include/boost/type_traits.hpp \
  /usr/include/boost/type_traits/conjunction.hpp \
  /usr/include/boost/type_traits/disjunction.hpp \
@@ -1819,42 +1807,42 @@ CMakeFiles/new.o.dir/visibleedge.cpp.o: \
  /usr/include/boost/type_traits/remove_cv_ref.hpp \
  /usr/include/boost/type_traits/integral_promotion.hpp \
  /usr/include/boost/type_traits/promote.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Triangulation_structural_filtering_traits.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Lazy_kernel.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Static_filtered_predicate.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Epic_converter.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Polygon_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/circulator.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/circulator_bases.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Iterator_range.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/tuple.h \
- /usr/include/boost/foreach.hpp /usr/include/boost/foreach_fwd.hpp \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Polygon_2_algorithms.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Polygon_2/polygon_assertions.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Polygon_2/Polygon_2_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/Triangulation_structural_filtering_traits.h \
+ /home/johnpsar/CGAL/include/CGAL/Lazy_kernel.h \
+ /home/johnpsar/CGAL/include/CGAL/Static_filtered_predicate.h \
+ /home/johnpsar/CGAL/include/CGAL/Epic_converter.h \
+ /home/johnpsar/CGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2.h \
+ /home/johnpsar/CGAL/include/CGAL/circulator.h \
+ /home/johnpsar/CGAL/include/CGAL/circulator_bases.h \
+ /home/johnpsar/CGAL/include/CGAL/Iterator_range.h \
+ /home/johnpsar/CGAL/include/CGAL/tuple.h /usr/include/boost/foreach.hpp \
+ /usr/include/boost/foreach_fwd.hpp \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2_algorithms.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/polygon_assertions.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_impl.h \
  /home/johnpsar/Desktop/project-emiris/ergasia1/util.h \
  /usr/include/c++/11/queue /usr/include/c++/11/bits/stl_queue.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/convex_hull_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/license/Convex_hull_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/convex_hull_traits_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/distance_predicates_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/ch_akl_toussaint.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Convex_hull_2/ch_akl_toussaint_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/convexity_check_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Convex_hull_2/convexity_check_2_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Convex_hull_2/ch_assertions.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/ch_selected_extreme_points_2.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Convex_hull_2/ch_selected_extreme_points_2_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/ch_graham_andrew.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Convex_hull_2/ch_graham_andrew_impl.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/IO/Tee_for_output_iterator.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/ch_bykat.h \
- /home/johnpsar/Downloads/CGAL/include/CGAL/Convex_hull_2/ch_bykat_impl.h
+ /home/johnpsar/CGAL/include/CGAL/convex_hull_2.h \
+ /home/johnpsar/CGAL/include/CGAL/license/Convex_hull_2.h \
+ /home/johnpsar/CGAL/include/CGAL/convex_hull_traits_2.h \
+ /home/johnpsar/CGAL/include/CGAL/distance_predicates_2.h \
+ /home/johnpsar/CGAL/include/CGAL/ch_akl_toussaint.h \
+ /home/johnpsar/CGAL/include/CGAL/Convex_hull_2/ch_akl_toussaint_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/convexity_check_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Convex_hull_2/convexity_check_2_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/Convex_hull_2/ch_assertions.h \
+ /home/johnpsar/CGAL/include/CGAL/ch_selected_extreme_points_2.h \
+ /home/johnpsar/CGAL/include/CGAL/Convex_hull_2/ch_selected_extreme_points_2_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/ch_graham_andrew.h \
+ /home/johnpsar/CGAL/include/CGAL/Convex_hull_2/ch_graham_andrew_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/IO/Tee_for_output_iterator.h \
+ /home/johnpsar/CGAL/include/CGAL/ch_bykat.h \
+ /home/johnpsar/CGAL/include/CGAL/Convex_hull_2/ch_bykat_impl.h
