@@ -2,7 +2,7 @@
 #define INCREMENTING
 
 #include <vector>
-#include <CGAL/Exact_predicates_exact_constructions_kernel.h>
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/Polygon_2.h>
 #include <queue>
 #include "util.h"

@@ -24,18 +24,18 @@ int main(int argc, char **argv)
 
     // get_points_from_file("test.txt", &points);
 
-    Incrementing algo(points, sorter[inp]);
+    // Incrementing algo(points, sorter[inp]);
     // algo.Print_Points();
     // cout << "----Edges----\n";
     // algo.Print_Edges();
 
     // cout << algo.Simple() << "\n";
 
-    algo.Create_Polygon_Line();
-    algo.Create_Polygon_Line();
-    algo.Create_Polygon_Line();
-    algo.Create_Polygon_Line();
-    algo.Create_Polygon_Line();
+    // algo.Create_Polygon_Line();
+    // algo.Create_Polygon_Line();
+    // algo.Create_Polygon_Line();
+    // algo.Create_Polygon_Line();
+    // algo.Create_Polygon_Line();
     // cout << algo.Simple() << "\n";
     // VisibleEdge algo2(points);
     return 0;

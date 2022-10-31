@@ -27,7 +27,7 @@ Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter) : points
 }
 Incrementing::~Incrementing()
 {
-}
+}   
 
 const void Incrementing::Print_Points()
 {

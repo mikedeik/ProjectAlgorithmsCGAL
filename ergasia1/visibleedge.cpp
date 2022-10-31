@@ -28,6 +28,7 @@ void VisibleEdge::Create_Convex_Hull()
     for (Point point : convex_hull_points)
     {
         cout << point << std::endl;
+        polygon.push_back(point);
     }
 }
 
@@ -36,7 +37,7 @@ void VisibleEdge::Initialize_Polygonal_Chain()
     for (int i = 0; i < convex_hull_points.size() - 1; i++)
     {
         edges.push_back(Segment(convex_hull_points[i], convex_hull_points[i + 1]));
-    }
+        }
     edges.push_back(Segment(convex_hull_points.back(), convex_hull_points.front()));
     Print_Edges();
 }
