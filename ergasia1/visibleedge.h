@@ -18,14 +18,14 @@ typedef std::vector<Point>::const_iterator PointIterator;
 class VisibleEdge
 {
 private:
-    vector<Point> points, convex_hull_points,points_not_in_chain; // result has the convex hull
+    vector<Point> points, convex_hull_points, points_not_in_chain; // result has the convex hull
     Polygon polygon;
     vector<Segment> edges;
     void Create_Convex_Hull();
     bool Is_Point_Included_In_Polygonal_Chain(Point);
     Point Find_Nearest_Point_To_Segment(Segment);
-    int Find_Index_Of_Point_In_Vector(Point,vector<Point>);
-
+    int Find_Index_Of_Point_In_Vector(Point, vector<Point>);
+    int Find_Index_In_Polygon(Point);
 
 public:
     VisibleEdge(std::vector<Point> points);

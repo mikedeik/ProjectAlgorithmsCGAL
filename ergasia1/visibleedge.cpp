@@ -67,7 +67,7 @@ void VisibleEdge::Create_Polygon()
             points_not_in_chain.push_back(p);
         }
     }
-    
+
     while (points_not_in_chain.size() > 0)
     {
         for (Segment edge : polygon.edges())
@@ -75,13 +75,14 @@ void VisibleEdge::Create_Polygon()
             cout << "Current edge" << edge << std::endl;
             Point temp = Find_Nearest_Point_To_Segment(edge);
             cout << "TEMP IS : " << temp << std::endl;
+
             // Insert point between points of edge
-            PointIterator position_to_insert = find(polygon.vertices().begin(), polygon.vertices().end(), temp);
+            PointIterator position_to_insert = find(polygon.vertices().begin(), polygon.vertices().end(), edge.start());
 
             int index = position_to_insert - polygon.vertices().begin();
             cout << "Position to insert is :" << index << std::endl;
-            //EDO TROEI SEGMENTATION
-            cout << "Polygon Size is: "<< polygon.size()<<std::endl;
+            
+            // EDO TROEI SEGMENTATION
             polygon.insert(polygon.begin() + index, temp);
 
             // remove from points_not_in chain
@@ -124,6 +125,19 @@ int VisibleEdge::Find_Index_Of_Point_In_Vector(Point p, vector<Point> v)
     {
         if (v[i].x() == p.x() && v[i].y() == p.y())
         {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int VisibleEdge::Find_Index_In_Polygon(Point p)
+{
+    for (int i = 0; i < polygon.size(); i++)
+    {
+        if (polygon[i].x() == p.x() && polygon[i].y() == p.y())
+        {
+            cout << "INDEX : " << i << std::endl;
             return i;
         }
     }
