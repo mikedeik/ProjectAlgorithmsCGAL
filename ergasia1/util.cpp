@@ -222,6 +222,11 @@ void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vect
 {
     for (auto edge_it = ch_polygon.edges_end() - position_to_start - 1; edge_it != ch_polygon.edges_begin(); --edge_it)
     {
+
+        if (red_edges->size() == ch_polygon.size())
+        {
+            return;
+        }
         cout << "checking edge: " << *edge_it;
         getchar();
         bool intersects = 0;

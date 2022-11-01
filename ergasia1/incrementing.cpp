@@ -220,31 +220,5 @@ const void Incrementing::find_visible_edges(Point p)
         }
     }
 
-    // for (auto itt = polygon.begin() + first; itt != polygon.begin() + last; ++itt)
-    // {
-    //     cout << "checking for edge: " << *itt << " - " << *(itt + 1) << "\n";
-    //     bool intersects = 0;
-    //     for (auto intersect_it = polygon.begin() + first; intersect_it != polygon.begin() + last; ++intersect_it)
-    //     {
-    //         cout << "edge: " << *intersect_it << " - " << *(intersect_it + 1) << "\n";
-    //
-    //         // den thelw na tsekarw an kanei intersect me ton euato tou
-    //         if (itt == intersect_it)
-    //         {
-    //             cout << "skip\n";
-    //             continue;
-    //         }
-
-    //         if (check_intersection(Triangle(*itt, p, *(itt + 1)), Segment(*intersect_it, *(intersect_it + 1))))
-    //         {
-    //             intersects = 1;
-    //             break;
-    //         }
-    //     }
-    //     if (!intersects)
-    //     {
-    //         visible_edges.push_back(Segment(*itt, *(itt + 1)));
-    //     }
-    // }
     // TODO na tsekarw an to teleutaio point einai to arxiko tou polygwnou
 }
