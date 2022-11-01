@@ -70,7 +70,10 @@ int main(int argc, char **argv)
 
     algo.Print_Edges();
     cout << algo.Simple() << "\n";
-    // VisibleEdge algo2(points);
-    // algo2.Create_Polygon();
+
+    VisibleEdge algo2(points);
+    algo2.Create_Polygon();
+    FT visible_edge_area = algo2.Get_Polygon_Area();
+    cout << "Area of Polygon is :" << visible_edge_area << std::endl;
     return 0;
 }

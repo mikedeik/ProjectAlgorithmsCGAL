@@ -35,6 +35,7 @@ public:
     // Create_Polygon requires initialization with create_convex_hull
     // and adds the internal points to the polygonal chain
     void Create_Polygon();
+    FT Get_Polygon_Area();
 };
 
 #endif

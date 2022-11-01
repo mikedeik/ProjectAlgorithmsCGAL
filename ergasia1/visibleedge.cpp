@@ -70,37 +70,21 @@ void VisibleEdge::Create_Polygon()
 
     while (points_not_in_chain.size() > 0)
     {
-        for (Segment edge : polygon.edges())
+        int polygon_size = polygon.size();
+        for (int i = 0; i < polygon_size - 1; i++)
         {
-            cout << "Current edge" << edge << std::endl;
-            Point temp = Find_Nearest_Point_To_Segment(edge);
-            cout << "TEMP IS : " << temp << std::endl;
-
-            // Insert point between points of edge
-            PointIterator position_to_insert = find(polygon.vertices().begin(), polygon.vertices().end(), edge.start());
-
-            int index = position_to_insert - polygon.vertices().begin();
-            cout << "Position to insert is :" << index << std::endl;
-            
-            // EDO TROEI SEGMENTATION
-            polygon.insert(polygon.begin() + index, temp);
-
+            Point nearest_point = Find_Nearest_Point_To_Segment(Segment(polygon[i], polygon[i + 1]));
+            // Insert point between the vertices of the edge.Meaning after i
+            polygon.insert(polygon.begin() + i, nearest_point);
             // remove from points_not_in chain
 
-            points_not_in_chain.erase(points_not_in_chain.begin() + Find_Index_Of_Point_In_Vector(temp, points_not_in_chain));
-            for (Point p : points_not_in_chain)
-            {
-                cout << p << std::endl;
-            }
+            points_not_in_chain.erase(points_not_in_chain.begin() + Find_Index_Of_Point_In_Vector(nearest_point, points_not_in_chain));
             if (points_not_in_chain.size() == 0)
             {
                 break;
             }
-            cout << "PNIC SIZE IS :" << points_not_in_chain.size() << std::endl;
         }
     }
-
-    cout << "ALL DONE" << std::endl;
 }
 
 Point VisibleEdge::Find_Nearest_Point_To_Segment(Segment s)
@@ -142,4 +126,9 @@ int VisibleEdge::Find_Index_In_Polygon(Point p)
         }
     }
     return -1;
+}
+
+FT VisibleEdge::Get_Polygon_Area()
+{
+    return polygon.area();
 }
