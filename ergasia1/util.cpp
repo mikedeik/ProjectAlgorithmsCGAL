@@ -149,3 +149,137 @@ bool check_intersection_BFS(vector<Segment> edges, int position, Triangle t)
 
     return 0;
 }
+
+void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges, Sorter sorter)
+{
+    for (auto edge_it = ch_polygon.edges_begin() + position_to_start; edge_it != ch_polygon.edges_end(); ++edge_it)
+    {
+        cout << "checking edge: " << *edge_it;
+        getchar();
+        bool intersects = 0;
+
+        // ftiaxnw trigwno me tin kainourgia akmi
+        Triangle t((*edge_it).source(), p, (*edge_it).target());
+
+        // gia kathe epomeni tou akmi koitaw an tin kovei (pou simainei pws den einai orati)
+
+        for (auto intersect_it = ch_polygon.edges_begin() + position_to_start + 1; intersect_it != ch_polygon.edges_end(); ++intersect_it)
+        {
+            if (intersect_it == edge_it)
+            {
+                cout << "same\n";
+                continue;
+            }
+            // tha doume an to result einai apla ena simeio (diladi to )
+            const Segment to_test = *intersect_it;
+
+            if (check_intersection(t, to_test))
+            {
+                cout << "intersects\n";
+                intersects = 1;
+                break;
+            }
+        }
+        // opote paw stin epomeni
+        if (intersects)
+        {
+            break;
+        }
+
+        // paw twra pros tin antitheti kateuthinsi kai kanw to idio
+        for (auto intersect_it = ch_polygon.edges_end() - position_to_start - 1; intersect_it != ch_polygon.edges_begin(); --intersect_it)
+        {
+            if (intersect_it == edge_it)
+            {
+                cout << "same\n";
+                continue;
+            }
+            const Segment to_test = *intersect_it;
+            if (check_intersection(t, to_test))
+            {
+                cout << "intersects\n";
+                intersects = 1;
+                break;
+            }
+        }
+
+        if (intersects)
+        {
+            break;
+        }
+        // an den kovei kamia akmi tote einai kokkini
+        red_edges->push_back(*edge_it);
+    }
+
+    cout << "---- Red Edges ----\n";
+    for (Segment edge : *red_edges)
+    {
+        cout << edge << "\n";
+    }
+}
+
+void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges, Sorter sorter)
+{
+    for (auto edge_it = ch_polygon.edges_end() - position_to_start - 1; edge_it != ch_polygon.edges_begin(); --edge_it)
+    {
+        cout << "checking edge: " << *edge_it;
+        getchar();
+        bool intersects = 0;
+
+        Triangle t((*edge_it).source(), p, (*edge_it).target());
+
+        // gia kathe epomeni akmi tsekarw an kanoun intersect
+
+        // const Polygon::Edges& ch_edges = ch_polygon.edges();
+        // check_intersection_BFS(ch_edges, )
+
+        for (auto intersect_it = ch_polygon.edges_end() - position_to_start; intersect_it != ch_polygon.edges_end(); ++intersect_it)
+        {
+            if (intersect_it == edge_it)
+            {
+                cout << "same\n";
+                continue;
+            }
+            // tha doume an to result einai apla ena simeio (diladi to )
+            const Segment to_test = *intersect_it;
+            if (check_intersection(t, to_test))
+            {
+                cout << "intersects 1\n";
+                intersects = 1;
+                break;
+            }
+        }
+        if (intersects)
+        {
+            break;
+        }
+        // to idio kai gia tis proigoumenes
+        for (auto intersect_it = ch_polygon.edges_end() - position_to_start - 1; intersect_it != ch_polygon.edges_begin(); --intersect_it)
+        {
+            if (intersect_it == edge_it)
+            {
+                cout << "same\n";
+                continue;
+            }
+
+            const Segment to_test = *intersect_it;
+            if (check_intersection(t, to_test))
+            {
+                cout << "intersects 2\n";
+                intersects = 1;
+                break;
+            }
+        }
+
+        if (!intersects)
+        {
+            red_edges->insert(red_edges->begin(), *edge_it);
+        }
+    }
+
+    cout << "---- Red Edges ----\n";
+    for (Segment edge : *red_edges)
+    {
+        cout << edge << "\n";
+    }
+}

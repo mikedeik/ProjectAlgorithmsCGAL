@@ -3,14 +3,13 @@
 
 #include <vector>
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
-#include <CGAL/Polygon_2.h>
+
 #include <queue>
 #include "util.h"
 #include <CGAL/convex_hull_2.h>
 
 using std::vector;
 
-typedef CGAL::Polygon_2<Kernel> Polygon;
 typedef Kernel::Segment_2 Segment;
 
 void incrementing_algorithm(vector<Point> points);

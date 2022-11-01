@@ -1813,4 +1813,18 @@ CMakeFiles/new.o.dir/util.cpp.o: \
  /home/mike/CGAL-5.5/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
  /home/mike/CGAL-5.5/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
  /home/mike/CGAL-5.5/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
+ /home/mike/CGAL-5.5/include/CGAL/Polygon_2.h \
+ /home/mike/CGAL-5.5/include/CGAL/circulator.h \
+ /home/mike/CGAL-5.5/include/CGAL/circulator_bases.h \
+ /home/mike/CGAL-5.5/include/CGAL/Iterator_range.h \
+ /home/mike/CGAL-5.5/include/CGAL/tuple.h /usr/include/boost/foreach.hpp \
+ /usr/include/boost/foreach_fwd.hpp \
+ /home/mike/CGAL-5.5/include/CGAL/Polygon_2_algorithms.h \
+ /home/mike/CGAL-5.5/include/CGAL/Polygon_2/polygon_assertions.h \
+ /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
+ /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
+ /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
+ /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
+ /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
+ /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_impl.h \
  /usr/include/c++/11/queue /usr/include/c++/11/bits/stl_queue.h

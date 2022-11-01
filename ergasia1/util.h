@@ -2,6 +2,7 @@
 #define UTIL
 
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
+#include <CGAL/Polygon_2.h>
 #include <queue>
 
 enum Sorter
@@ -21,11 +22,15 @@ typedef CGAL::Exact_predicates_exact_constructions_kernel Kernel;
 typedef Kernel::Point_2 Point;
 typedef Kernel::Segment_2 Segment;
 typedef Kernel::Triangle_2 Triangle;
+typedef CGAL::Polygon_2<Kernel> Polygon;
 
 // adds the points
 void get_points_from_file(string filename, vector<Point> *points);
 void sort_points(vector<Point> *points, Sorter sorter);
 bool check_intersection_BFS(vector<Segment> edges);
 bool check_intersection(Triangle t, Segment e);
+
+void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges, Sorter sorter);
+void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges, Sorter sorter);
 
 #endif // UTIL
