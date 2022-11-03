@@ -17,14 +17,15 @@ Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter) : points
                                                                           sorter(inc_sorter)
 {
     sort_points(&points, sorter);
-    CGAL::convex_hull_2(points.begin(), points.begin() + 3, std::back_inserter(convex_hull));
+    cout << "INIT\n";
+
+    polygon.push_back(points[2]);
+    polygon.push_back(points[0]);
+    polygon.push_back(points[1]);
+
+    CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
 
     // TODO arxika suneutheiaka simeia
-    cout << "INIT\n";
-    for (auto it = points.begin(); it != points.begin() + 3; ++it)
-    {
-        polygon.push_back(*it);
-    }
 
     point_position = 3;
 }
@@ -86,15 +87,14 @@ const void Incrementing::Create_Polygon_Line()
         {
             polygon.insert(polygon.begin() + index, points[point_position]);
         }
-
-        cout << "----- Polygon Edges ------\n";
-        for (Segment edge : polygon.edges())
+        if (!polygon.is_simple())
         {
-            cout << edge << "\n";
-        }
-        for (Point p : polygon.vertices())
-        {
-            cout << "[" << p.x() << "," << p.y() << "]\n";
+            cout << "---- Polygon Edges ----\n";
+            for (Segment edge : polygon.edges())
+            {
+                cout << edge << "\n";
+            }
+            // getchar();
         }
 
         visible_edges.clear();
@@ -114,7 +114,7 @@ const void Incrementing::Create_Polygon_Line()
     auto duration = duration_cast<seconds>(stop - start);
 
     cout << "Time taken by function: "
-         << duration.count() << " microseconds"
+         << duration.count() << " seconds"
          << "\n";
 }
 
@@ -127,8 +127,6 @@ const void Incrementing::find_red_edges(Point p)
     // kathe fora pou prospathw na valw ena simeio to proigoumeno tou tha einai sigoura koryfi tou CH
 
     int position_to_start;
-
-    cout << "we get in red edges";
 
     for (auto it = convex_hull.begin(); it != convex_hull.end(); ++it)
     {
@@ -145,9 +143,9 @@ const void Incrementing::find_red_edges(Point p)
     {
         cout << edge << "\n";
     }
-    cout << position_to_start;
-    getchar();
+
     // ksekinaw apo to proigoumeno simeio kai paw pros ta mprosta
+
     traverse_ccw(ch_polygon, position_to_start, p, &red_edges, sorter);
 
     if (red_edges.size() == ch_polygon.size())
@@ -155,18 +153,27 @@ const void Incrementing::find_red_edges(Point p)
         return;
     }
 
-    getchar();
     // ksekinaw apo to proigoumeno simeio kai paw pros ta pisw
     // edw kathe fora pou vazw ena kainourio red edge thelw na mpainei prin apo auta pou exw prosthesei gia na einai sorted
 
     traverse_cw(ch_polygon, position_to_start, p, &red_edges, sorter);
+
+    if (red_edges.size() == 0)
+    {
+        cout << p;
+
+        for (Segment edge : ch_polygon.edges())
+        {
+            cout << edge << "\n";
+        }
+    }
 }
 
 const void Incrementing::find_visible_edges(Point p)
 {
 
-    cout << "we get in visible edges";
-    getchar();
+    cout << "we get in visible edges\n";
+
     Point starting_point = red_edges[0].source();
     Point end_point = red_edges[red_edges.size() - 1].target();
     cout << "Starting Point: " << starting_point << "\n";
@@ -186,30 +193,43 @@ const void Incrementing::find_visible_edges(Point p)
         if ((*it).target() == end_point)
         {
             last = it - polygon.edges_begin();
+            cout << "last is : " << last << "\n";
         }
 
         if ((*it).source() == starting_point)
         {
             first = it - polygon.edges_begin();
+            cout << "first is : " << first << "\n";
+        }
+
+        if (first == last)
+        {
+            visible_edges.push_back(*it);
+            return;
         }
     }
 
-    for (auto itt = polygon.edges_begin() + first; itt != polygon.edges_begin() + last + 1; ++itt)
+    for (auto itt = polygon.edges_begin() + first; itt != polygon.edges_begin() + last; ++itt)
     {
+        cout << "edge : " << *itt << "\n";
+
         bool intersects = 0;
 
         if (CGAL::collinear((*itt).source(), p, (*itt).target()))
         {
+            cout << "colinear\n";
+            getchar();
             continue;
         }
-        for (auto intersect_it = polygon.edges_begin() + first; intersect_it != polygon.edges_begin() + last + 1; ++intersect_it)
+        for (auto intersect_it = polygon.edges_begin() + first; intersect_it != polygon.edges_begin() + last; ++intersect_it)
         {
-            if (itt == intersect_it)
+            if (*itt == *intersect_it)
             {
                 continue;
             }
             if (check_intersection(Triangle((*itt).source(), p, (*itt).target()), *intersect_it))
             {
+                cout << "intersects\n";
                 intersects = 1;
                 break;
             }
@@ -219,6 +239,9 @@ const void Incrementing::find_visible_edges(Point p)
             visible_edges.push_back(*itt);
         }
     }
-
-    // TODO na tsekarw an to teleutaio point einai to arxiko tou polygwnou
+    if (visible_edges.size() == 0)
+    {
+        cout << "no visible edge";
+        getchar();
+    }
 }
