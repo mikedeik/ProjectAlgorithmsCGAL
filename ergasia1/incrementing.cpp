@@ -209,18 +209,22 @@ const void Incrementing::find_visible_edges(Point p)
         }
     }
 
+    int go_to_start = 0;
+    int go_to_next = 0;
+
     for (auto itt = polygon.edges_begin() + first; itt != polygon.edges_begin() + last; ++itt)
     {
+        if (itt == polygon.edges_end() - 1)
+        {
+            cout << "reached end";
+            go_to_start = 1;
+            break;
+        }
+
         cout << "edge : " << *itt << "\n";
 
         bool intersects = 0;
 
-        if (CGAL::collinear((*itt).source(), p, (*itt).target()))
-        {
-            cout << "colinear\n";
-            getchar();
-            continue;
-        }
         for (auto intersect_it = polygon.edges_begin() + first; intersect_it != polygon.edges_begin() + last; ++intersect_it)
         {
             if (*itt == *intersect_it)
@@ -239,6 +243,40 @@ const void Incrementing::find_visible_edges(Point p)
             visible_edges.push_back(*itt);
         }
     }
+
+    if (go_to_start)
+    {
+
+        for (auto itt = polygon.edges_begin(); itt != polygon.edges_begin() + last; ++itt)
+        {
+            cout << "in here";
+            bool intersects = 0;
+
+            for (auto intersect_it = polygon.edges_begin() + first; intersect_it != polygon.edges_begin() + last; ++intersect_it)
+            {
+                if (*itt == *intersect_it)
+                {
+                    continue;
+                }
+                if (check_intersection(Triangle((*itt).source(), p, (*itt).target()), *intersect_it))
+                {
+                    cout << "intersects\n";
+                    intersects = 1;
+                    break;
+                }
+            }
+            if (!intersects)
+            {
+                visible_edges.push_back(*itt);
+            }
+        }
+    }
+    cout << "---- Visible Edges -----\n";
+    for (Segment edge : visible_edges)
+    {
+        cout << edge << "\n";
+    }
+    getchar();
     if (visible_edges.size() == 0)
     {
         cout << "no visible edge";
