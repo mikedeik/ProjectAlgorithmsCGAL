@@ -54,7 +54,7 @@ int main(int argc, char **argv)
     sorter.insert(pair<string, Sorter>("2a", Y_ASCENDING));
     sorter.insert(pair<string, Sorter>("2b", Y_DESCENDING));
     vector<Point> points;
-    get_points_from_file("data/images/euro-night-0000010.instance", &points);
+    get_points_from_file("data/uniform/uniform-0001000-1.instance", &points);
     // get_points_from_file("../data/images/euro-night-0000010.instance", &points);
 
     // get_points_from_file("test.txt", &points);

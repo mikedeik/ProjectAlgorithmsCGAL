@@ -23,6 +23,8 @@ typedef Kernel::Point_2 Point;
 typedef Kernel::Segment_2 Segment;
 typedef Kernel::Triangle_2 Triangle;
 typedef CGAL::Polygon_2<Kernel> Polygon;
+typedef std::vector<Point>::const_iterator PointIterator;
+typedef std::vector<Segment>::iterator EdgeIterator;
 
 // adds the points
 void get_points_from_file(string filename, vector<Point> *points);

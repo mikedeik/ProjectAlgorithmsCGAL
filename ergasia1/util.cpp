@@ -152,10 +152,16 @@ bool check_intersection_BFS(vector<Segment> edges, int position, Triangle t)
 
 void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges, Sorter sorter)
 {
+    // cout << "***** Convex Hull Edges ******\n";
+    // for (Segment edge : ch_polygon.edges())
+    // {
+    //     cout << edge << "\n";
+    // }
 
     for (auto edge_it = ch_polygon.edges_begin() + position_to_start; edge_it != ch_polygon.edges_end(); ++edge_it)
     {
-        // cout << "checking edge: " << *edge_it;
+        // cout << "checking edge: " << *edge_it << "\n";
+        // cout << "position to start " << position_to_start << "\n";
 
         bool intersects = 0;
 
@@ -171,6 +177,7 @@ void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vect
 
         for (auto intersect_it = ch_polygon.edges_begin(); intersect_it != ch_polygon.edges_end(); ++intersect_it)
         {
+            // cout << "with edge << " << *intersect_it << "\n";
             if (*intersect_it == *edge_it)
             {
                 // cout << "same\n";
@@ -207,9 +214,10 @@ void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vecto
         position_to_start = ch_polygon.edges().size();
     }
 
-    for (auto edge_it = ch_polygon.edges_begin() + position_to_start - 1; edge_it != ch_polygon.edges_begin(); --edge_it)
+    for (auto edge_it = ch_polygon.edges_begin() + position_to_start - 1; edge_it >= ch_polygon.edges_begin(); --edge_it)
     {
-
+        // cout << "checking edge: " << *edge_it << "\n";
+        // cout << "position to start " << position_to_start << "\n";
         // cout << "checking edge: " << *edge_it;
         // getchar();
 
@@ -229,6 +237,7 @@ void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vecto
 
         for (auto intersect_it = ch_polygon.edges_begin(); intersect_it != ch_polygon.edges_end(); ++intersect_it)
         {
+            // cout << "with edge << " << *intersect_it << "\n";
             if (*intersect_it == *edge_it)
             {
                 // cout << "same\n";
