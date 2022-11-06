@@ -59,6 +59,6 @@ void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vecto
 // kokkines akmes apo to shmeio p pros to kyrto perivlima
 void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges);
 
-void print_to_file(const Polygon ch_polygon,string filename);
+void print_to_file(const Polygon ch_polygon,string filename,int time);
 
 #endif // UTIL

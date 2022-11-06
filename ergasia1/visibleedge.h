@@ -6,7 +6,8 @@
 #include <CGAL/Polygon_2.h>
 #include "util.h"
 #include <CGAL/convex_hull_2.h>
-
+#include <boost/optional/optional_io.hpp>
+#include <chrono>
 typedef CGAL::Exact_predicates_exact_constructions_kernel Kernel;
 typedef Kernel::Point_2 Point;
 typedef CGAL::Polygon_2<Kernel> Polygon;
@@ -27,7 +28,7 @@ private:
     Point Find_Nearest_Point_To_Segment(Segment);
     int Find_Index_Of_Point_In_Vector(Point, vector<Point>);
     int Find_Index_In_Polygon(Point);
-
+    int time;
 public:
     VisibleEdge(std::vector<Point> points,string output_file);
     ~VisibleEdge();

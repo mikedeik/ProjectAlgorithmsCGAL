@@ -24,6 +24,7 @@ private:
     int point_position;                       // enas akeraios pou krataei tin thesi tou Point pou tha prosthesoume sto arxiko array
     vector<Segment> red_edges, visible_edges; // duo Segment arrays ena gia ta red edges ki ena gia ta visible edges tis polygwnikis grammis
     string output_file;
+    int time;
 
     /*  Pairnei orisma ena Point p
         Private synartisi pou vriskei tis kokkines akmes*/

@@ -31,6 +31,7 @@ Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter, string o
     }
     // thetei point_position se 3 gia na ksekinisei apo auto to simeio
     point_position = 3;
+    time=0;
 }
 
 // adeiazw ola ta vectors gia dealocate memmory
@@ -102,7 +103,7 @@ const void Incrementing::Create_Polygon_Line()
     auto stop = high_resolution_clock::now();
 
     auto duration = duration_cast<seconds>(stop - start);
-
+    time=duration.count();
     cout << "Time taken by function: "
          << duration.count() << " seconds"
          << "\n";
@@ -334,7 +335,7 @@ const void Incrementing::Print_Polygon()
 {
     if (output_file != "")
     {
-        print_to_file(polygon, output_file);
+        print_to_file(polygon, output_file,time);
     }
     else
     {

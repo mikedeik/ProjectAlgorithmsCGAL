@@ -4,11 +4,12 @@
 VisibleEdge::VisibleEdge(std::vector<Point> points, string output_file)
 {
     this->points = points;
+    time = 0;
     Create_Convex_Hull();
     Create_Polygon();
     if (output_file != "")
     {
-        print_to_file(polygon, output_file);
+        print_to_file(polygon, output_file,time);
     }
     else
     {
@@ -20,10 +21,11 @@ VisibleEdge::VisibleEdge(std::vector<Point> points, string output_file)
         {
             cout << edge << "\n";
         }
-        cout << "visible edge algorithm"<< "\n";
+        cout << "visible edge algorithm"
+             << "\n";
         cout << "area" << polygon.area() << "\n";
-        cout << "ratio"<<"\n";
-
+        cout << "ratio"
+             << "\n";
     }
 }
 
@@ -80,6 +82,8 @@ bool VisibleEdge::Is_Point_Included_In_Polygonal_Chain(Point p)
 
 void VisibleEdge::Create_Polygon()
 {
+    auto start = std::chrono::high_resolution_clock::now();
+
     points_not_in_chain.clear();
     for (Point p : points)
     {
@@ -129,7 +133,10 @@ void VisibleEdge::Create_Polygon()
 
         nearest_poits.clear();
     }
-    print_to_file(polygon, "lol.txt");
+    auto stop = std::chrono::high_resolution_clock::now();
+
+    auto duration = std::chrono::duration_cast<std::chrono::seconds>(stop - start);
+    time = duration.count();
 }
 
 Point VisibleEdge::Find_Nearest_Point_To_Segment(Segment s)
