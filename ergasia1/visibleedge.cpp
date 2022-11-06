@@ -1,10 +1,30 @@
 #include <iostream>
 #include "visibleedge.h"
 
-VisibleEdge::VisibleEdge(std::vector<Point> points)
+VisibleEdge::VisibleEdge(std::vector<Point> points, string output_file)
 {
     this->points = points;
     Create_Convex_Hull();
+    Create_Polygon();
+    if (output_file != "")
+    {
+        print_to_file(polygon, output_file);
+    }
+    else
+    {
+        for (Point p : polygon)
+        {
+            cout << p << "\n";
+        }
+        for (Segment edge : polygon.edges())
+        {
+            cout << edge << "\n";
+        }
+        cout << "visible edge algorithm"<< "\n";
+        cout << "area" << polygon.area() << "\n";
+        cout << "ratio"<<"\n";
+
+    }
 }
 
 VisibleEdge::~VisibleEdge()
@@ -109,7 +129,7 @@ void VisibleEdge::Create_Polygon()
 
         nearest_poits.clear();
     }
-    print_to_file(polygon,"lol.txt");
+    print_to_file(polygon, "lol.txt");
 }
 
 Point VisibleEdge::Find_Nearest_Point_To_Segment(Segment s)

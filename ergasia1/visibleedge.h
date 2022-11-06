@@ -29,7 +29,7 @@ private:
     int Find_Index_In_Polygon(Point);
 
 public:
-    VisibleEdge(std::vector<Point> points);
+    VisibleEdge(std::vector<Point> points,string output_file);
     ~VisibleEdge();
     void Add_Point(Point);
     void Print_Edges();

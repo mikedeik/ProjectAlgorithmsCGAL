@@ -51,7 +51,7 @@ public:
     /* Dhmiourgei tin polugwniki grammi */
     const void Create_Polygon_Line();
 
-    const void Output_to_File();
+    const void Print_Polygon();
 };
 
 #endif // INCREMENTING

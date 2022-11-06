@@ -276,5 +276,6 @@ void print_to_file(const Polygon ch_polygon, string filename)
     {
         MyFile << edge << "\n";
     }
+    MyFile << "area"<< ch_polygon.area()<<"\n";
     MyFile.close();
 }

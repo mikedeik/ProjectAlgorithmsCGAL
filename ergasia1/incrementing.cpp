@@ -329,3 +329,25 @@ const void Incrementing::find_visible_edges(Point p)
         }
     }
 }
+
+const void Incrementing::Print_Polygon()
+{
+    if (output_file != "")
+    {
+        print_to_file(polygon, output_file);
+    }
+    else
+    {
+        for (Point p : polygon)
+        {
+            cout << p << "\n";
+        }
+        for (Segment edge : polygon.edges())
+        {
+            cout << edge << "\n";
+        }
+        cout << "incrementing algorithm"<< "\n";
+        cout << "area" << polygon.area() << "\n";
+        cout << "ratio"<<"\n";
+    }
+}
