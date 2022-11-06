@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.1...3.23)
 
-project( new.o )
+project( new.o)
 
 
 # CGAL and its components
