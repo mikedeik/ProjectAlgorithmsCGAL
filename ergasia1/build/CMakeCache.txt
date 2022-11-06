@@ -176,7 +176,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=new.o
+CMAKE_PROJECT_NAME:STATIC=to_polygon
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -304,7 +304,7 @@ Boost_DEBUG-ADVANCED:INTERNAL=1
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CGAL_Boost_USE_STATIC_LIBS
 CGAL_Boost_USE_STATIC_LIBS-ADVANCED:INTERNAL=1
-CGAL_EXECUTABLE_TARGETS:INTERNAL=new.o;new.o;new.o;new.o;new.o
+CGAL_EXECUTABLE_TARGETS:INTERNAL=new.o;new.o;new.o;new.o;new.o;new.o;new.o;to_polygon;to_polygon
 //CGAL library is configured to use GMP
 CGAL_USE_GMP:INTERNAL=TRUE
 //CGAL library is configured to use MPFR

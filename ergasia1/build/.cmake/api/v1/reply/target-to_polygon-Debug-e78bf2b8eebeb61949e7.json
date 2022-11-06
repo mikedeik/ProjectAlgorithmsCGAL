@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "new.o"
+			"path" : "to_polygon"
 		}
 	],
 	"backtrace" : 1,
@@ -78,7 +78,7 @@
 			]
 		}
 	],
-	"id" : "new.o::@6890427a1f51a3e7e1df",
+	"id" : "to_polygon::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -106,8 +106,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "new.o",
-	"nameOnDisk" : "new.o",
+	"name" : "to_polygon",
+	"nameOnDisk" : "to_polygon",
 	"paths" : 
 	{
 		"build" : ".",

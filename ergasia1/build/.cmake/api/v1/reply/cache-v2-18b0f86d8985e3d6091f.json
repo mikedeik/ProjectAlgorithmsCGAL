@@ -119,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "new.o;new.o;new.o;new.o;new.o"
+			"value" : "new.o;new.o;new.o;new.o;new.o;new.o;new.o;to_polygon;to_polygon"
 		},
 		{
 			"name" : "CGAL_TEST_DRAW_FUNCTIONS",
@@ -1027,7 +1027,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "new.o"
+			"value" : "to_polygon"
 		},
 		{
 			"name" : "CMAKE_RANLIB",

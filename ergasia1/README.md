@@ -1,6 +1,6 @@
 Gia build prepei na prostethi sto find CMakeLists.txt to path tou installation tis CGAL .
-Meta me cmake kanoyme build to makefile.
-Meta me make ginete build kai to executable name einai new.o
+Meta me cmake kanoyme build to makefile. (cmake -S .)
+Meta me make ginete build kai to executable name einai ./to_polygon
 
 To programma pairnei cli parameters opos apaitei i ekfonisi.
 
