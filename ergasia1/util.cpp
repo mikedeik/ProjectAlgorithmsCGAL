@@ -264,3 +264,17 @@ void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vecto
         red_edges->insert(red_edges->begin(), *edge_it);
     }
 }
+
+void print_to_file(const Polygon ch_polygon, string filename)
+{
+    std::ofstream MyFile(filename);
+    for (Point p : ch_polygon)
+    {
+        MyFile << p << "\n";
+    }
+    for (Segment edge : ch_polygon.edges())
+    {
+        MyFile << edge << "\n";
+    }
+    MyFile.close();
+}

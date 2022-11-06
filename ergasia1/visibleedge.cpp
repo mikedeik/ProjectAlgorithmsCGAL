@@ -109,6 +109,7 @@ void VisibleEdge::Create_Polygon()
 
         nearest_poits.clear();
     }
+    print_to_file(polygon,"lol.txt");
 }
 
 Point VisibleEdge::Find_Nearest_Point_To_Segment(Segment s)

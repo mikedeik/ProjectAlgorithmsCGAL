@@ -1526,8 +1526,8 @@ CMakeFiles/new.o.dir/util.cpp.o: \
  /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h \
  /home/johnpsar/CGAL/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h \
  /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h \
- /home/johnpsar/CGAL/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h \
  /home/johnpsar/CGAL/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h \
+ /home/johnpsar/CGAL/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h \
  /home/johnpsar/CGAL/include/CGAL/Kernel/Type_equality_wrapper.h \
  /home/johnpsar/CGAL/include/CGAL/Kernel/interface_macros.h \
  /home/johnpsar/CGAL/include/CGAL/Filtered_kernel.h \
@@ -1813,4 +1813,18 @@ CMakeFiles/new.o.dir/util.cpp.o: \
  /home/johnpsar/CGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
  /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
  /home/johnpsar/CGAL/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2.h \
+ /home/johnpsar/CGAL/include/CGAL/circulator.h \
+ /home/johnpsar/CGAL/include/CGAL/circulator_bases.h \
+ /home/johnpsar/CGAL/include/CGAL/Iterator_range.h \
+ /home/johnpsar/CGAL/include/CGAL/tuple.h /usr/include/boost/foreach.hpp \
+ /usr/include/boost/foreach_fwd.hpp \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2_algorithms.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/polygon_assertions.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_vertex_circulator.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
+ /home/johnpsar/CGAL/include/CGAL/Polygon_2/Polygon_2_impl.h \
  /usr/include/c++/11/queue /usr/include/c++/11/bits/stl_queue.h

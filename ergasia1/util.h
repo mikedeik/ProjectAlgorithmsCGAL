@@ -4,7 +4,8 @@
 #include <CGAL/Exact_predicates_exact_constructions_kernel.h>
 #include <CGAL/Polygon_2.h>
 #include <queue>
-
+#include <iostream>
+#include <fstream>
 enum Sorter
 {
     X_DESCENDING,
@@ -57,5 +58,7 @@ void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vecto
 // dianyei to polygwno me fora CCW ksekinwntas apo do to position_to_start edge kai prosthei tis
 // kokkines akmes apo to shmeio p pros to kyrto perivlima
 void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges);
+
+void print_to_file(const Polygon ch_polygon,string filename);
 
 #endif // UTIL
