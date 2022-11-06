@@ -25,6 +25,7 @@ bool Sort_Asc_X(Point p1, Point p2)
 }
 
 // sorting vasi y fthinousa
+// an einai suneutheiaka sort kata x
 bool Sort_Desc_Y(Point p1, Point p2)
 {
     if (!(CGAL::compare_y(p1, p2)))
@@ -35,6 +36,7 @@ bool Sort_Desc_Y(Point p1, Point p2)
 }
 
 // sorting vasi y auksousa
+// an einai suneutheiaka sort kata x
 bool Sort_Asc_Y(Point p1, Point p2)
 {
     if (!(CGAL::compare_y(p1, p2)))
@@ -44,6 +46,7 @@ bool Sort_Asc_Y(Point p1, Point p2)
     return CGAL::compare_y(p1, p2) > 0;
 }
 
+// diavazei ta
 void get_points_from_file(string filename, vector<Point> *points)
 {
     string line;
@@ -61,6 +64,8 @@ void get_points_from_file(string filename, vector<Point> *points)
         input >> p;
         points->push_back(p);
     }
+
+    myfile.close();
 }
 
 void sort_points(vector<Point> *points, Sorter sorter)
