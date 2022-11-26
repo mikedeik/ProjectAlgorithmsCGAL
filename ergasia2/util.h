@@ -6,6 +6,7 @@
 #include <queue>
 #include <iostream>
 #include <fstream>
+#include <cmath>
 enum Sorter
 {
     X_DESCENDING,
@@ -59,6 +60,9 @@ void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vecto
 // kokkines akmes apo to shmeio p pros to kyrto perivlima
 void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges);
 
-void print_to_file(const Polygon ch_polygon,string filename,int time);
+void print_to_file(const Polygon ch_polygon, string filename, int time);
+
+// elegxei an ikanopoieitai to kritirio Metropolis
+bool Compute_Metropolis(double DE, double T, double R);
 
 #endif // UTIL

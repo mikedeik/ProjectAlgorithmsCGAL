@@ -53,6 +53,9 @@ public:
     const void Create_Polygon_Line();
 
     const void Print_Polygon();
+
+    /* Epistrefei to neo polygwno */
+    const Polygon Get_Simple_Polygon();
 };
 
 #endif // INCREMENTING

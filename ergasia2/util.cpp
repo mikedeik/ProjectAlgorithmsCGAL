@@ -97,7 +97,7 @@ void sort_points(vector<Point> *points, Sorter sorter)
 /*  Epistrefei an to trigwno t kai to segment e temnontai*/
 bool check_intersection(Triangle t, Segment e)
 {
-    const auto result = CGAL::intersection(t, e);
+    const auto result = CGAL::intersection(e, t);
 
     if (result)
     {
@@ -105,6 +105,14 @@ bool check_intersection(Triangle t, Segment e)
         if (const Segment *s = boost::get<Segment>(&*result))
         {
             return 1;
+        }
+        else
+        {
+            const Point *p = boost::get<Point>(&*result);
+            if (*p != e.target() && *p != e.source())
+            {
+                return 1;
+            }
         }
     }
     return 0;
@@ -265,7 +273,7 @@ void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vecto
     }
 }
 
-void print_to_file(const Polygon ch_polygon, string filename,int time)
+void print_to_file(const Polygon ch_polygon, string filename, int time)
 {
     std::ofstream MyFile(filename);
     for (Point p : ch_polygon)
@@ -276,7 +284,13 @@ void print_to_file(const Polygon ch_polygon, string filename,int time)
     {
         MyFile << edge << "\n";
     }
-    MyFile << "area"<< ch_polygon.area()<<"\n";
-    MyFile<< "construction time "<< time<<"\n";
+    MyFile << "area" << ch_polygon.area() << "\n";
+    MyFile << "construction time " << time << "\n";
+    MyFile << "Polygon is Simple: " << ch_polygon.is_simple() << "\n";
     MyFile.close();
+}
+
+bool Compute_Metropolis(double DE, double T, double R)
+{
+    return exp((-1) * DE / T) >= R;
 }

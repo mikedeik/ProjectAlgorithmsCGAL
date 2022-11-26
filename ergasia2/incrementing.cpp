@@ -8,7 +8,6 @@
 #include <CGAL/ch_selected_extreme_points_2.h>
 
 using std::cout;
-using std::priority_queue;
 using std::vector;
 
 using namespace std::chrono;
@@ -31,7 +30,7 @@ Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter, string o
     }
     // thetei point_position se 3 gia na ksekinisei apo auto to simeio
     point_position = 3;
-    time=0;
+    time = 0;
 }
 
 // adeiazw ola ta vectors gia dealocate memmory
@@ -79,8 +78,8 @@ const void Incrementing::Create_Polygon_Line()
         find_visible_edges(points[point_position]);
         int random_edge = random() % visible_edges.size();
 
-        PointIterator position_to_insert = find(polygon.vertices().begin(), polygon.vertices().end(), visible_edges[random_edge].target());
-        int index = position_to_insert - polygon.vertices().begin();
+        PointIterator position_to_insert = find(polygon.begin(), polygon.end(), visible_edges[random_edge].target());
+        int index = position_to_insert - polygon.begin();
 
         if (!index)
         {
@@ -95,6 +94,14 @@ const void Incrementing::Create_Polygon_Line()
         red_edges.clear();
         ch_polygon.clear();
         convex_hull.clear();
+
+        if (!polygon.is_simple())
+        {
+            cout << "at point position " << point_position << " polygon simplicity broke\n";
+            cout << "this is the point " << points[point_position] << "\n";
+            getchar();
+        }
+
         // sto telos ftiaxnw to neo convex hull kai paw na prosthesw to epomeno simeio
         point_position++;
         CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
@@ -103,7 +110,7 @@ const void Incrementing::Create_Polygon_Line()
     auto stop = high_resolution_clock::now();
 
     auto duration = duration_cast<seconds>(stop - start);
-    time=duration.count();
+    time = duration.count();
     cout << "Time taken by function: "
          << duration.count() << " seconds"
          << "\n";
@@ -153,19 +160,11 @@ const void Incrementing::find_red_edges(Point p)
 const void Incrementing::find_visible_edges(Point p)
 {
 
-    // cout << "we get in visible edges\n";
-
     Point starting_point = red_edges[0].source();
     Point end_point = red_edges[red_edges.size() - 1].target();
-    // cout << "Starting Point: " << starting_point << "\n";
-    // cout << "Ending Point: " << end_point << "\n";
+
     int first, last;
 
-    // cout << "---- Polygon Edges ----\n";
-    // for (Segment edge : polygon.edges())
-    // {
-    //     cout << edge << "\n";
-    // }
     // vriskw tis theseis twn simeiwn pou tha prepei na ksekinisw kai na stamatisw apo tis kokkines akmes
     for (auto it = polygon.edges_begin(); it != polygon.edges_end(); ++it)
     {
@@ -335,7 +334,7 @@ const void Incrementing::Print_Polygon()
 {
     if (output_file != "")
     {
-        print_to_file(polygon, output_file,time);
+        print_to_file(polygon, output_file, time);
     }
     else
     {
@@ -347,8 +346,16 @@ const void Incrementing::Print_Polygon()
         {
             cout << edge << "\n";
         }
-        cout << "incrementing algorithm"<< "\n";
+        cout << "incrementing algorithm"
+             << "\n";
         cout << "area" << polygon.area() << "\n";
-        cout << "ratio"<<"\n";
+        cout << "ratio"
+             << "\n";
+        cout << "simple polygon: " << polygon.is_simple() << "\n";
     }
+}
+
+const Polygon Incrementing::Get_Simple_Polygon()
+{
+    return polygon;
 }
