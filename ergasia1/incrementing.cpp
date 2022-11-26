@@ -31,7 +31,7 @@ Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter, string o
     }
     // thetei point_position se 3 gia na ksekinisei apo auto to simeio
     point_position = 3;
-    time=0;
+    time = 0;
 }
 
 // adeiazw ola ta vectors gia dealocate memmory
@@ -103,7 +103,7 @@ const void Incrementing::Create_Polygon_Line()
     auto stop = high_resolution_clock::now();
 
     auto duration = duration_cast<seconds>(stop - start);
-    time=duration.count();
+    time = duration.count();
     cout << "Time taken by function: "
          << duration.count() << " seconds"
          << "\n";
@@ -120,21 +120,11 @@ const void Incrementing::find_red_edges(Point p)
 
         // tha kratiwsw ti thesi tou proigoumenou simeiou sto convex hull
         ch_polygon.push_back(*it);
-        // if (*it == points[point_position - 1])
-        // {
-        //     position_to_start = it - ch_polygon.begin();
-        // }
     }
 
     PointIterator position_pointer = find(ch_polygon.begin(), ch_polygon.end(), points[point_position - 1]);
     position_to_start = position_pointer - ch_polygon.begin();
 
-    // cout << "--------- Convex Hull edges -----------\n";
-    // for (Segment edge : ch_polygon.edges())
-    // {
-    //     cout << edge << "\n";
-    // }
-    // getchar();
     // ksekinaw apo to proigoumeno simeio kai paw pros ta mprosta
 
     traverse_ccw(ch_polygon, position_to_start, p, &red_edges);
@@ -335,7 +325,7 @@ const void Incrementing::Print_Polygon()
 {
     if (output_file != "")
     {
-        print_to_file(polygon, output_file,time);
+        print_to_file(polygon, output_file, time);
     }
     else
     {
@@ -347,8 +337,10 @@ const void Incrementing::Print_Polygon()
         {
             cout << edge << "\n";
         }
-        cout << "incrementing algorithm"<< "\n";
+        cout << "incrementing algorithm"
+             << "\n";
         cout << "area" << polygon.area() << "\n";
-        cout << "ratio"<<"\n";
+        cout << "ratio"
+             << "\n";
     }
 }
