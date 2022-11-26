@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named new.o
+# Target rules for targets named to_polygon
 
 # Build rule for target.
-new.o: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 new.o
-.PHONY : new.o
+to_polygon: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 to_polygon
+.PHONY : to_polygon
 
 # fast build rule for target.
-new.o/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/build
-.PHONY : new.o/fast
+to_polygon/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/build
+.PHONY : to_polygon/fast
 
 incrementing.o: incrementing.cpp.o
 .PHONY : incrementing.o
 
 # target to build an object file
 incrementing.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/incrementing.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/incrementing.cpp.o
 .PHONY : incrementing.cpp.o
 
 incrementing.i: incrementing.cpp.i
@@ -142,7 +142,7 @@ incrementing.i: incrementing.cpp.i
 
 # target to preprocess a source file
 incrementing.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/incrementing.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/incrementing.cpp.i
 .PHONY : incrementing.cpp.i
 
 incrementing.s: incrementing.cpp.s
@@ -150,7 +150,7 @@ incrementing.s: incrementing.cpp.s
 
 # target to generate assembly for a file
 incrementing.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/incrementing.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/incrementing.cpp.s
 .PHONY : incrementing.cpp.s
 
 main.o: main.cpp.o
@@ -158,7 +158,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -166,7 +166,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +174,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 util.o: util.cpp.o
@@ -182,7 +182,7 @@ util.o: util.cpp.o
 
 # target to build an object file
 util.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/util.cpp.o
 .PHONY : util.cpp.o
 
 util.i: util.cpp.i
@@ -190,7 +190,7 @@ util.i: util.cpp.i
 
 # target to preprocess a source file
 util.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/util.cpp.i
 .PHONY : util.cpp.i
 
 util.s: util.cpp.s
@@ -198,7 +198,7 @@ util.s: util.cpp.s
 
 # target to generate assembly for a file
 util.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/util.cpp.s
 .PHONY : util.cpp.s
 
 visibleedge.o: visibleedge.cpp.o
@@ -206,7 +206,7 @@ visibleedge.o: visibleedge.cpp.o
 
 # target to build an object file
 visibleedge.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/visibleedge.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/visibleedge.cpp.o
 .PHONY : visibleedge.cpp.o
 
 visibleedge.i: visibleedge.cpp.i
@@ -214,7 +214,7 @@ visibleedge.i: visibleedge.cpp.i
 
 # target to preprocess a source file
 visibleedge.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/visibleedge.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/visibleedge.cpp.i
 .PHONY : visibleedge.cpp.i
 
 visibleedge.s: visibleedge.cpp.s
@@ -222,7 +222,7 @@ visibleedge.s: visibleedge.cpp.s
 
 # target to generate assembly for a file
 visibleedge.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new.o.dir/build.make CMakeFiles/new.o.dir/visibleedge.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/visibleedge.cpp.s
 .PHONY : visibleedge.cpp.s
 
 # Help Target
@@ -233,7 +233,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... new.o"
+	@echo "... to_polygon"
 	@echo "... incrementing.o"
 	@echo "... incrementing.i"
 	@echo "... incrementing.s"

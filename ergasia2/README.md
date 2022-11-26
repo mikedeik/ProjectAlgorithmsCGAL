@@ -1,5 +1,14 @@
-giati kaneis etsi construct to Incrementing algo kai oxi me parameters?
-mallon prepei na kanoume abstract class me points , polygon giati exoume auta ta types pantou kai ta idia functions pano kato .
+Mihalis Deiktakis - sdi0800018
+Ioannis Psarros   - sdi1800216
 
-<!-- gia na ftiaxo to makefile sto laptop  -->
-cmake -DCMAKE_PREFIX_PATH=/home/johnpsar/Downloads/CGAL -DCMAKE_BUILD_TYPE=Release .
+Gia build prepei na prostethi sto find CMakeLists.txt to path tou installation tis CGAL .
+Meta me cmake kanoyme build to makefile. (cmake -S .)
+Meta me make ginete build kai to executable name einai ./to_polygon
+
+To programma pairnei cli parameters opos apaitei i ekfonisi.
+
+Den ilopoithike ston Visible Edge algorithmo i megistopoiisi kai elaxistopoisi emvadou.
+
+Exoun dimiourgithi 2 classes ena to VisibleEdge kai ena to Incrementing gia tous antistoixous Algorithmous opou kai ilopoiithikan ta katallila functions.
+
+

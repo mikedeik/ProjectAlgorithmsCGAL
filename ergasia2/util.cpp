@@ -46,7 +46,10 @@ bool Sort_Asc_Y(Point p1, Point p2)
     return CGAL::compare_y(p1, p2) > 0;
 }
 
-// diavazei ta
+/*  string filename : to path enos arxeiou me ta points
+    vector<Point>* points : deiktis se vector pou krataei points
+    diavazei ta points apo arxeio kai ta thetei mesa se dosmeno vector*/
+
 void get_points_from_file(string filename, vector<Point> *points)
 {
     string line;
@@ -68,6 +71,9 @@ void get_points_from_file(string filename, vector<Point> *points)
     myfile.close();
 }
 
+/*  vector<Point>* points : deiktis se vector pou krataei points
+    Sorter: sorter : kathorizei pws theloume na sortaristei to array
+    analogws ton Sorter sortarei to array*/
 void sort_points(vector<Point> *points, Sorter sorter)
 {
     switch (sorter)
@@ -88,14 +94,14 @@ void sort_points(vector<Point> *points, Sorter sorter)
         break;
     }
 }
-
+/*  Epistrefei an to trigwno t kai to segment e temnontai*/
 bool check_intersection(Triangle t, Segment e)
 {
     const auto result = CGAL::intersection(t, e);
 
     if (result)
     {
-        // an to apotelesma einai euthigramo tmima tote i akmi den einai kokkini
+        // an to apotelesma einai euthigramo tmima tote i akmi kovetai apo to trigwno
         if (const Segment *s = boost::get<Segment>(&*result))
         {
             return 1;
@@ -104,6 +110,7 @@ bool check_intersection(Triangle t, Segment e)
     return 0;
 }
 
+/*Unsued*/
 bool check_intersection_BFS(vector<Segment> edges, int position, Triangle t)
 {
     queue<Segment> bag;
@@ -155,24 +162,21 @@ bool check_intersection_BFS(vector<Segment> edges, int position, Triangle t)
     return 0;
 }
 
-void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges, Sorter sorter)
+// pairnei ws orisma ena polygwno(tou kyrtou perivlimatos), mia thesi (int), ena simeio, kai ena pointer se array apo Segments
+// dianyei to polygwno me fora CCW ksekinwntas apo do to position_to_start edge kai prosthei tis
+// kokkines akmes apo to shmeio p pros to kyrto perivlima
+void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges)
 {
-    // cout << "***** Convex Hull Edges ******\n";
-    // for (Segment edge : ch_polygon.edges())
-    // {
-    //     cout << edge << "\n";
-    // }
 
     for (auto edge_it = ch_polygon.edges_begin() + position_to_start; edge_it != ch_polygon.edges_end(); ++edge_it)
     {
-        // cout << "checking edge: " << *edge_it << "\n";
-        // cout << "position to start " << position_to_start << "\n";
 
         bool intersects = 0;
 
         // ftiaxnw trigwno me tin kainourgia akmi
         Triangle t((*edge_it).source(), p, (*edge_it).target());
 
+        // an to p einai syneutheiako me thn akmi tha parw mia alli
         if (t.is_degenerate())
         {
             continue;
@@ -182,23 +186,21 @@ void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vect
 
         for (auto intersect_it = ch_polygon.edges_begin(); intersect_it != ch_polygon.edges_end(); ++intersect_it)
         {
-            // cout << "with edge << " << *intersect_it << "\n";
+
             if (*intersect_it == *edge_it)
             {
-                // cout << "same\n";
                 continue;
             }
-            // tha doume an to result einai apla ena simeio (diladi to )
+            // an kovei kapoia alli akmi den einai kokkini
             const Segment to_test = *intersect_it;
 
             if (check_intersection(t, to_test))
             {
-                // cout << "intersects\n";
                 intersects = 1;
                 break;
             }
         }
-
+        // an den einai kokkini tote den einai kai kamia epomeni
         if (intersects)
         {
             break;
@@ -211,20 +213,19 @@ void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vect
     }
 }
 
-void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges, Sorter sorter)
+// pairnei ws orisma ena polygwno(tou kyrtou perivlimatos), mia thesi (int), ena simeio, kai ena pointer se array apo Segments
+// dianyei to polygwno me fora CW ksekinwntas apo do to position_to_start edge - 1 kai prosthei tis
+// kokkines akmes apo to shmeio p pros to kyrto perivlima prin apo tis proigoumenes gia na einai swsta sorted
+void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vector<Segment> *red_edges)
 {
 
     if (!position_to_start)
     {
         position_to_start = ch_polygon.edges().size();
     }
-
+    // ksekiname apo tin akmi position_to_start - 1 kai pame pros ta pisw mexri tin prwti
     for (auto edge_it = ch_polygon.edges_begin() + position_to_start - 1; edge_it >= ch_polygon.edges_begin(); --edge_it)
     {
-        // cout << "checking edge: " << *edge_it << "\n";
-        // cout << "position to start " << position_to_start << "\n";
-        // cout << "checking edge: " << *edge_it;
-        // getchar();
 
         bool intersects = 0;
 
@@ -237,32 +238,45 @@ void traverse_cw(const Polygon ch_polygon, int position_to_start, Point p, vecto
 
         // gia kathe epomeni akmi tsekarw an kanoun intersect
 
-        // const Polygon::Edges& ch_edges = ch_polygon.edges();
-        // check_intersection_BFS(ch_edges, )
-
         for (auto intersect_it = ch_polygon.edges_begin(); intersect_it != ch_polygon.edges_end(); ++intersect_it)
         {
-            // cout << "with edge << " << *intersect_it << "\n";
+
             if (*intersect_it == *edge_it)
             {
-                // cout << "same\n";
+
                 continue;
             }
             // tha doume an to result einai apla ena simeio (diladi to )
             const Segment to_test = *intersect_it;
             if (check_intersection(t, to_test))
             {
-                // cout << "intersects 1\n";
+
                 intersects = 1;
                 break;
             }
         }
-
+        // an den einai orari tote den einai kai oi apomenes
         if (intersects)
         {
             break;
         }
-
+        // edw tis prosthetw stin arxi tou array
         red_edges->insert(red_edges->begin(), *edge_it);
     }
+}
+
+void print_to_file(const Polygon ch_polygon, string filename,int time)
+{
+    std::ofstream MyFile(filename);
+    for (Point p : ch_polygon)
+    {
+        MyFile << p << "\n";
+    }
+    for (Segment edge : ch_polygon.edges())
+    {
+        MyFile << edge << "\n";
+    }
+    MyFile << "area"<< ch_polygon.area()<<"\n";
+    MyFile<< "construction time "<< time<<"\n";
+    MyFile.close();
 }

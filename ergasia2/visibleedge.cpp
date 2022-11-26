@@ -1,10 +1,32 @@
 #include <iostream>
 #include "visibleedge.h"
 
-VisibleEdge::VisibleEdge(std::vector<Point> points)
+VisibleEdge::VisibleEdge(std::vector<Point> points, string output_file)
 {
     this->points = points;
+    time = 0;
     Create_Convex_Hull();
+    Create_Polygon();
+    if (output_file != "")
+    {
+        print_to_file(polygon, output_file,time);
+    }
+    else
+    {
+        for (Point p : polygon)
+        {
+            cout << p << "\n";
+        }
+        for (Segment edge : polygon.edges())
+        {
+            cout << edge << "\n";
+        }
+        cout << "visible edge algorithm"
+             << "\n";
+        cout << "area" << polygon.area() << "\n";
+        cout << "ratio"
+             << "\n";
+    }
 }
 
 VisibleEdge::~VisibleEdge()
@@ -29,6 +51,7 @@ void VisibleEdge::Create_Convex_Hull()
         edges.push_back(Segment(convex_hull_points[i], convex_hull_points[i + 1]));
     }
     edges.push_back(Segment(convex_hull_points.back(), convex_hull_points.front()));
+
     Print_Edges();
 }
 
@@ -59,6 +82,8 @@ bool VisibleEdge::Is_Point_Included_In_Polygonal_Chain(Point p)
 
 void VisibleEdge::Create_Polygon()
 {
+    auto start = std::chrono::high_resolution_clock::now();
+
     points_not_in_chain.clear();
     for (Point p : points)
     {
@@ -70,21 +95,48 @@ void VisibleEdge::Create_Polygon()
 
     while (points_not_in_chain.size() > 0)
     {
-        int polygon_size = polygon.size();
-        for (int i = 0; i < polygon_size - 1; i++)
-        {
-            Point nearest_point = Find_Nearest_Point_To_Segment(Segment(polygon[i], polygon[i + 1]));
-            // Insert point between the vertices of the edge.Meaning after i
-            polygon.insert(polygon.begin() + i, nearest_point);
-            // remove from points_not_in chain
 
-            points_not_in_chain.erase(points_not_in_chain.begin() + Find_Index_Of_Point_In_Vector(nearest_point, points_not_in_chain));
-            if (points_not_in_chain.size() == 0)
+        for (auto it = polygon.edges_begin(); it != polygon.edges_end(); ++it)
+        {
+            nearest_poits.push_back(Find_Nearest_Point_To_Segment(*it));
+        }
+
+        int random_edge_index = random() % (polygon.edges().size() - 1);
+
+        Triangle t((*(polygon.edges_begin() + random_edge_index)).source(), nearest_poits[random_edge_index], (*(polygon.edges_begin() + random_edge_index)).target());
+
+        int intersects = 0;
+
+        for (Segment edge : polygon.edges())
+        {
+
+            if (*(polygon.edges_begin() + random_edge_index) == edge)
             {
+                continue;
+            }
+
+            if (check_intersection(t, edge))
+            {
+                intersects = 1;
                 break;
             }
         }
+
+        if (intersects)
+        {
+            continue;
+        }
+
+        polygon.insert(polygon.begin() + random_edge_index + 1, nearest_poits[random_edge_index]);
+
+        points_not_in_chain.erase(points_not_in_chain.begin() + Find_Index_Of_Point_In_Vector(nearest_poits[random_edge_index], points_not_in_chain));
+
+        nearest_poits.clear();
     }
+    auto stop = std::chrono::high_resolution_clock::now();
+
+    auto duration = std::chrono::duration_cast<std::chrono::seconds>(stop - start);
+    time = duration.count();
 }
 
 Point VisibleEdge::Find_Nearest_Point_To_Segment(Segment s)
@@ -93,7 +145,7 @@ Point VisibleEdge::Find_Nearest_Point_To_Segment(Segment s)
     FT min_dist = CGAL::squared_distance(s, points_not_in_chain[0]);
     for (Point p : points_not_in_chain)
     {
-        FT dist = CGAL::squared_distance(s, points_not_in_chain[0]);
+        FT dist = CGAL::squared_distance(s, p);
         if (dist < min_dist)
         {
             min_dist = dist;

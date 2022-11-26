@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.1...3.23)
 
-project( new.o )
+project( to_polygon )
 
 
 # CGAL and its components
@@ -32,13 +32,13 @@ endif()
 # include for local package
 
 
-# Creating entries for target: new.o
+# Creating entries for target: to_polygon
 # ############################
 
-add_executable( new.o  incrementing.cpp visibleedge.cpp main.cpp util.cpp )
+add_executable( to_polygon  incrementing.cpp visibleedge.cpp main.cpp util.cpp )
 
-add_to_cached_list( CGAL_EXECUTABLE_TARGETS new.o )
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS to_polygon )
 
 # Link the executable to CGAL and third-party libraries
-target_link_libraries(new.o PRIVATE CGAL::CGAL )
+target_link_libraries(to_polygon PRIVATE CGAL::CGAL )
 

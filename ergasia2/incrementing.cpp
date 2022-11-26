@@ -13,28 +13,42 @@ using std::vector;
 
 using namespace std::chrono;
 
-Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter) : points(inc_points),
-                                                                          sorter(inc_sorter)
+/* O constructor pairnei san orisma to array apo points kai ton Sorter*/
+Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter, string output) : points(inc_points),
+                                                                                         sorter(inc_sorter),
+                                                                                         output_file(output)
 {
+    // kanei stort ta points analoga me ton sorter
     sort_points(&points, sorter);
-    cout << "INIT\n";
 
+    // dhmiourgei to Convex Hull
     CGAL::convex_hull_2(points.begin(), points.begin() + 3, std::back_inserter(convex_hull));
+
+    // kai analogws arxikopoiei tin arxiki polygwnikh grammh
     for (Point point : convex_hull)
     {
         polygon.push_back(point);
     }
-    // TODO arxika suneutheiaka simeia
-
+    // thetei point_position se 3 gia na ksekinisei apo auto to simeio
     point_position = 3;
+    time=0;
 }
+
+// adeiazw ola ta vectors gia dealocate memmory
 Incrementing::~Incrementing()
 {
+    polygon.clear();
+    ch_polygon.clear();
+    points.clear();
+    convex_hull.clear();
+    visible_edges.clear();
+    red_edges.clear();
 }
 
 const void Incrementing::Print_Points()
 {
-    for (Point point : points)
+    cout << "==== Polygon Points ====\n";
+    for (Point point : polygon.vertices())
     {
         cout << point << "\n";
     }
@@ -42,15 +56,11 @@ const void Incrementing::Print_Points()
 
 const void Incrementing::Print_Edges()
 {
-    for (Segment segment : edges)
+    cout << "==== Polygon Edges ====\n";
+    for (Segment edge : polygon.edges())
     {
-        cout << segment << "\n";
+        cout << edge << "\n";
     }
-}
-
-void Incrementing::Add_Point(Point p1)
-{
-    polygon.push_back(p1);
 }
 
 const bool Incrementing::Simple()
@@ -58,22 +68,16 @@ const bool Incrementing::Simple()
     return polygon.is_simple();
 }
 
+/* Dhmiourgia polygwnikis grammis */
 const void Incrementing::Create_Polygon_Line()
 {
     auto start = high_resolution_clock::now();
     while (point_position < points.size())
     {
         find_red_edges(points[point_position]);
-        // cout << "New point: " << points[point_position] << "\n";
-        // cout << "---- Red Edges ----\n";
-        // for (Segment edge : red_edges)
-        // {
-        //     cout << edge << "\n";
-        // }
-        // getchar();
+
         find_visible_edges(points[point_position]);
         int random_edge = random() % visible_edges.size();
-        // cout << "edge to break " << visible_edges[random_edge] << "\n";
 
         PointIterator position_to_insert = find(polygon.vertices().begin(), polygon.vertices().end(), visible_edges[random_edge].target());
         int index = position_to_insert - polygon.vertices().begin();
@@ -86,15 +90,6 @@ const void Incrementing::Create_Polygon_Line()
         {
             polygon.insert(polygon.begin() + index, points[point_position]);
         }
-        // if (!polygon.is_simple())
-        // {
-        //     cout << "---- Polygon Edges Not simple ----\n";
-        //     for (Segment edge : polygon.edges())
-        //     {
-        //         cout << edge << "\n";
-        //     }
-        //     //
-        // }
 
         visible_edges.clear();
         red_edges.clear();
@@ -107,18 +102,11 @@ const void Incrementing::Create_Polygon_Line()
 
     auto stop = high_resolution_clock::now();
 
-    // Get duration. Substart timepoints to
-    // get duration. To cast it to proper unit
-    // use duration cast method
     auto duration = duration_cast<seconds>(stop - start);
-
+    time=duration.count();
     cout << "Time taken by function: "
          << duration.count() << " seconds"
          << "\n";
-}
-
-const void Incrementing::testing()
-{
 }
 
 const void Incrementing::find_red_edges(Point p)
@@ -149,7 +137,7 @@ const void Incrementing::find_red_edges(Point p)
     // getchar();
     // ksekinaw apo to proigoumeno simeio kai paw pros ta mprosta
 
-    traverse_ccw(ch_polygon, position_to_start, p, &red_edges, sorter);
+    traverse_ccw(ch_polygon, position_to_start, p, &red_edges);
 
     if (red_edges.size() == ch_polygon.size())
     {
@@ -159,17 +147,7 @@ const void Incrementing::find_red_edges(Point p)
     // ksekinaw apo to proigoumeno simeio kai paw pros ta pisw
     // edw kathe fora pou vazw ena kainourio red edge thelw na mpainei prin apo auta pou exw prosthesei gia na einai sorted
 
-    traverse_cw(ch_polygon, position_to_start, p, &red_edges, sorter);
-
-    // if (red_edges.size() == 0)
-    // {
-    //     cout << p;
-
-    //     for (Segment edge : ch_polygon.edges())
-    //     {
-    //         cout << edge << "\n";
-    //     }
-    // }
+    traverse_cw(ch_polygon, position_to_start, p, &red_edges);
 }
 
 const void Incrementing::find_visible_edges(Point p)
@@ -219,16 +197,11 @@ const void Incrementing::find_visible_edges(Point p)
     for (auto itt = polygon.edges_begin() + first; itt != polygon.edges_begin() + last + 1; ++itt)
     {
 
-        // cout << "edge : " << *itt << "\n";
-
         bool intersects = 0;
         int count = first;
         for (auto intersect_it = polygon.edges_begin() + first; intersect_it != polygon.edges_begin() + last + 1; ++intersect_it)
         {
-            // cout << "in here\n";
-            // cout << "first is : " << first << " and last is : " << last << " and polygon edges are: " << polygon.edges().size() - 1;
 
-            // getchar();
             if (*itt == *intersect_it)
             {
                 if (intersect_it == polygon.edges_end() - 1)
@@ -241,7 +214,6 @@ const void Incrementing::find_visible_edges(Point p)
 
             if (check_intersection(Triangle((*itt).source(), p, (*itt).target()), *intersect_it))
             {
-                // cout << "intersects\n";
                 intersects = 1;
                 break;
             }
@@ -283,16 +255,8 @@ const void Incrementing::find_visible_edges(Point p)
             visible_edges.push_back(*itt);
         }
 
-        // if (!polygon.is_simple())
-        // {
-        //     cout << "polygon not simple ";
-        //     getchar();
-        // }
-
         if (itt == polygon.edges_end() - 1)
         {
-            // cout << "reached end";
-            // getchar();
             go_to_start = 1;
             break;
         }
@@ -365,14 +329,26 @@ const void Incrementing::find_visible_edges(Point p)
             }
         }
     }
-    // cout << "---- Visible Edges -----\n";
-    // for (Segment edge : visible_edges)
-    // {
-    //     cout << edge << "\n";
-    // }
+}
 
-    // if (visible_edges.size() == 0)
-    // {
-    //     cout << "no visible edge";
-    // }
+const void Incrementing::Print_Polygon()
+{
+    if (output_file != "")
+    {
+        print_to_file(polygon, output_file,time);
+    }
+    else
+    {
+        for (Point p : polygon)
+        {
+            cout << p << "\n";
+        }
+        for (Segment edge : polygon.edges())
+        {
+            cout << edge << "\n";
+        }
+        cout << "incrementing algorithm"<< "\n";
+        cout << "area" << polygon.area() << "\n";
+        cout << "ratio"<<"\n";
+    }
 }
