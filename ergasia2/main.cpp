@@ -2,76 +2,101 @@
 #include "util.h"
 #include "incrementing.h"
 #include "visibleedge.h"
-
+#include "SimulatedAnnealing.h"
 #include <map>
 
 using namespace std;
 
 int main(int argc, char **argv)
 {
-
+    int L;
+    double threshold;
+    Target target;
     string input_file_path = "", output_file_path = "", algorithm = "", initialization = "";
-    int edge_selection = -1;
-    for (int i = 1; i < argc; i = i + 2)
-    {
 
-        if (argv[i] && argv[i + 1])
+    if (argc != 12)
+    {
+        Print_Errors();
+        return 1;
+    }
+
+    for (int i = 1; i <= 6; i++)
+    {
+        switch (i)
         {
-            if (!strcmp(argv[i], "-i"))
+        case 1:
+            if (!strcmp(argv[1], "-i"))
             {
-                input_file_path = argv[i + 1];
+                input_file_path = argv[2];
+                break;
             }
-            if (!strcmp(argv[i], "-o"))
+            Print_Errors(i);
+            return i;
+        case 2:
+            if (!strcmp(argv[3], "-o"))
             {
-                output_file_path = argv[i + 1];
+                output_file_path = argv[4];
+                break;
             }
-            if (!strcmp(argv[i], "-algorithm"))
+            Print_Errors(i);
+            return i;
+        case 3:
+            if (!strcmp(argv[5], "-algorithm"))
             {
-                algorithm = argv[i + 1];
+                algorithm = argv[6];
+                break;
             }
-            if (!strcmp(argv[i], "-edge_selection"))
+            Print_Errors(i);
+            return i;
+        case 4:
+            if (!strcmp(argv[7], "-L"))
             {
-                edge_selection = stoi(argv[i + 1]);
+                L = atoi(argv[8]);
+                break;
             }
-            if (!strcmp(argv[i], "-initialization"))
+            Print_Errors(i);
+            return i;
+        case 5:
+            if (!strcmp(argv[9], "-max"))
             {
-                initialization = argv[i + 1];
+                target = MAX;
+                break;
             }
+            if (!strcmp(argv[9], "-min"))
+            {
+                target = MIN;
+                break;
+            }
+            Print_Errors(i);
+            return i;
+        case 6:
+            if (!strcmp(argv[10], "-threshold"))
+            {
+                threshold = atof(argv[11]);
+                break;
+            }
+            if (!strcmp(argv[10], "-annealing"))
+            {
+                initialization = argv[11];
+                break;
+            }
+            Print_Errors(i);
+            return i;
+
+        default:
+            break;
         }
     }
-
-    cout << algorithm;
-    getchar();
-
-    map<string, Sorter> sorter;
-
-    string inp = initialization;
-
-    sorter.insert(pair<string, Sorter>("1a", X_ASCENDING));
-    sorter.insert(pair<string, Sorter>("1b", X_DESCENDING));
-    sorter.insert(pair<string, Sorter>("2a", Y_ASCENDING));
-    sorter.insert(pair<string, Sorter>("2b", Y_DESCENDING));
     vector<Point> points;
+    cout << input_file_path;
     get_points_from_file(input_file_path, &points);
 
-    if (algorithm == "incremental")
-    {
+    Incrementing algo(points, X_DESCENDING, output_file_path);
+    algo.Create_Polygon_Line();
+    algo.Print_Polygon();
+    Polygon p = algo.Get_Simple_Polygon();
 
-        // get_points_from_file("test.txt", &points);
-        Incrementing algo(points, sorter[inp], output_file_path);
-        algo.Create_Polygon_Line();
-        algo.Print_Polygon();
-    }
-    else
-    {
-        VisibleEdge algo2(points, output_file_path);
-    }
-
-    cout << "input_file_path :" << input_file_path << endl;
-    cout << "output_file_path :" << output_file_path << endl;
-    cout << "Algorithm :" << algorithm << endl;
-    cout << "ES :" << edge_selection << endl;
-    cout << "Initialization :" << initialization << endl;
+    SimulatedAnnealing SA(p, LOCAL);
 
     return 0;
 }

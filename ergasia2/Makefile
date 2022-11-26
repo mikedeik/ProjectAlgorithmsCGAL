@@ -129,6 +129,30 @@ to_polygon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/build
 .PHONY : to_polygon/fast
 
+SimulatedAnnealing.o: SimulatedAnnealing.cpp.o
+.PHONY : SimulatedAnnealing.o
+
+# target to build an object file
+SimulatedAnnealing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o
+.PHONY : SimulatedAnnealing.cpp.o
+
+SimulatedAnnealing.i: SimulatedAnnealing.cpp.i
+.PHONY : SimulatedAnnealing.i
+
+# target to preprocess a source file
+SimulatedAnnealing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.i
+.PHONY : SimulatedAnnealing.cpp.i
+
+SimulatedAnnealing.s: SimulatedAnnealing.cpp.s
+.PHONY : SimulatedAnnealing.s
+
+# target to generate assembly for a file
+SimulatedAnnealing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_polygon.dir/build.make CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.s
+.PHONY : SimulatedAnnealing.cpp.s
+
 incrementing.o: incrementing.cpp.o
 .PHONY : incrementing.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... to_polygon"
+	@echo "... SimulatedAnnealing.o"
+	@echo "... SimulatedAnnealing.i"
+	@echo "... SimulatedAnnealing.s"
 	@echo "... incrementing.o"
 	@echo "... incrementing.i"
 	@echo "... incrementing.s"

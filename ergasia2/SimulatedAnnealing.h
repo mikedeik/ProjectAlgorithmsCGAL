@@ -6,18 +6,15 @@
 class SimulatedAnnealing
 {
 private:
-    /* data */
+    Polygon starting_polygon;
+    Polygon new_polygon;
+    AnnealingType type;
+
 public:
-    SimulatedAnnealing(/* args */);
+    SimulatedAnnealing(Polygon polygon, AnnealingType an_type);
     ~SimulatedAnnealing();
+    const void MinimizeArea();
+    const void MaximizeArea();
 };
-
-SimulatedAnnealing::SimulatedAnnealing(/* args */)
-{
-}
-
-SimulatedAnnealing::~SimulatedAnnealing()
-{
-}
 
 #endif // SIMANNEALING

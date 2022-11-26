@@ -294,3 +294,40 @@ bool Compute_Metropolis(double DE, double T, double R)
 {
     return exp((-1) * DE / T) >= R;
 }
+
+void Print_Errors(int position)
+{
+    switch (position)
+    {
+    case 1:
+        cout << "Error on input file\n";
+        break;
+    case 2:
+        cout << "Error on output file\n";
+        break;
+    case 3:
+        cout << "Error on algorithm\n";
+        break;
+    case 4:
+        cout << "Error on L parameter\n";
+        break;
+    case 5:
+        cout << "Error on Target\n";
+        break;
+    case 6:
+        cout << "Error on Initialization\n";
+        break;
+
+    default:
+        cout << "Error on given arguments count. 11 arguments expexted\n";
+        break;
+    }
+
+    cout << "** Arguments should be: **\n"
+         << "1. -i <point set input file>\n"
+         << "2. -o <output file>\n"
+         << "3. -algorithm <local_search or simulated_annealing>\n"
+         << "4. -L <L parameter according to algorithm>\n"
+         << "5. -max or -min [depending on Polygon Area Target]\n"
+         << "6. -threshold <double> OR -annealing <local or global or subdivision> [depending on algorithm]\n";
+}

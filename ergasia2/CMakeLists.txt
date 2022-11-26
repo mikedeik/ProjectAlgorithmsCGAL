@@ -36,7 +36,7 @@ endif()
 # Creating entries for target: to_polygon
 # ############################
 
-add_executable( to_polygon  incrementing.cpp main.cpp util.cpp visibleedge.cpp )
+add_executable( to_polygon  incrementing.cpp main.cpp SimulatedAnnealing.cpp util.cpp visibleedge.cpp )
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS to_polygon )
 

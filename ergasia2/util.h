@@ -15,6 +15,19 @@ enum Sorter
     Y_ASCENDING
 };
 
+enum Target
+{
+    MAX,
+    MIN
+};
+
+enum AnnealingType
+{
+    LOCAL,
+    GLOBAL,
+    SUBDIVISION
+};
+
 using std::cout;
 using std::queue;
 using std::string;
@@ -64,5 +77,7 @@ void print_to_file(const Polygon ch_polygon, string filename, int time);
 
 // elegxei an ikanopoieitai to kritirio Metropolis
 bool Compute_Metropolis(double DE, double T, double R);
+
+void Print_Errors(int position = 0);
 
 #endif // UTIL
