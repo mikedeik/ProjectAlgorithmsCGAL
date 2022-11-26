@@ -40,6 +40,9 @@ int main(int argc, char **argv)
         }
     }
 
+    cout << algorithm;
+    getchar();
+
     map<string, Sorter> sorter;
 
     string inp = initialization;
@@ -50,6 +53,7 @@ int main(int argc, char **argv)
     sorter.insert(pair<string, Sorter>("2b", Y_DESCENDING));
     vector<Point> points;
     get_points_from_file(input_file_path, &points);
+
     if (algorithm == "incremental")
     {
 
@@ -57,8 +61,10 @@ int main(int argc, char **argv)
         Incrementing algo(points, sorter[inp], output_file_path);
         algo.Create_Polygon_Line();
         algo.Print_Polygon();
-    }else{
-        VisibleEdge algo2(points,output_file_path);
+    }
+    else
+    {
+        VisibleEdge algo2(points, output_file_path);
     }
 
     cout << "input_file_path :" << input_file_path << endl;

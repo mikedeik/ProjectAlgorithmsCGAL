@@ -1,2 +1,2 @@
-# Empty dependencies file for new.o.
+# Empty dependencies file for to_polygon.
 # This may be replaced when dependencies are built.

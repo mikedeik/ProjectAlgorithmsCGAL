@@ -1,5 +1,5 @@
-CMakeFiles/new.o.dir/main.cpp.o: \
- /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/main.cpp \
+CMakeFiles/to_polygon.dir/incrementing.cpp.o: \
+ /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia2/incrementing.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -29,6 +29,7 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/11/exception /usr/include/c++/11/bits/exception.h \
  /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/exception_defines.h \
@@ -117,16 +118,20 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/select.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/11/bits/std_abs.h /usr/include/c++/11/cstdio \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/c++/11/cerrno /usr/include/errno.h \
- /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/11/cerrno \
+ /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
@@ -145,9 +150,21 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc \
- /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/util.h \
- /home/mike/CGAL-5.5/include/CGAL/Exact_predicates_exact_constructions_kernel.h \
+ /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/fstream \
+ /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/queue \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
+ /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/bits/stl_heap.h \
+ /usr/include/c++/11/bits/stl_queue.h \
+ /usr/include/c++/11/bits/uses_allocator.h \
+ /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia2/incrementing.h \
+ /home/mike/CGAL-5.5/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
  /home/mike/CGAL-5.5/include/CGAL/Simple_cartesian.h \
  /home/mike/CGAL-5.5/include/CGAL/Cartesian/Cartesian_base.h \
  /home/mike/CGAL-5.5/include/CGAL/basic.h \
@@ -163,6 +180,7 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /usr/include/boost/config/detail/select_platform_config.hpp \
@@ -309,13 +327,12 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
- /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
  /usr/include/c++/11/functional /usr/include/c++/11/tuple \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/unordered_map \
  /usr/include/c++/11/ext/aligned_buffer.h \
@@ -324,11 +341,7 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/vector \
- /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
+ /usr/include/c++/11/bits/erase_if.h \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/iterator \
  /usr/include/c++/11/bits/stream_iterator.h \
  /usr/include/c++/11/unordered_set \
@@ -341,11 +354,7 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /home/mike/CGAL-5.5/include/CGAL/license/lgpl.h \
- /home/mike/CGAL-5.5/include/CGAL/license.h /usr/include/c++/11/fstream \
- /usr/include/c++/11/bits/codecvt.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
- /usr/include/c++/11/bits/fstream.tcc \
+ /home/mike/CGAL-5.5/include/CGAL/license.h \
  /home/mike/CGAL-5.5/include/CGAL/assertions.h \
  /home/mike/CGAL-5.5/include/CGAL/Uncertain.h \
  /home/mike/CGAL-5.5/include/CGAL/enum.h \
@@ -353,7 +362,6 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /home/mike/CGAL-5.5/include/CGAL/Origin.h \
  /home/mike/CGAL-5.5/include/CGAL/Origin_impl.h \
  /home/mike/CGAL-5.5/include/CGAL/Profile_counter.h \
- /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
  /usr/include/c++/11/iomanip /usr/include/c++/11/locale \
  /usr/include/c++/11/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
@@ -571,8 +579,10 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/boost/range/detail/implementation_help.hpp \
  /usr/include/boost/range/detail/common.hpp \
  /usr/include/boost/range/detail/sfinae.hpp /usr/include/string.h \
- /usr/include/strings.h /usr/include/boost/range/size.hpp \
- /usr/include/boost/range/size_type.hpp \
+ /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+ /usr/include/boost/range/size.hpp /usr/include/boost/range/size_type.hpp \
  /usr/include/boost/range/difference_type.hpp \
  /usr/include/boost/range/has_range_iterator.hpp \
  /usr/include/boost/utility/enable_if.hpp \
@@ -1141,11 +1151,9 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/boost/integer/static_log2.hpp /usr/include/c++/11/typeindex \
  /usr/include/c++/11/optional /usr/include/c++/11/variant \
  /usr/include/boost/container_hash/extensions.hpp \
- /usr/include/boost/detail/container_fwd.hpp /usr/include/c++/11/deque \
- /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
- /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
- /usr/include/c++/11/bits/list.tcc /usr/include/c++/11/set \
- /usr/include/c++/11/bits/stl_set.h \
+ /usr/include/boost/detail/container_fwd.hpp /usr/include/c++/11/list \
+ /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
+ /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h /usr/include/c++/11/bitset \
  /home/mike/CGAL-5.5/include/CGAL/Cartesian/Point_2.h \
  /home/mike/CGAL-5.5/include/CGAL/Cartesian/Weighted_point_2.h \
@@ -1808,10 +1816,11 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /usr/include/boost/type_traits/integral_promotion.hpp \
  /usr/include/boost/type_traits/promote.hpp \
  /home/mike/CGAL-5.5/include/CGAL/Triangulation_structural_filtering_traits.h \
+ /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia2/util.h \
+ /home/mike/CGAL-5.5/include/CGAL/Exact_predicates_exact_constructions_kernel.h \
  /home/mike/CGAL-5.5/include/CGAL/Lazy_kernel.h \
  /home/mike/CGAL-5.5/include/CGAL/Static_filtered_predicate.h \
  /home/mike/CGAL-5.5/include/CGAL/Epic_converter.h \
- /home/mike/CGAL-5.5/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
  /home/mike/CGAL-5.5/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
  /home/mike/CGAL-5.5/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
  /home/mike/CGAL-5.5/include/CGAL/Polygon_2.h \
@@ -1828,8 +1837,6 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_edge_iterator.h \
  /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_edge_circulator.h \
  /home/mike/CGAL-5.5/include/CGAL/Polygon_2/Polygon_2_impl.h \
- /usr/include/c++/11/queue /usr/include/c++/11/bits/stl_queue.h \
- /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/incrementing.h \
  /home/mike/CGAL-5.5/include/CGAL/convex_hull_2.h \
  /home/mike/CGAL-5.5/include/CGAL/license/Convex_hull_2.h \
  /home/mike/CGAL-5.5/include/CGAL/convex_hull_traits_2.h \
@@ -1846,4 +1853,4 @@ CMakeFiles/new.o.dir/main.cpp.o: \
  /home/mike/CGAL-5.5/include/CGAL/IO/Tee_for_output_iterator.h \
  /home/mike/CGAL-5.5/include/CGAL/ch_bykat.h \
  /home/mike/CGAL-5.5/include/CGAL/Convex_hull_2/ch_bykat_impl.h \
- /home/mike/Documents/Project_Emiris/project-emiris/ergasia1/visibleedge.h
+ /usr/include/boost/optional/optional_io.hpp
