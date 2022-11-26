@@ -57,8 +57,10 @@ int main(int argc, char **argv)
         Incrementing algo(points, sorter[inp], output_file_path);
         algo.Create_Polygon_Line();
         algo.Print_Polygon();
-    }else{
-        VisibleEdge algo2(points,output_file_path);
+    }
+    else
+    {
+        VisibleEdge algo2(points, output_file_path);
     }
 
     cout << "input_file_path :" << input_file_path << endl;
