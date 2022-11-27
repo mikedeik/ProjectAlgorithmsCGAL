@@ -7,6 +7,12 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+
+// testing includes
+#include <CGAL/Kd_tree.h>
+#include <CGAL/Fuzzy_iso_box.h>
+#include <CGAL/Search_traits_2.h>
+
 enum Sorter
 {
     X_DESCENDING,
@@ -17,8 +23,8 @@ enum Sorter
 
 enum Target
 {
-    MAX,
-    MIN
+    MAX = 1,
+    MIN = 2
 };
 
 enum AnnealingType
@@ -40,6 +46,7 @@ typedef Kernel::Triangle_2 Triangle;
 typedef CGAL::Polygon_2<Kernel> Polygon;
 typedef std::vector<Point>::const_iterator PointIterator;
 typedef std::vector<Segment>::const_iterator EdgeIterator;
+typedef Kernel::FT FT;
 
 /*  string filename : to path enos arxeiou me ta points
     vector<Point>* points : deiktis se vector pou krataei points
@@ -63,6 +70,9 @@ bool check_intersection_BFS(vector<Segment> edges);
 /*  Epistrefei an to trigwno t kai to segment e temnontai*/
 bool check_intersection(Triangle t, Segment e);
 
+/* Epistrefei an ta euthigramma tmimata t1 kai t2 temnontai*/
+bool check_intersection(Segment t1, Segment t2);
+
 /* pairnei ws orisma ena polygwno(tou kyrtou perivlimatos), mia thesi (int), ena simeio, kai ena pointer se array apo Segments
    dianyei to polygwno me fora CCW ksekinwntas apo do to position_to_start edge kai prosthei tis
    kokkines akmes apo to shmeio p pros to kyrto perivlima */
@@ -78,6 +88,11 @@ void print_to_file(const Polygon ch_polygon, string filename, int time);
 // elegxei an ikanopoieitai to kritirio Metropolis
 bool Compute_Metropolis(double DE, double T, double R);
 
+// ektypwnei errors se periptwsh lathos arguments
 void Print_Errors(int position = 0);
+
+// epistrefei random timi metaksy [0,1)
+double generate_random_01();
+void testing_KD_tree(vector<Point> inc_points);
 
 #endif // UTIL

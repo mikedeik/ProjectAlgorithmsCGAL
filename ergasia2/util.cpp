@@ -118,6 +118,26 @@ bool check_intersection(Triangle t, Segment e)
     return 0;
 }
 
+bool check_intersection(Segment t1, Segment t2)
+{
+    const auto result = CGAL::intersection(t1, t2);
+
+    if (result)
+    {
+        if (const Point *p = boost::get<Point>(&*result))
+        {
+            if ((*p == t1.source() && *p == t2.target()) || (*p == t2.source() && *p == t1.target()))
+            {
+                return 0;
+            }
+        }
+
+        return 1;
+    }
+
+    return 0;
+}
+
 /*Unsued*/
 bool check_intersection_BFS(vector<Segment> edges, int position, Triangle t)
 {
@@ -330,4 +350,38 @@ void Print_Errors(int position)
          << "4. -L <L parameter according to algorithm>\n"
          << "5. -max or -min [depending on Polygon Area Target]\n"
          << "6. -threshold <double> OR -annealing <local or global or subdivision> [depending on algorithm]\n";
+}
+
+typedef CGAL::Search_traits_2<Kernel> Traits;
+typedef CGAL::Kd_tree<Traits> Tree;
+typedef CGAL::Fuzzy_iso_box<Traits> Fuzzy_iso_box;
+
+void testing_KD_tree(vector<Point> inc_points)
+{
+
+    std::list<Point> points;
+    points.push_back(Point(0, 0));
+    Tree tree;
+    for (Point p : inc_points)
+    {
+        tree.insert(p);
+    }
+
+    std::list<Point> result;
+    // define range query
+    Point p = inc_points[3];
+    Point q = inc_points[7];
+    // Searching an exact range
+    // using default value 0.0 for epsilon fuzziness paramater
+    Fuzzy_iso_box exact_range(p, q);
+    tree.search(std::back_inserter(result), exact_range);
+    std::cout << "The points in the box [" << p.x() << "," << q.y() << "]^2 are: " << std::endl;
+    std::copy(result.begin(), result.end(), std::ostream_iterator<Point>(std::cout, "\n"));
+    std::cout << std::endl;
+    result.clear();
+}
+
+double generate_random_01()
+{
+    return rand() / (RAND_MAX + 1.);
 }

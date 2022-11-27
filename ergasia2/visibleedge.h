@@ -13,7 +13,7 @@ typedef Kernel::Point_2 Point;
 typedef CGAL::Polygon_2<Kernel> Polygon;
 typedef Kernel::Segment_2 Segment;
 typedef std::vector<Point> Points;
-typedef Kernel::FT FT;
+
 typedef std::vector<Point>::const_iterator PointIterator;
 
 class VisibleEdge
@@ -29,8 +29,9 @@ private:
     int Find_Index_Of_Point_In_Vector(Point, vector<Point>);
     int Find_Index_In_Polygon(Point);
     int time;
+
 public:
-    VisibleEdge(std::vector<Point> points,string output_file);
+    VisibleEdge(std::vector<Point> points, string output_file);
     ~VisibleEdge();
     void Add_Point(Point);
     void Print_Edges();

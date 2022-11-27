@@ -96,7 +96,8 @@ int main(int argc, char **argv)
     algo.Print_Polygon();
     Polygon p = algo.Get_Simple_Polygon();
 
-    SimulatedAnnealing SA(p, LOCAL);
+    SimulatedAnnealing SA(p, LOCAL, target, L);
+    // testing_KD_tree(points);
 
     return 0;
 }
