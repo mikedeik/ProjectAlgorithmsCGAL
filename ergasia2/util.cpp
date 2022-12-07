@@ -124,13 +124,13 @@ bool check_intersection(Segment t1, Segment t2)
 
     if (result)
     {
-        if (const Point *p = boost::get<Point>(&*result))
-        {
-            if ((*p == t1.source() && *p == t2.target()) || (*p == t2.source() && *p == t1.target()))
-            {
-                return 0;
-            }
-        }
+        // if (const Point *p = boost::get<Point>(&*result))
+        // {
+        //     if ((*p == t1.source() && *p == t2.target()) || (*p == t2.source() && *p == t1.target()))
+        //     {
+        //         return 0;
+        //     }
+        // }
 
         return 1;
     }

@@ -18,6 +18,7 @@ private:
     AnnealingType type;
     Target target;
     Tree KD_tree;
+    double starting_area;
     int L;
     double T = 1.0;
 

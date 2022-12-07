@@ -6,6 +6,7 @@ SimulatedAnnealing::SimulatedAnnealing(Polygon polygon, AnnealingType an_type, T
                                                                                                             target(Area_target),
                                                                                                             L(L)
 {
+
     for (Point p : starting_polygon)
     {
         cout << p << "\n";
@@ -19,6 +20,11 @@ SimulatedAnnealing::SimulatedAnnealing(Polygon polygon, AnnealingType an_type, T
     {
         KD_tree.insert(point);
     }
+    new_polygon = starting_polygon;
+
+    starting_area = CGAL::to_double(starting_polygon.area());
+
+    cout << "starting area :" << starting_polygon.area() << "\n";
 }
 
 SimulatedAnnealing::~SimulatedAnnealing()
@@ -30,9 +36,14 @@ SimulatedAnnealing::~SimulatedAnnealing()
 
 const void SimulatedAnnealing::MinimizeArea()
 {
-    while (T)
+
+    srand(time(NULL));
+    while (T > 0)
     {
+
         int random = rand() % (starting_polygon.size() - 4) + 2;
+        // cout << "this is random : " << random << "\n";
+        // getchar();
 
         /*********************************************************************/
         /* Edw tha prepei na mpoun oi epiloges analoga to Type(Local, Global)*/
@@ -48,21 +59,43 @@ const void SimulatedAnnealing::MinimizeArea()
 
         if (check_validity(p, q, r, s))
         {
+            // cout << "valid\n";
 
             new_polygon.erase(starting_polygon.begin() + random);
             new_polygon.insert(starting_polygon.begin() + random + 1, q);
-        }
+            double DE = CGAL::to_double(calculate_energy(new_polygon) - calculate_energy(starting_polygon));
 
+            if (DE < 0.0 || Compute_Metropolis(DE, T, generate_random_01()))
+            {
+                // cout << "old area :" << starting_polygon.area() << "\n";
+                // cout << "new area :" << new_polygon.area() << "\n";
+                // getchar();
+                starting_polygon = Polygon(new_polygon);
+
+                cout << "****ACTUALLY GOT BETTER****\n";
+                // getchar();
+            }
+            else
+            {
+                new_polygon = Polygon(starting_polygon);
+            }
+
+            if (!starting_polygon.is_simple())
+            {
+
+                cout << " we fucked up\n";
+                cout << " position was " << random << "\n";
+                getchar();
+            }
+
+            T = T - (1.0 / double(L));
+        }
         // vriskoume tin diafora energeias
-        double DE = CGAL::to_double(calculate_energy(new_polygon) - calculate_energy(starting_polygon));
-
-        if (DE < 0.0 || Compute_Metropolis(DE, T, generate_random_01()))
-        {
-            starting_polygon = new_polygon;
-        }
-
-        T = T - (1.0 / L);
     }
+    cout << "starting area :" << starting_area << "\n";
+    cout << "new area :" << new_polygon.area() << "\n";
+    cout << "is it simple? -> " << new_polygon.is_simple();
+    // calculate_energy(new_polygon);
 }
 
 const FT SimulatedAnnealing::calculate_energy(Polygon p)
@@ -95,7 +128,7 @@ const FT SimulatedAnnealing::calculate_energy(Polygon p)
         break;
     }
 
-    cout << "Energy: " << E << "\n";
+    // cout << "Energy: " << E << "\n";
 
     return E;
 }
@@ -150,6 +183,14 @@ bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
 
     for (Point point : points_in_rectangle)
     {
+        cout << "checking point : " << point << "\n";
+        if (point == p || point == q || point == r || point == s)
+        {
+            cout << "but it's equal to something\n";
+            // getchar();
+            continue;
+        }
+        // getchar();
         // vriskw ti thesi tou simeiou sto polygwno
         PointIterator position_to_check = find(starting_polygon.begin(), starting_polygon.end(), point);
         int index = position_to_check - starting_polygon.begin();
