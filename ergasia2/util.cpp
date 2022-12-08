@@ -120,22 +120,23 @@ bool check_intersection(Triangle t, Segment e)
 
 bool check_intersection(Segment t1, Segment t2)
 {
-    const auto result = CGAL::intersection(t1, t2);
+    return CGAL::do_intersect(t1, t2);
+    // const auto result = CGAL::intersection(t1, t2);
 
-    if (result)
-    {
-        // if (const Point *p = boost::get<Point>(&*result))
-        // {
-        //     if ((*p == t1.source() && *p == t2.target()) || (*p == t2.source() && *p == t1.target()))
-        //     {
-        //         return 0;
-        //     }
-        // }
+    // if (result)
+    // {
+    //     // if (const Point *p = boost::get<Point>(&*result))
+    //     // {
+    //     //     if ((*p == t1.source() && *p == t2.target()) || (*p == t2.source() && *p == t1.target()))
+    //     //     {
+    //     //         return 0;
+    //     //     }
+    //     // }
 
-        return 1;
-    }
+    //     return 1;
+    // }
 
-    return 0;
+    // return 0;
 }
 
 /*Unsued*/
