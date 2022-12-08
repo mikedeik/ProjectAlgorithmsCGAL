@@ -43,9 +43,6 @@ const void SimulatedAnnealing::MinimizeArea()
     {
 
         int random = rand() % (starting_polygon.size() - 4) + 2;
-        // int random = 2;
-        // cout << "this is random : " << random << "\n";
-        // getchar();
 
         /*********************************************************************/
         /* Edw tha prepei na mpoun oi epiloges analoga to Type(Local, Global)*/
@@ -58,26 +55,6 @@ const void SimulatedAnnealing::MinimizeArea()
         // rs einai i epomeni akmi
         Point r = *(starting_polygon.begin() + random + 1);
         Point s = *(starting_polygon.begin() + random + 2);
-
-        // cout << "Point p " << p << "\n";
-        // cout << "Point q " << q << "\n";
-        // cout << "Point r " << r << "\n";
-        // cout << "Point s " << s << "\n";
-        // getchar();
-
-        // if (random == 19)
-        // {
-        //     cout << "Point p " << p << "\n";
-        //     cout << "Point q " << q << "\n";
-        //     cout << "Point r " << r << "\n";
-        //     cout << "Point s " << s << "\n";
-
-        //     for (Point p : starting_polygon)
-        //     {
-        //         cout << p << "\n";
-        //     }
-        //     getchar();
-        // }
 
         if (!check_validity(p, q, r, s))
         {
@@ -95,14 +72,15 @@ const void SimulatedAnnealing::MinimizeArea()
             // cout << "old area :" << starting_polygon.area() << "\n";
             // cout << "new area :" << new_polygon.area() << "\n";
             // getchar();
-            starting_polygon = Polygon(new_polygon);
+            starting_polygon = new_polygon;
 
             // cout << "****ACTUALLY GOT BETTER****\n";
             // getchar();
         }
         else
         {
-            new_polygon = Polygon(starting_polygon);
+            new_polygon =
+                starting_polygon;
         }
 
         if (!starting_polygon.is_simple())
@@ -118,7 +96,7 @@ const void SimulatedAnnealing::MinimizeArea()
     }
     cout << "starting area :" << starting_area << "\n";
     cout << "new area :" << new_polygon.area() << "\n";
-    cout << "is it simple? -> " << new_polygon.is_simple();
+    cout << "is it simple? -> " << new_polygon.is_simple() << "\n";
     // calculate_energy(new_polygon);
 }
 
@@ -200,21 +178,14 @@ bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
     // arxika an kanoun intersect autes i akmes den einai valid epilogi
     if (check_intersection(pr, qs))
     {
-        // cout << "intersect\n";
         return 0;
     }
 
     std::list<Point> points_in_rectangle = find_points_in_rectangle(p, q, r, s);
 
-    // cout << "the points in the list:\n";
-    // for (Point p1 : points_in_rectangle)
-    // {
-    //     cout << p1 << "\n";
-    // }
-
     for (Point point : points_in_rectangle)
     {
-        // cout << "checking point : " << point << "\n";
+
         if (point == q || point == r)
         {
             continue;
@@ -223,7 +194,6 @@ bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
         // vriskw ti thesi tou simeiou sto polygwno
         PointIterator position_to_check = find(starting_polygon.begin(), starting_polygon.end(), point);
         int index = position_to_check - starting_polygon.begin();
-        // cout << "index is : " << index << "\n";
 
         // prepei na tsekarw tis akmes stis theseis index kai index - 1
         Segment front_edge_to_check = *(starting_polygon.edges_begin() + index);
@@ -242,7 +212,7 @@ bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
 
         if (point == p)
         {
-            // cout << "for P checking edge " << back_edge_to_check << " whith " << qs << "\n";
+
             if (check_intersection(back_edge_to_check, qs))
             {
                 return 0;
@@ -261,16 +231,12 @@ bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
             continue;
         }
 
-        // cout << "checking edge " << front_edge_to_check << " whith " << pr << "\n";
-        // cout << "checking edge " << front_edge_to_check << " whith " << qs << "\n";
         // tsekarw gia to front edge an kanoun intersect epistrefw 0
         if (check_intersection(front_edge_to_check, pr) || check_intersection(front_edge_to_check, qs))
         {
             return 0;
         }
 
-        // cout << "checking edge " << back_edge_to_check << " whith " << pr << "\n";
-        // cout << "checking edge " << back_edge_to_check << " whith " << qs << "\n";
         // tsekarw gia to back edge an kanoun intersect epistrefw 0
         if (check_intersection(back_edge_to_check, pr) || check_intersection(back_edge_to_check, qs))
         {
