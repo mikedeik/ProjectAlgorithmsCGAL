@@ -32,13 +32,13 @@ endif()
 # include for local package
 
 
-# Creating entries for target: to_polygon
+# Creating entries for target: a.out
 # ############################
 
-add_executable( to_polygon  incrementing.cpp visibleedge.cpp main.cpp util.cpp )
+add_executable( a.out  incrementing.cpp visibleedge.cpp main.cpp util.cpp SimulatedAnnealing.cpp )
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS to_polygon )
 
 # Link the executable to CGAL and third-party libraries
-target_link_libraries(to_polygon PRIVATE CGAL::CGAL )
+target_link_libraries(a.out PRIVATE CGAL::CGAL )
 
