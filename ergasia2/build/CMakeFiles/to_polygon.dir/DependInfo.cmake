@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp" "CMakeFiles/to_polygon.dir/incrementing.cpp.o" "gcc" "CMakeFiles/to_polygon.dir/incrementing.cpp.o.d"
-  "/home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp" "CMakeFiles/to_polygon.dir/main.cpp.o" "gcc" "CMakeFiles/to_polygon.dir/main.cpp.o.d"
-  "/home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp" "CMakeFiles/to_polygon.dir/util.cpp.o" "gcc" "CMakeFiles/to_polygon.dir/util.cpp.o.d"
-  "/home/johnpsar/Desktop/project-emiris/ergasia1/visibleedge.cpp" "CMakeFiles/to_polygon.dir/visibleedge.cpp.o" "gcc" "CMakeFiles/to_polygon.dir/visibleedge.cpp.o.d"
+  "/home/johnpsar/Desktop/project-emiris/ergasia2/incrementing.cpp" "CMakeFiles/to_polygon.dir/incrementing.cpp.o" "gcc" "CMakeFiles/to_polygon.dir/incrementing.cpp.o.d"
+  "/home/johnpsar/Desktop/project-emiris/ergasia2/main.cpp" "CMakeFiles/to_polygon.dir/main.cpp.o" "gcc" "CMakeFiles/to_polygon.dir/main.cpp.o.d"
+  "/home/johnpsar/Desktop/project-emiris/ergasia2/util.cpp" "CMakeFiles/to_polygon.dir/util.cpp.o" "gcc" "CMakeFiles/to_polygon.dir/util.cpp.o.d"
+  "/home/johnpsar/Desktop/project-emiris/ergasia2/visibleedge.cpp" "CMakeFiles/to_polygon.dir/visibleedge.cpp.o" "gcc" "CMakeFiles/to_polygon.dir/visibleedge.cpp.o.d"
   )
 
 # Targets to which this target links.

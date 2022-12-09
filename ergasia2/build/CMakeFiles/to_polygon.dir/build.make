@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnpsar/Desktop/project-emiris/ergasia1
+CMAKE_SOURCE_DIR = /home/johnpsar/Desktop/project-emiris/ergasia2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnpsar/Desktop/project-emiris/ergasia1/build
+CMAKE_BINARY_DIR = /home/johnpsar/Desktop/project-emiris/ergasia2/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/to_polygon.dir/depend.make
@@ -72,58 +72,58 @@ include CMakeFiles/to_polygon.dir/flags.make
 CMakeFiles/to_polygon.dir/incrementing.cpp.o: CMakeFiles/to_polygon.dir/flags.make
 CMakeFiles/to_polygon.dir/incrementing.cpp.o: ../incrementing.cpp
 CMakeFiles/to_polygon.dir/incrementing.cpp.o: CMakeFiles/to_polygon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/to_polygon.dir/incrementing.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/incrementing.cpp.o -MF CMakeFiles/to_polygon.dir/incrementing.cpp.o.d -o CMakeFiles/to_polygon.dir/incrementing.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/to_polygon.dir/incrementing.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/incrementing.cpp.o -MF CMakeFiles/to_polygon.dir/incrementing.cpp.o.d -o CMakeFiles/to_polygon.dir/incrementing.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia2/incrementing.cpp
 
 CMakeFiles/to_polygon.dir/incrementing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/to_polygon.dir/incrementing.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp > CMakeFiles/to_polygon.dir/incrementing.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia2/incrementing.cpp > CMakeFiles/to_polygon.dir/incrementing.cpp.i
 
 CMakeFiles/to_polygon.dir/incrementing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/incrementing.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/incrementing.cpp -o CMakeFiles/to_polygon.dir/incrementing.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/incrementing.cpp -o CMakeFiles/to_polygon.dir/incrementing.cpp.s
 
 CMakeFiles/to_polygon.dir/visibleedge.cpp.o: CMakeFiles/to_polygon.dir/flags.make
 CMakeFiles/to_polygon.dir/visibleedge.cpp.o: ../visibleedge.cpp
 CMakeFiles/to_polygon.dir/visibleedge.cpp.o: CMakeFiles/to_polygon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/to_polygon.dir/visibleedge.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/visibleedge.cpp.o -MF CMakeFiles/to_polygon.dir/visibleedge.cpp.o.d -o CMakeFiles/to_polygon.dir/visibleedge.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/visibleedge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/to_polygon.dir/visibleedge.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/visibleedge.cpp.o -MF CMakeFiles/to_polygon.dir/visibleedge.cpp.o.d -o CMakeFiles/to_polygon.dir/visibleedge.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia2/visibleedge.cpp
 
 CMakeFiles/to_polygon.dir/visibleedge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/to_polygon.dir/visibleedge.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/visibleedge.cpp > CMakeFiles/to_polygon.dir/visibleedge.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia2/visibleedge.cpp > CMakeFiles/to_polygon.dir/visibleedge.cpp.i
 
 CMakeFiles/to_polygon.dir/visibleedge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/visibleedge.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/visibleedge.cpp -o CMakeFiles/to_polygon.dir/visibleedge.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/visibleedge.cpp -o CMakeFiles/to_polygon.dir/visibleedge.cpp.s
 
 CMakeFiles/to_polygon.dir/main.cpp.o: CMakeFiles/to_polygon.dir/flags.make
 CMakeFiles/to_polygon.dir/main.cpp.o: ../main.cpp
 CMakeFiles/to_polygon.dir/main.cpp.o: CMakeFiles/to_polygon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/to_polygon.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/main.cpp.o -MF CMakeFiles/to_polygon.dir/main.cpp.o.d -o CMakeFiles/to_polygon.dir/main.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/to_polygon.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/main.cpp.o -MF CMakeFiles/to_polygon.dir/main.cpp.o.d -o CMakeFiles/to_polygon.dir/main.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia2/main.cpp
 
 CMakeFiles/to_polygon.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/to_polygon.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp > CMakeFiles/to_polygon.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia2/main.cpp > CMakeFiles/to_polygon.dir/main.cpp.i
 
 CMakeFiles/to_polygon.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/main.cpp -o CMakeFiles/to_polygon.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/main.cpp -o CMakeFiles/to_polygon.dir/main.cpp.s
 
 CMakeFiles/to_polygon.dir/util.cpp.o: CMakeFiles/to_polygon.dir/flags.make
 CMakeFiles/to_polygon.dir/util.cpp.o: ../util.cpp
 CMakeFiles/to_polygon.dir/util.cpp.o: CMakeFiles/to_polygon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/to_polygon.dir/util.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/util.cpp.o -MF CMakeFiles/to_polygon.dir/util.cpp.o.d -o CMakeFiles/to_polygon.dir/util.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/to_polygon.dir/util.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/util.cpp.o -MF CMakeFiles/to_polygon.dir/util.cpp.o.d -o CMakeFiles/to_polygon.dir/util.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia2/util.cpp
 
 CMakeFiles/to_polygon.dir/util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/to_polygon.dir/util.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp > CMakeFiles/to_polygon.dir/util.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia2/util.cpp > CMakeFiles/to_polygon.dir/util.cpp.i
 
 CMakeFiles/to_polygon.dir/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/util.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia1/util.cpp -o CMakeFiles/to_polygon.dir/util.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/util.cpp -o CMakeFiles/to_polygon.dir/util.cpp.s
 
 # Object files for target to_polygon
 to_polygon_OBJECTS = \
@@ -144,7 +144,7 @@ to_polygon: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 to_polygon: /usr/lib/x86_64-linux-gnu/libmpfr.so
 to_polygon: /usr/lib/x86_64-linux-gnu/libgmp.so
 to_polygon: CMakeFiles/to_polygon.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable to_polygon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable to_polygon"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/to_polygon.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -156,6 +156,6 @@ CMakeFiles/to_polygon.dir/clean:
 .PHONY : CMakeFiles/to_polygon.dir/clean
 
 CMakeFiles/to_polygon.dir/depend:
-	cd /home/johnpsar/Desktop/project-emiris/ergasia1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnpsar/Desktop/project-emiris/ergasia1 /home/johnpsar/Desktop/project-emiris/ergasia1 /home/johnpsar/Desktop/project-emiris/ergasia1/build /home/johnpsar/Desktop/project-emiris/ergasia1/build /home/johnpsar/Desktop/project-emiris/ergasia1/build/CMakeFiles/to_polygon.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/johnpsar/Desktop/project-emiris/ergasia2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnpsar/Desktop/project-emiris/ergasia2 /home/johnpsar/Desktop/project-emiris/ergasia2 /home/johnpsar/Desktop/project-emiris/ergasia2/build /home/johnpsar/Desktop/project-emiris/ergasia2/build /home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles/to_polygon.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/to_polygon.dir/depend
 
