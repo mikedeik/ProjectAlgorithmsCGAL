@@ -15,6 +15,10 @@ class SimulatedAnnealing
 private:
     Polygon starting_polygon;
     Polygon new_polygon;
+    vector<Point> points;
+
+    // vector<Point> *subdivision_vectors;
+    // int m = 0;
     AnnealingType type;
     Target target;
     Tree KD_tree;
@@ -35,12 +39,15 @@ private:
     bool check_validity(Point p, Point q, Point r, Segment st);
 
 public:
-    SimulatedAnnealing(Polygon polygon, AnnealingType an_type, Target Area_target, int L);
+    SimulatedAnnealing(vector<Point> inc_points, AnnealingType an_type, Target Area_target, int L);
     ~SimulatedAnnealing();
 
     const void MinimizeArea();
     const void Local_Optimization();
     const void Global_Optimization();
+    const void Global_Optimization(Polygon *polygon, int position_of_left_most_point, int position_of_rightmost_point, vector<Point> edge_points);
+    const void Global_Optimization(Polygon *polygon, Point left_most, Point right_most);
+    const void Subdivision_Optimization();
 };
 
 #endif // SIMANNEALING

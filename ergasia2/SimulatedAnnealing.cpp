@@ -1,13 +1,19 @@
 #include "SimulatedAnnealing.h"
 #include "CGAL/convex_hull_2.h"
+#include "incrementing.h"
 
-SimulatedAnnealing::SimulatedAnnealing(Polygon polygon, AnnealingType an_type, Target Area_target, int L) : starting_polygon(polygon),
-                                                                                                            type(an_type),
-                                                                                                            target(Area_target),
-                                                                                                            L(L)
+SimulatedAnnealing::SimulatedAnnealing(vector<Point> inc_points, AnnealingType an_type, Target Area_target, int L) : points(inc_points),
+                                                                                                                     type(an_type),
+                                                                                                                     target(Area_target),
+                                                                                                                     L(L)
 {
 
+    Incrementing *algo = new Incrementing(points, X_ASCENDING, "out.txt");
+    algo->Create_Polygon_Line();
+    starting_polygon = algo->Get_Simple_Polygon();
+
     calculate_energy(starting_polygon);
+    starting_area = CGAL::to_double(starting_polygon.area());
 
     // initialize the KD tree
     for (Point point : starting_polygon)
@@ -15,10 +21,6 @@ SimulatedAnnealing::SimulatedAnnealing(Polygon polygon, AnnealingType an_type, T
         KD_tree.insert(point);
     }
     new_polygon = starting_polygon;
-
-    starting_area = CGAL::to_double(starting_polygon.area());
-
-    // cout << "starting area :" << starting_polygon.area() << "\n";
 }
 
 SimulatedAnnealing::~SimulatedAnnealing()
@@ -40,6 +42,8 @@ const void SimulatedAnnealing::MinimizeArea()
     case GLOBAL:
         Global_Optimization();
         break;
+    case SUBDIVISION:
+        Subdivision_Optimization();
     default:
         break;
     }
@@ -90,14 +94,6 @@ const void SimulatedAnnealing::Local_Optimization()
             new_polygon = starting_polygon;
         }
 
-        // if (!starting_polygon.is_simple())
-        // {
-
-        //     cout << " we fucked up\n";
-        //     cout << " position was " << random << "\n";
-        //     getchar();
-        // }
-
         T = T - (1.0 / double(L));
     }
 }
@@ -118,10 +114,6 @@ const void SimulatedAnnealing::Global_Optimization()
             random_edge = rand() % (new_polygon.edges().size() - 4) + 2;
         }
 
-        // cout << "random point is: " << random_point << "\n";
-        // cout << "random edge is " << random_edge << "\n";
-        // getchar();
-
         Point q = *(starting_polygon.begin() + random_point);
         Point p = *(starting_polygon.begin() + random_point - 1);
         // rs einai i epomeni akmi
@@ -133,9 +125,6 @@ const void SimulatedAnnealing::Global_Optimization()
         {
             continue;
         }
-        // cout << "valid change \n";
-        // getchar();
-        // if it's valid change
 
         new_polygon.erase(new_polygon.begin() + random_point);
 
@@ -159,6 +148,269 @@ const void SimulatedAnnealing::Global_Optimization()
         }
 
         T = T - (1.0 / double(L));
+    }
+}
+
+const void SimulatedAnnealing::Global_Optimization(Polygon *polygon, int position_of_left_most_point, int position_of_rightmost_point, vector<Point> edge_points)
+{
+    cout << "Running Global for subdivision\n";
+
+    Polygon output_polygon = *polygon;
+    T = 1.0;
+
+    // cout << "are both polygons simple? " << polygon->is_simple() << " output polygon " << output_polygon.is_simple() << "\n";
+    // getchar();
+    while (T > 0)
+    {
+        vector<bool> visited;
+        int random_point = rand() % (polygon->size() - 4) + 2;
+
+        int random_edge = rand() % (polygon->edges().size() - 4) + 2;
+
+        // den thelw na spasw tin epomeni i proigoumeni akmi tou simeiou
+        while (random_edge == random_point || random_edge == (random_point - 1))
+        {
+            random_edge = rand() % (output_polygon.edges().size() - 4) + 2;
+        }
+
+        Point q = *(polygon->begin() + random_point);
+
+        if (position_of_left_most_point >= 0)
+        {
+
+            if (q == edge_points[position_of_left_most_point])
+            {
+                continue;
+            }
+        }
+
+        if (position_of_rightmost_point >= 0)
+        {
+            if (q == edge_points[position_of_rightmost_point])
+            {
+                continue;
+            }
+        }
+
+        Point p = *(polygon->begin() + random_point - 1);
+        // rs einai i epomeni akmi
+        Point r = *(polygon->begin() + random_point + 1);
+
+        Segment st = *(polygon->edges_begin() + random_edge);
+
+        if (!check_validity(p, q, r, st))
+        {
+            continue;
+        }
+
+        output_polygon.erase(output_polygon.begin() + random_point);
+
+        // find where t is in the new polygon after the erase of q
+        PointIterator to_insert = find(output_polygon.begin(), output_polygon.end(), st.target());
+        int position_to_insert = to_insert - output_polygon.begin();
+
+        // insert q before t
+        output_polygon.insert(output_polygon.begin() + position_to_insert, q);
+
+        // as with local check if it's a good change
+        double DE = CGAL::to_double(calculate_energy(output_polygon) - calculate_energy(*polygon));
+
+        if (DE < 0.0 || Compute_Metropolis(DE, T, generate_random_01()))
+        {
+            *polygon = output_polygon;
+        }
+        else
+        {
+            output_polygon = *polygon;
+        }
+
+        T = T - (1.0 / double(L));
+        cout << "T is " << T << "\n";
+    }
+}
+
+const void SimulatedAnnealing::Global_Optimization(Polygon *polygon, Point left_most, Point right_most)
+{
+    cout << "Running Global for subdivision\n";
+    cout << "stating polygon is simple " << polygon->is_simple() << "\n";
+
+    Polygon output_polygon = *polygon;
+    T = 1.0;
+    while (T > 0)
+    {
+
+        int random_point = rand() % (polygon->size() - 4) + 2;
+
+        int random_edge = rand() % (polygon->edges().size() - 4) + 2;
+
+        // den thelw na spasw tin epomeni i proigoumeni akmi tou simeiou
+        if (random_edge == random_point || random_edge == (random_point - 1))
+        {
+            continue;
+        }
+
+        Point q = *(polygon->begin() + random_point);
+
+        if (q == left_most || q == right_most)
+        {
+            continue;
+        }
+
+        Point p = *(polygon->begin() + random_point - 1);
+        // rs einai i epomeni akmi
+        Point r = *(polygon->begin() + random_point + 1);
+
+        Segment st = *(polygon->edges_begin() + random_edge);
+
+        if (st.target() == right_most)
+        {
+            continue;
+        }
+
+        if (!check_validity(p, q, r, st))
+        {
+            continue;
+        }
+
+        output_polygon.erase(output_polygon.begin() + random_point);
+
+        // find where t is in the new polygon after the erase of q
+        PointIterator to_insert = find(output_polygon.begin(), output_polygon.end(), st.target());
+        int position_to_insert = to_insert - output_polygon.begin();
+
+        // insert q before t
+        output_polygon.insert(output_polygon.begin() + position_to_insert, q);
+
+        // as with local check if it's a good change
+        double DE = CGAL::to_double(calculate_energy(output_polygon) - calculate_energy(*polygon));
+
+        if (DE < 0.0 || Compute_Metropolis(DE, T, generate_random_01()))
+        {
+            *polygon = output_polygon;
+        }
+        else
+        {
+            output_polygon = *polygon;
+        }
+
+        if (!polygon->is_simple())
+        {
+            cout << "not simple anymore\n";
+            getchar();
+        }
+
+        T = T - (1.0 / double(L));
+        cout << "T is " << T << "\n";
+    }
+}
+
+const void SimulatedAnnealing::Subdivision_Optimization()
+{
+    sort_points(&points, X_ASCENDING);
+    srand(time(NULL));
+    // int m = (rand() % 91) + 10;
+    int m = 10;
+    int ceil;
+
+    vector<vector<Point>> subdivision_vectors;
+
+    if ((points.size() - 1) % (m - 1))
+    {
+        ceil = (points.size() - 1) / (m - 1) + 1;
+    }
+    else
+    {
+        ceil = (points.size() - 1) / (m - 1);
+    }
+    int position = 0;
+    int count = 0;
+    vector<Point> temp;
+    subdivision_vectors.push_back(temp);
+
+    vector<Point> edge_points;
+    for (Point p : points)
+    {
+        subdivision_vectors[position].push_back(p);
+        count++;
+        if (!(count % ceil))
+        {
+            vector<Point> t;
+            subdivision_vectors.push_back(t);
+            subdivision_vectors[position + 1].push_back(p);
+            edge_points.push_back(p);
+            position++;
+        }
+    }
+
+    vector<Polygon> polygon_array;
+
+    int position_of_points_vector = 0;
+    for (vector<Point> vec : subdivision_vectors)
+    {
+        // Incrementing init_polygons(vec, X_ASCENDING);
+        // init_polygons.Create_Polygon_Line();
+        // polygon_array.push_back(init_polygons.Get_Simple_Polygon());
+
+        // cout << "old area is: " << polygon_array[position_of_points_vector].area() << "\n";
+
+        // if (!position_of_points_vector)
+        // {
+        //     Global_Optimization(&polygon_array[position_of_points_vector], -1, position_of_points_vector, edge_points);
+        // }
+        // else if (position_of_points_vector == subdivision_vectors.size() - 1)
+        // {
+        //     Global_Optimization(&polygon_array[position_of_points_vector], position_of_points_vector, -1, edge_points);
+        // }
+        // else
+        // {
+        //     Global_Optimization(&polygon_array[position_of_points_vector], position_of_points_vector - 1, position_of_points_vector, edge_points);
+        // }
+
+        // cout << "new area is: " << polygon_array[position_of_points_vector].area() << "\n";
+        // getchar();
+        // position_of_points_vector++;
+
+        Incrementing init_poly(vec, X_ASCENDING);
+        init_poly.Create_Polygon_Line();
+        Polygon temp_polygon = init_poly.Get_Simple_Polygon();
+
+        if (!position_of_points_vector)
+        {
+            Global_Optimization(&temp_polygon, Point(-1, -1), vec[vec.size() - 1]);
+
+            new_polygon = Polygon(temp_polygon);
+        }
+        else if (position_of_points_vector == subdivision_vectors.size() - 1)
+        {
+            Global_Optimization(&temp_polygon, vec[0], Point(-1, -1));
+
+            PointIterator position_to_add = find(new_polygon.begin(), new_polygon.end(), vec[0]);
+            int position = position_to_add - new_polygon.begin();
+
+            // vazw ta points sto polugwno me tin antitheti seira
+            for (auto point_to_add = new_polygon.end() - 1; point_to_add != new_polygon.begin(); point_to_add--)
+            {
+                new_polygon.insert(new_polygon.begin() + position, *point_to_add);
+            }
+        }
+        else
+        {
+            Global_Optimization(&temp_polygon, vec[0], vec[vec.size() - 1]);
+
+            PointIterator position_to_add = find(new_polygon.begin(), new_polygon.end(), vec[0]);
+            int position = position_to_add - new_polygon.begin();
+
+            // vazw ta points sto polugwno me tin antitheti seira
+            for (auto point_to_add = new_polygon.end() - 1; point_to_add != new_polygon.begin(); point_to_add--)
+            {
+                new_polygon.insert(new_polygon.begin() + position, *point_to_add);
+            }
+        }
+        position_of_points_vector++;
+        temp_polygon.clear();
+
+        cout << "AFTER " << position_of_points_vector << "iteration new_polygon is simple -> " << new_polygon.is_simple() << "\n";
+        getchar();
     }
 }
 

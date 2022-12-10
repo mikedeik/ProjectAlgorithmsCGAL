@@ -99,12 +99,7 @@ int main(int argc, char **argv)
     cout << input_file_path;
     get_points_from_file(input_file_path, &points);
 
-    Incrementing algo(points, X_DESCENDING, output_file_path);
-    algo.Create_Polygon_Line();
-    algo.Print_Polygon();
-    Polygon p = algo.Get_Simple_Polygon();
-
-    SimulatedAnnealing SA(p, an_type[initialization], target, L);
+    SimulatedAnnealing SA(points, an_type[initialization], target, L);
     SA.MinimizeArea();
     // testing_KD_tree(points);
 

@@ -37,6 +37,7 @@ private:
 public:
     // constructor
     Incrementing(vector<Point> inc_points, Sorter inc_sorter, string output);
+    Incrementing(vector<Point> inc_points, Sorter inc_sorter);
     // destructor
     ~Incrementing();
 

@@ -7,10 +7,10 @@ bool Sort_Desc_X(Point p1, Point p2)
 
     if (!(CGAL::compare_x(p1, p2)))
     {
-        return CGAL::compare_y(p1, p2) < 0;
+        return CGAL::compare_y(p1, p2) > 0;
     }
 
-    return CGAL::compare_x(p1, p2) < 0;
+    return CGAL::compare_x(p1, p2) > 0;
 }
 
 // sorting vasi x auksousa
@@ -19,9 +19,9 @@ bool Sort_Asc_X(Point p1, Point p2)
 {
     if (!(CGAL::compare_x(p1, p2)))
     {
-        return CGAL::compare_y(p1, p2) > 0;
+        return CGAL::compare_y(p1, p2) < 0;
     }
-    return CGAL::compare_x(p1, p2) > 0;
+    return CGAL::compare_x(p1, p2) < 0;
 }
 
 // sorting vasi y fthinousa
@@ -30,9 +30,9 @@ bool Sort_Desc_Y(Point p1, Point p2)
 {
     if (!(CGAL::compare_y(p1, p2)))
     {
-        return CGAL::compare_x(p1, p2) < 0;
+        return CGAL::compare_x(p1, p2) > 0;
     }
-    return CGAL::compare_y(p1, p2) < 0;
+    return CGAL::compare_y(p1, p2) > 0;
 }
 
 // sorting vasi y auksousa
@@ -41,9 +41,9 @@ bool Sort_Asc_Y(Point p1, Point p2)
 {
     if (!(CGAL::compare_y(p1, p2)))
     {
-        return CGAL::compare_x(p1, p2) > 0;
+        return CGAL::compare_x(p1, p2) < 0;
     }
-    return CGAL::compare_y(p1, p2) > 0;
+    return CGAL::compare_y(p1, p2) < 0;
 }
 
 /*  string filename : to path enos arxeiou me ta points

@@ -33,6 +33,27 @@ Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter, string o
     time = 0;
 }
 
+Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter) : points(inc_points),
+                                                                          sorter(inc_sorter),
+                                                                          output_file("")
+
+{
+    // kanei stort ta points analoga me ton sorter
+    sort_points(&points, sorter);
+
+    // dhmiourgei to Convex Hull
+    CGAL::convex_hull_2(points.begin(), points.begin() + 3, std::back_inserter(convex_hull));
+
+    // kai analogws arxikopoiei tin arxiki polygwnikh grammh
+    for (Point point : convex_hull)
+    {
+        polygon.push_back(point);
+    }
+    // thetei point_position se 3 gia na ksekinisei apo auto to simeio
+    point_position = 3;
+    time = 0;
+}
+
 // adeiazw ola ta vectors gia dealocate memmory
 Incrementing::~Incrementing()
 {
