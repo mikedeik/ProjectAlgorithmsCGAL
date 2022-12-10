@@ -88,6 +88,13 @@ int main(int argc, char **argv)
             break;
         }
     }
+
+    map<string, AnnealingType> an_type;
+
+    an_type.insert(pair<string, AnnealingType>("local", LOCAL));
+    an_type.insert(pair<string, AnnealingType>("global", GLOBAL));
+    an_type.insert(pair<string, AnnealingType>("subdivision", SUBDIVISION));
+
     vector<Point> points;
     cout << input_file_path;
     get_points_from_file(input_file_path, &points);
@@ -97,7 +104,7 @@ int main(int argc, char **argv)
     algo.Print_Polygon();
     Polygon p = algo.Get_Simple_Polygon();
 
-    SimulatedAnnealing SA(p, LOCAL, target, L);
+    SimulatedAnnealing SA(p, an_type[initialization], target, L);
     SA.MinimizeArea();
     // testing_KD_tree(points);
 

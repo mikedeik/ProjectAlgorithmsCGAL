@@ -7,13 +7,6 @@ SimulatedAnnealing::SimulatedAnnealing(Polygon polygon, AnnealingType an_type, T
                                                                                                             L(L)
 {
 
-    for (Point p : starting_polygon)
-    {
-        cout << p << "\n";
-    }
-    getchar();
-    cout << starting_polygon.is_simple() << "\n";
-
     calculate_energy(starting_polygon);
 
     // initialize the KD tree
@@ -25,7 +18,7 @@ SimulatedAnnealing::SimulatedAnnealing(Polygon polygon, AnnealingType an_type, T
 
     starting_area = CGAL::to_double(starting_polygon.area());
 
-    cout << "starting area :" << starting_polygon.area() << "\n";
+    // cout << "starting area :" << starting_polygon.area() << "\n";
 }
 
 SimulatedAnnealing::~SimulatedAnnealing()
@@ -39,6 +32,27 @@ const void SimulatedAnnealing::MinimizeArea()
 {
 
     srand(time(NULL));
+    switch (type)
+    {
+    case LOCAL:
+        Local_Optimization();
+        break;
+    case GLOBAL:
+        Global_Optimization();
+        break;
+    default:
+        break;
+    }
+
+    cout << "starting area :" << starting_area << "\n";
+    cout << "new area :" << new_polygon.area() << "\n";
+    cout << "is it simple? -> " << new_polygon.is_simple() << "\n";
+    // calculate_energy(new_polygon);
+}
+
+const void SimulatedAnnealing::Local_Optimization()
+{
+    cout << "Running Local\n";
     while (T > 0)
     {
 
@@ -69,35 +83,83 @@ const void SimulatedAnnealing::MinimizeArea()
 
         if (DE < 0.0 || Compute_Metropolis(DE, T, generate_random_01()))
         {
-            // cout << "old area :" << starting_polygon.area() << "\n";
-            // cout << "new area :" << new_polygon.area() << "\n";
-            // getchar();
             starting_polygon = new_polygon;
-
-            // cout << "****ACTUALLY GOT BETTER****\n";
-            // getchar();
         }
         else
         {
-            new_polygon =
-                starting_polygon;
+            new_polygon = starting_polygon;
         }
 
-        if (!starting_polygon.is_simple())
-        {
+        // if (!starting_polygon.is_simple())
+        // {
 
-            cout << " we fucked up\n";
-            cout << " position was " << random << "\n";
-            getchar();
+        //     cout << " we fucked up\n";
+        //     cout << " position was " << random << "\n";
+        //     getchar();
+        // }
+
+        T = T - (1.0 / double(L));
+    }
+}
+
+const void SimulatedAnnealing::Global_Optimization()
+{
+    cout << "Running Global\n";
+    while (T > 0)
+    {
+        vector<bool> visited;
+        int random_point = rand() % (starting_polygon.size() - 4) + 2;
+
+        int random_edge = rand() % (new_polygon.edges().size() - 4) + 2;
+
+        // den thelw na spasw tin epomeni i proigoumeni akmi tou simeiou
+        while (random_edge == random_point || random_edge == (random_point - 1))
+        {
+            random_edge = rand() % (new_polygon.edges().size() - 4) + 2;
+        }
+
+        // cout << "random point is: " << random_point << "\n";
+        // cout << "random edge is " << random_edge << "\n";
+        // getchar();
+
+        Point q = *(starting_polygon.begin() + random_point);
+        Point p = *(starting_polygon.begin() + random_point - 1);
+        // rs einai i epomeni akmi
+        Point r = *(starting_polygon.begin() + random_point + 1);
+
+        Segment st = *(starting_polygon.edges_begin() + random_edge);
+
+        if (!check_validity(p, q, r, st))
+        {
+            continue;
+        }
+        // cout << "valid change \n";
+        // getchar();
+        // if it's valid change
+
+        new_polygon.erase(new_polygon.begin() + random_point);
+
+        // find where t is in the new polygon after the erase of q
+        PointIterator to_insert = find(new_polygon.begin(), new_polygon.end(), st.target());
+        int position_to_insert = to_insert - new_polygon.begin();
+
+        // insert q before t
+        new_polygon.insert(new_polygon.begin() + position_to_insert, q);
+
+        // as with local check if it's a good change
+        double DE = CGAL::to_double(calculate_energy(new_polygon) - calculate_energy(starting_polygon));
+
+        if (DE < 0.0 || Compute_Metropolis(DE, T, generate_random_01()))
+        {
+            starting_polygon = new_polygon;
+        }
+        else
+        {
+            new_polygon = starting_polygon;
         }
 
         T = T - (1.0 / double(L));
-        // cout << T << "\n";
     }
-    cout << "starting area :" << starting_area << "\n";
-    cout << "new area :" << new_polygon.area() << "\n";
-    cout << "is it simple? -> " << new_polygon.is_simple() << "\n";
-    // calculate_energy(new_polygon);
 }
 
 const FT SimulatedAnnealing::calculate_energy(Polygon p)
@@ -167,6 +229,33 @@ const std::list<Point> SimulatedAnnealing::find_points_in_rectangle(Point p, Poi
 
     // contains also the points we are checking
     return result;
+}
+
+bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Segment st)
+{
+    Segment pr(p, r);
+    Segment sq(st.source(), q);
+    Segment qt(q, st.target());
+
+    if (check_intersection(sq, pr) || check_intersection(pr, qt))
+    {
+        return 0;
+    }
+
+    for (Segment edge : starting_polygon.edges())
+    {
+        if (edge == pr || edge == sq || edge == qt || edge == st || edge == Segment(p, q) || edge == Segment(q, r))
+        {
+            continue;
+        }
+
+        if (check_intersection(edge, pr) || check_intersection(edge, sq) || check_intersection(edge, qt))
+        {
+            return 0;
+        }
+    }
+
+    return 1;
 }
 
 bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
