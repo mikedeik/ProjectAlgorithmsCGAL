@@ -35,9 +35,9 @@ endif()
 # Creating entries for target: a.out
 # ############################
 
-add_executable( a.out  incrementing.cpp visibleedge.cpp main.cpp util.cpp SimulatedAnnealing.cpp )
+add_executable( a.out  incrementing.cpp visibleedge.cpp main.cpp util.cpp SimulatedAnnealing.cpp LocalSearch.cpp)
 
-add_to_cached_list( CGAL_EXECUTABLE_TARGETS to_polygon )
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS a.out )
 
 # Link the executable to CGAL and third-party libraries
 target_link_libraries(a.out PRIVATE CGAL::CGAL )

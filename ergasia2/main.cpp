@@ -3,6 +3,7 @@
 #include "incrementing.h"
 #include "visibleedge.h"
 #include "SimulatedAnnealing.h"
+#include "LocalSearch.h"
 #include <map>
 
 using namespace std;
