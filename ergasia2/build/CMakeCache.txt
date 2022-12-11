@@ -276,6 +276,15 @@ a.out_SOURCE_DIR:STATIC=/home/johnpsar/Desktop/project-emiris/ergasia2
 //The directory containing a CMake configuration file for boost_headers.
 boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0
 
+//Value Computed by CMake
+to_polygon_BINARY_DIR:STATIC=/home/johnpsar/Desktop/project-emiris/ergasia2/build
+
+//Value Computed by CMake
+to_polygon_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+to_polygon_SOURCE_DIR:STATIC=/home/johnpsar/Desktop/project-emiris/ergasia2
+
 
 ########################
 # INTERNAL cache entries
@@ -287,7 +296,7 @@ Boost_DEBUG-ADVANCED:INTERNAL=1
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CGAL_Boost_USE_STATIC_LIBS
 CGAL_Boost_USE_STATIC_LIBS-ADVANCED:INTERNAL=1
-CGAL_EXECUTABLE_TARGETS:INTERNAL=to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;a.out
+CGAL_EXECUTABLE_TARGETS:INTERNAL=to_polygon;to_polygon;to_polygon;to_polygon;to_polygon;a.out;to_polygon;a.out
 //CGAL library is configured to use GMP
 CGAL_USE_GMP:INTERNAL=TRUE
 //CGAL library is configured to use MPFR

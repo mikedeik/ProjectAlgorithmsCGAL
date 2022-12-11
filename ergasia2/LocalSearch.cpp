@@ -1,5 +1,4 @@
 #include "LocalSearch.h"
-// todo den ftiaxnontai sosta ta paths
 using namespace std::chrono;
 
 LocalSearch::LocalSearch(Polygon polygon)
@@ -63,27 +62,32 @@ const void LocalSearch::MaximizeArea()
                     // edo exo to path
 
                     // remove path from polygon
-                    cout << "before" << std::endl;
-                    Print_Polygon(temp_polygon);
-                    cout << "removing path"<<std::endl;
-                    for (Point point : path)
+                    temp_polygon = RemovePath(temp_polygon, path); // edo to temp polygon exei afairemeno to path
+                    // insert path between edge
+                    // epeidi ta vazo ola amesos meta to proto simeio tou edge mpainoun anapoda(opos theloume)
+                    for (int i = 0; i < path.size(); i++)
                     {
-                        cout << point << "-";
+                        PointIterator position_to_insert = find(temp_polygon.vertices().begin(), temp_polygon.vertices().end(), edge.vertex(0));
+                        int index = position_to_insert - temp_polygon.vertices().begin();
+                        temp_polygon.insert(temp_polygon.begin() + index, path[i]);
                     }
-                    cout << std::endl;
-                    temp_polygon = RemovePath(temp_polygon, path);
-                    cout << "after" << std::endl;
-                    Print_Polygon(temp_polygon);
 
-                    // add it between edge
+                    if (temp_polygon.is_simple())
+                    {
+                        if (temp_polygon.area() > best_polygon.area())
+                        {
+                            cout << "temp area" << CGAL::to_double(temp_polygon.area()) << "best area" << CGAL::to_double(best_polygon.area()) << std::endl;
+                            best_polygon = temp_polygon;
+                        }
+                    }
                     path.clear();
                     j++;
                 }
                 // if V moving to e increases area save to list
             }
         }
-        DA = 0;
-        // DA = float(best_polygon.area()-current_polygon.area());
+        DA = abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area()));
+        cout << " DA IS :" << DA << std::endl;
         current_polygon = best_polygon;
         polygon_history.push_back(current_polygon);
         // Aplly all changes
@@ -91,6 +95,86 @@ const void LocalSearch::MaximizeArea()
     }
 }
 
+
+const void LocalSearch::MinimizeArea()
+{
+    int max_path_length = 3;
+    float threshold = 0.01;
+    float DA = threshold; // difference of area (curr polygon area - prev polygon area)
+
+    vector<Point> path;
+    while (DA >= threshold)
+    {
+        Polygon best_polygon = current_polygon;
+        // for every edge e ε S do
+        for (Segment edge : current_polygon.edges())
+        {
+            // cout << edge << "\n";
+            // for every path V of length <=k do
+            for (int i = 0; i < max_path_length; i++)
+            {
+                int j = 0;
+                for (Point point : current_polygon.vertices())
+                {
+                    Polygon temp_polygon = current_polygon;
+                    int path_length = 0;
+                    // create path
+
+                    // looparo ola ta points kai se kathe iteration thelo na ksekinaei to path apo neo point
+                    // opote exo to bool passed initial point opou ksekinaei na prosthetei points sto path mono
+                    // an einai stin sosti thesi
+
+                    int x = 0;
+                    for (Point path_point : current_polygon.vertices())
+                    {
+                        if (x >= j)
+                        {
+
+                            path.push_back(path_point);
+                            path_length++;
+                            if (path_length >= i)
+                            {
+                                break;
+                            }
+                        }
+                        x++;
+                    }
+
+                    // edo exo to path
+
+                    // remove path from polygon
+                    temp_polygon = RemovePath(temp_polygon, path); // edo to temp polygon exei afairemeno to path
+                    // insert path between edge
+                    // epeidi ta vazo ola amesos meta to proto simeio tou edge mpainoun anapoda(opos theloume)
+                    for (int i = 0; i < path.size(); i++)
+                    {
+                        PointIterator position_to_insert = find(temp_polygon.vertices().begin(), temp_polygon.vertices().end(), edge.vertex(0));
+                        int index = position_to_insert - temp_polygon.vertices().begin();
+                        temp_polygon.insert(temp_polygon.begin() + index, path[i]);
+                    }
+
+                    if (temp_polygon.is_simple())
+                    {
+                        if (temp_polygon.area() < best_polygon.area())
+                        {
+                            cout << "temp area" << CGAL::to_double(temp_polygon.area()) << "best area" << CGAL::to_double(best_polygon.area()) << std::endl;
+                            best_polygon = temp_polygon;
+                        }
+                    }
+                    path.clear();
+                    j++;
+                }
+                // if V moving to e increases area save to list
+            }
+        }
+        DA = abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area()));
+        cout << " DA IS :" << DA << std::endl;
+        current_polygon = best_polygon;
+        polygon_history.push_back(current_polygon);
+        // Aplly all changes
+        // Keep best solution
+    }
+}
 Polygon RemovePath(Polygon polygon, vector<Point> path)
 {
 
@@ -126,7 +210,7 @@ Polygon RemovePath(Polygon polygon, vector<Point> path)
     }
     else
     {
-        polygon.erase(polygon.begin() + position_of_start, polygon.begin() + position_of_end+1);
+        polygon.erase(polygon.begin() + position_of_start, polygon.begin() + position_of_end + 1);
     }
     return polygon;
 }

@@ -3,11 +3,11 @@
 
 cmake_minimum_required(VERSION 3.1...3.23)
 
-project( to_polygon )
+project( a.out )
 
 
 # CGAL and its components
-find_package( CGAL QUIET COMPONENTS  )
+find_package( CGAL PATHS /home/johnpsar/CGAL /home/mike/CGAL-5.5)
 
 if ( NOT CGAL_FOUND )
 
@@ -15,7 +15,6 @@ if ( NOT CGAL_FOUND )
   return()  
 
 endif()
-
 
 # Boost and its components
 find_package( Boost REQUIRED )
@@ -33,13 +32,12 @@ endif()
 # include for local package
 
 
-# Creating entries for target: to_polygon
+# Creating entries for target: a.out
 # ############################
 
-add_executable( to_polygon  incrementing.cpp LocalSearch.cpp main.cpp SimulatedAnnealing.cpp util.cpp visibleedge.cpp )
+add_executable( a.out  incrementing.cpp visibleedge.cpp main.cpp util.cpp SimulatedAnnealing.cpp LocalSearch.cpp)
 
-add_to_cached_list( CGAL_EXECUTABLE_TARGETS to_polygon )
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS a.out )
 
 # Link the executable to CGAL and third-party libraries
-target_link_libraries(to_polygon PRIVATE CGAL::CGAL )
-
+target_link_libraries(a.out PRIVATE CGAL::CGAL )

@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/to_polygon.dir/LocalSearch.cpp.o"
+  "CMakeFiles/to_polygon.dir/LocalSearch.cpp.o.d"
+  "CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o"
+  "CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o.d"
   "CMakeFiles/to_polygon.dir/incrementing.cpp.o"
   "CMakeFiles/to_polygon.dir/incrementing.cpp.o.d"
   "CMakeFiles/to_polygon.dir/main.cpp.o"

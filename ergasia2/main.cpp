@@ -13,7 +13,7 @@ int main(int argc, char **argv)
     int L;
     double threshold;
     Target target;
-    string input_file_path = "../data/images/euro-night-0000010.instance", output_file_path = "", algorithm = "", initialization = "";
+    string input_file_path = "../data/images/euro-night-0000050.instance", output_file_path = "", algorithm = "", initialization = "";
 
     // if (argc != 12)
     // {
@@ -99,8 +99,8 @@ int main(int argc, char **argv)
     cout << input_file_path << std::endl;
     get_points_from_file(input_file_path, &points);
 
-    SimulatedAnnealing SA(points, an_type[initialization], target, L);
-    SA.MinimizeArea();
+    // SimulatedAnnealing SA(points, an_type[initialization], target, L);
+    // SA.MinimizeArea();
     Incrementing algo(points, X_DESCENDING, output_file_path);
 
     algo.Create_Polygon_Line();
@@ -108,6 +108,9 @@ int main(int argc, char **argv)
     Polygon p = algo.Get_Simple_Polygon();
     LocalSearch LS(p);
     LS.MaximizeArea();
+    cout << p.is_simple() << std::endl;
+    LS.MinimizeArea();
+    cout << p.is_simple() << std::endl;
     // SimulatedAnnealing SA(p, LOCAL, target, L);
     // SA.MinimizeArea();
     // testing_KD_tree(points);

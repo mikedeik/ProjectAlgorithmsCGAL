@@ -83,19 +83,19 @@ CMakeFiles/to_polygon.dir/incrementing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/incrementing.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/incrementing.cpp -o CMakeFiles/to_polygon.dir/incrementing.cpp.s
 
-CMakeFiles/to_polygon.dir/visibleedge.cpp.o: CMakeFiles/to_polygon.dir/flags.make
-CMakeFiles/to_polygon.dir/visibleedge.cpp.o: ../visibleedge.cpp
-CMakeFiles/to_polygon.dir/visibleedge.cpp.o: CMakeFiles/to_polygon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/to_polygon.dir/visibleedge.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/visibleedge.cpp.o -MF CMakeFiles/to_polygon.dir/visibleedge.cpp.o.d -o CMakeFiles/to_polygon.dir/visibleedge.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia2/visibleedge.cpp
+CMakeFiles/to_polygon.dir/LocalSearch.cpp.o: CMakeFiles/to_polygon.dir/flags.make
+CMakeFiles/to_polygon.dir/LocalSearch.cpp.o: ../LocalSearch.cpp
+CMakeFiles/to_polygon.dir/LocalSearch.cpp.o: CMakeFiles/to_polygon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/to_polygon.dir/LocalSearch.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/LocalSearch.cpp.o -MF CMakeFiles/to_polygon.dir/LocalSearch.cpp.o.d -o CMakeFiles/to_polygon.dir/LocalSearch.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia2/LocalSearch.cpp
 
-CMakeFiles/to_polygon.dir/visibleedge.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/to_polygon.dir/visibleedge.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia2/visibleedge.cpp > CMakeFiles/to_polygon.dir/visibleedge.cpp.i
+CMakeFiles/to_polygon.dir/LocalSearch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/to_polygon.dir/LocalSearch.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia2/LocalSearch.cpp > CMakeFiles/to_polygon.dir/LocalSearch.cpp.i
 
-CMakeFiles/to_polygon.dir/visibleedge.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/visibleedge.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/visibleedge.cpp -o CMakeFiles/to_polygon.dir/visibleedge.cpp.s
+CMakeFiles/to_polygon.dir/LocalSearch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/LocalSearch.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/LocalSearch.cpp -o CMakeFiles/to_polygon.dir/LocalSearch.cpp.s
 
 CMakeFiles/to_polygon.dir/main.cpp.o: CMakeFiles/to_polygon.dir/flags.make
 CMakeFiles/to_polygon.dir/main.cpp.o: ../main.cpp
@@ -111,10 +111,24 @@ CMakeFiles/to_polygon.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/main.cpp -o CMakeFiles/to_polygon.dir/main.cpp.s
 
+CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o: CMakeFiles/to_polygon.dir/flags.make
+CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o: ../SimulatedAnnealing.cpp
+CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o: CMakeFiles/to_polygon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o -MF CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o.d -o CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia2/SimulatedAnnealing.cpp
+
+CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia2/SimulatedAnnealing.cpp > CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.i
+
+CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/SimulatedAnnealing.cpp -o CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.s
+
 CMakeFiles/to_polygon.dir/util.cpp.o: CMakeFiles/to_polygon.dir/flags.make
 CMakeFiles/to_polygon.dir/util.cpp.o: ../util.cpp
 CMakeFiles/to_polygon.dir/util.cpp.o: CMakeFiles/to_polygon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/to_polygon.dir/util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/to_polygon.dir/util.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/util.cpp.o -MF CMakeFiles/to_polygon.dir/util.cpp.o.d -o CMakeFiles/to_polygon.dir/util.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia2/util.cpp
 
 CMakeFiles/to_polygon.dir/util.cpp.i: cmake_force
@@ -125,26 +139,44 @@ CMakeFiles/to_polygon.dir/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/util.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/util.cpp -o CMakeFiles/to_polygon.dir/util.cpp.s
 
+CMakeFiles/to_polygon.dir/visibleedge.cpp.o: CMakeFiles/to_polygon.dir/flags.make
+CMakeFiles/to_polygon.dir/visibleedge.cpp.o: ../visibleedge.cpp
+CMakeFiles/to_polygon.dir/visibleedge.cpp.o: CMakeFiles/to_polygon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/to_polygon.dir/visibleedge.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/to_polygon.dir/visibleedge.cpp.o -MF CMakeFiles/to_polygon.dir/visibleedge.cpp.o.d -o CMakeFiles/to_polygon.dir/visibleedge.cpp.o -c /home/johnpsar/Desktop/project-emiris/ergasia2/visibleedge.cpp
+
+CMakeFiles/to_polygon.dir/visibleedge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/to_polygon.dir/visibleedge.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnpsar/Desktop/project-emiris/ergasia2/visibleedge.cpp > CMakeFiles/to_polygon.dir/visibleedge.cpp.i
+
+CMakeFiles/to_polygon.dir/visibleedge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/to_polygon.dir/visibleedge.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnpsar/Desktop/project-emiris/ergasia2/visibleedge.cpp -o CMakeFiles/to_polygon.dir/visibleedge.cpp.s
+
 # Object files for target to_polygon
 to_polygon_OBJECTS = \
 "CMakeFiles/to_polygon.dir/incrementing.cpp.o" \
-"CMakeFiles/to_polygon.dir/visibleedge.cpp.o" \
+"CMakeFiles/to_polygon.dir/LocalSearch.cpp.o" \
 "CMakeFiles/to_polygon.dir/main.cpp.o" \
-"CMakeFiles/to_polygon.dir/util.cpp.o"
+"CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o" \
+"CMakeFiles/to_polygon.dir/util.cpp.o" \
+"CMakeFiles/to_polygon.dir/visibleedge.cpp.o"
 
 # External object files for target to_polygon
 to_polygon_EXTERNAL_OBJECTS =
 
 to_polygon: CMakeFiles/to_polygon.dir/incrementing.cpp.o
-to_polygon: CMakeFiles/to_polygon.dir/visibleedge.cpp.o
+to_polygon: CMakeFiles/to_polygon.dir/LocalSearch.cpp.o
 to_polygon: CMakeFiles/to_polygon.dir/main.cpp.o
+to_polygon: CMakeFiles/to_polygon.dir/SimulatedAnnealing.cpp.o
 to_polygon: CMakeFiles/to_polygon.dir/util.cpp.o
+to_polygon: CMakeFiles/to_polygon.dir/visibleedge.cpp.o
 to_polygon: CMakeFiles/to_polygon.dir/build.make
 to_polygon: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 to_polygon: /usr/lib/x86_64-linux-gnu/libmpfr.so
 to_polygon: /usr/lib/x86_64-linux-gnu/libgmp.so
 to_polygon: CMakeFiles/to_polygon.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable to_polygon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable to_polygon"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/to_polygon.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
