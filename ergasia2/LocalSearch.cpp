@@ -1,7 +1,7 @@
 #include "LocalSearch.h"
 using namespace std::chrono;
 
-LocalSearch::LocalSearch(vector<Point> points, char* operation)
+LocalSearch::LocalSearch(vector<Point> points, char *operation)
 {
     Incrementing algo(points, X_ASCENDING);
     algo.Create_Polygon_Line();
@@ -10,7 +10,7 @@ LocalSearch::LocalSearch(vector<Point> points, char* operation)
     cout << polygon_history.size() << std::endl;
     polygon_history.push_back(polygon);
     cout << polygon_history.size() << std::endl;
-    if (strcmp(operation, "max")==0)
+    if (strcmp(operation, "max") == 0)
     {
 
         MaximizeArea();
@@ -30,6 +30,8 @@ LocalSearch::~LocalSearch()
 
 const void LocalSearch::MaximizeArea()
 {
+    auto start = high_resolution_clock::now();
+
     int max_path_length = 3;
     float threshold = 0.01;
     float DA = threshold; // difference of area (curr polygon area - prev polygon area)
@@ -106,10 +108,19 @@ const void LocalSearch::MaximizeArea()
         // Aplly all changes
         // Keep best solution
     }
+    auto stop = high_resolution_clock::now();
+
+    auto duration = duration_cast<seconds>(stop - start);
+    int time = duration.count();
+    cout << "Time taken by function: "
+         << duration.count() << " seconds"
+         << "\n";
 }
 
 const void LocalSearch::MinimizeArea()
 {
+    auto start = high_resolution_clock::now();
+
     int max_path_length = 3;
     float threshold = 0.01;
     float DA = threshold; // difference of area (curr polygon area - prev polygon area)
@@ -185,6 +196,13 @@ const void LocalSearch::MinimizeArea()
         // Aplly all changes
         // Keep best solution
     }
+    auto stop = high_resolution_clock::now();
+
+    auto duration = duration_cast<seconds>(stop - start);
+    int time = duration.count();
+    cout << "Time taken by function: "
+         << duration.count() << " seconds"
+         << "\n";
 }
 Polygon RemovePath(Polygon polygon, vector<Point> path)
 {
