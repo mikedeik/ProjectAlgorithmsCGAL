@@ -2,13 +2,17 @@
 #include "CGAL/convex_hull_2.h"
 #include "incrementing.h"
 
-SimulatedAnnealing::SimulatedAnnealing(vector<Point> inc_points, AnnealingType an_type, Target Area_target, int L) : points(inc_points),
-                                                                                                                     type(an_type),
-                                                                                                                     target(Area_target),
-                                                                                                                     L(L)
+using namespace std::chrono;
+
+SimulatedAnnealing::SimulatedAnnealing(vector<Point> inc_points, AnnealingType an_type, Target Area_target, int L, string inc_output_file) : points(inc_points),
+                                                                                                                                             type(an_type),
+                                                                                                                                             target(Area_target),
+                                                                                                                                             L(L),
+                                                                                                                                             output_file(inc_output_file)
+
 {
 
-    Incrementing *algo = new Incrementing(points, X_ASCENDING, "out.txt");
+    Incrementing *algo = new Incrementing(points, X_ASCENDING);
     algo->Create_Polygon_Line();
     starting_polygon = algo->Get_Simple_Polygon();
 
@@ -30,8 +34,10 @@ SimulatedAnnealing::~SimulatedAnnealing()
     new_polygon.clear();
 }
 
-const void SimulatedAnnealing::MinimizeArea()
+const void SimulatedAnnealing::OptimizeArea()
 {
+
+    auto start = high_resolution_clock::now();
 
     srand(time(NULL));
     switch (type)
@@ -48,10 +54,14 @@ const void SimulatedAnnealing::MinimizeArea()
         break;
     }
 
+    auto stop = high_resolution_clock::now();
+
+    auto duration = duration_cast<milliseconds>(stop - start);
+    run_time = duration.count();
+
     cout << "starting area :" << starting_area << "\n";
     cout << "new area :" << new_polygon.area() << "\n";
     cout << "is it simple? -> " << new_polygon.is_simple() << "\n";
-    // calculate_energy(new_polygon);
 }
 
 const void SimulatedAnnealing::Local_Optimization()
@@ -61,10 +71,6 @@ const void SimulatedAnnealing::Local_Optimization()
     {
 
         int random = rand() % (starting_polygon.size() - 4) + 2;
-
-        /*********************************************************************/
-        /* Edw tha prepei na mpoun oi epiloges analoga to Type(Local, Global)*/
-        /*********************************************************************/
 
         // arxiko simeio
         Point q = *(starting_polygon.begin() + random);
@@ -76,10 +82,8 @@ const void SimulatedAnnealing::Local_Optimization()
 
         if (!check_validity(p, q, r, s))
         {
-            // cout << "not valid\n";
             continue;
         }
-        // cout << "valid\n";
 
         new_polygon.erase(new_polygon.begin() + random);
         new_polygon.insert(new_polygon.begin() + random + 1, q);
@@ -151,84 +155,6 @@ const void SimulatedAnnealing::Global_Optimization()
     }
 }
 
-const void SimulatedAnnealing::Global_Optimization(Polygon *polygon, int position_of_left_most_point, int position_of_rightmost_point, vector<Point> edge_points)
-{
-    cout << "Running Global for subdivision\n";
-
-    Polygon output_polygon = *polygon;
-    T = 1.0;
-
-    // cout << "are both polygons simple? " << polygon->is_simple() << " output polygon " << output_polygon.is_simple() << "\n";
-    // getchar();
-    while (T > 0)
-    {
-        vector<bool> visited;
-        int random_point = rand() % (polygon->size() - 4) + 2;
-
-        int random_edge = rand() % (polygon->edges().size() - 4) + 2;
-
-        // den thelw na spasw tin epomeni i proigoumeni akmi tou simeiou
-        while (random_edge == random_point || random_edge == (random_point - 1))
-        {
-            random_edge = rand() % (output_polygon.edges().size() - 4) + 2;
-        }
-
-        Point q = *(polygon->begin() + random_point);
-
-        if (position_of_left_most_point >= 0)
-        {
-
-            if (q == edge_points[position_of_left_most_point])
-            {
-                continue;
-            }
-        }
-
-        if (position_of_rightmost_point >= 0)
-        {
-            if (q == edge_points[position_of_rightmost_point])
-            {
-                continue;
-            }
-        }
-
-        Point p = *(polygon->begin() + random_point - 1);
-        // rs einai i epomeni akmi
-        Point r = *(polygon->begin() + random_point + 1);
-
-        Segment st = *(polygon->edges_begin() + random_edge);
-
-        if (!check_validity(p, q, r, st))
-        {
-            continue;
-        }
-
-        output_polygon.erase(output_polygon.begin() + random_point);
-
-        // find where t is in the new polygon after the erase of q
-        PointIterator to_insert = find(output_polygon.begin(), output_polygon.end(), st.target());
-        int position_to_insert = to_insert - output_polygon.begin();
-
-        // insert q before t
-        output_polygon.insert(output_polygon.begin() + position_to_insert, q);
-
-        // as with local check if it's a good change
-        double DE = CGAL::to_double(calculate_energy(output_polygon) - calculate_energy(*polygon));
-
-        if (DE < 0.0 || Compute_Metropolis(DE, T, generate_random_01()))
-        {
-            *polygon = output_polygon;
-        }
-        else
-        {
-            output_polygon = *polygon;
-        }
-
-        T = T - (1.0 / double(L));
-        cout << "T is " << T << "\n";
-    }
-}
-
 const void SimulatedAnnealing::Global_Optimization(Polygon *polygon, Point left_most, Point right_most)
 {
     cout << "Running Global for subdivision\n";
@@ -262,12 +188,12 @@ const void SimulatedAnnealing::Global_Optimization(Polygon *polygon, Point left_
 
         Segment st = *(polygon->edges_begin() + random_edge);
 
-        if (st.target() == right_most)
+        if (st.target() == right_most || st.source() == left_most)
         {
             continue;
         }
 
-        if (!check_validity(p, q, r, st))
+        if (!check_validity(p, q, r, st, *polygon))
         {
             continue;
         }
@@ -293,27 +219,24 @@ const void SimulatedAnnealing::Global_Optimization(Polygon *polygon, Point left_
             output_polygon = *polygon;
         }
 
-        if (!polygon->is_simple())
-        {
-            cout << "not simple anymore\n";
-            getchar();
-        }
-
         T = T - (1.0 / double(L));
-        cout << "T is " << T << "\n";
     }
 }
 
 const void SimulatedAnnealing::Subdivision_Optimization()
 {
+    // arxika kanoume sort ta points kata auksousa seira
     sort_points(&points, X_ASCENDING);
     srand(time(NULL));
-    // int m = (rand() % 91) + 10;
-    int m = 10;
+    // pairnoume tuxaio m sto diasthma [10,100]
+    int m = (rand() % 91) + 10;
+
     int ceil;
 
+    // ftiaxnoume ena vector apo vectors apo points ta opoia tha xrhsimopoihsoume sto subdivision
     vector<vector<Point>> subdivision_vectors;
 
+    // vriskoume to ceil to opoio tha mas deiksei posa arrays apo points tha exoume
     if ((points.size() - 1) % (m - 1))
     {
         ceil = (points.size() - 1) / (m - 1) + 1;
@@ -322,95 +245,87 @@ const void SimulatedAnnealing::Subdivision_Optimization()
     {
         ceil = (points.size() - 1) / (m - 1);
     }
+
     int position = 0;
     int count = 0;
+
+    // vazw ena keno array mesa to opoio kai kanoume clear
     vector<Point> temp;
     subdivision_vectors.push_back(temp);
+    temp.clear();
 
-    vector<Point> edge_points;
+    // gia ola ta points ftiaxnoume ta subvectors
     for (Point p : points)
     {
         subdivision_vectors[position].push_back(p);
         count++;
-        if (!(count % ceil))
+        // an eimaste sto simeio m-1 prepei na mpei kai san arxiko kai sto epomeno array
+        if (!(count % (m - 1)))
         {
             vector<Point> t;
             subdivision_vectors.push_back(t);
+            t.clear();
             subdivision_vectors[position + 1].push_back(p);
-            edge_points.push_back(p);
             position++;
         }
     }
 
-    vector<Polygon> polygon_array;
-
+    // twra gia kathe subarray apo points
     int position_of_points_vector = 0;
-    for (vector<Point> vec : subdivision_vectors)
+    for (int i = 0; i < ceil; i++)
     {
-        // Incrementing init_polygons(vec, X_ASCENDING);
-        // init_polygons.Create_Polygon_Line();
-        // polygon_array.push_back(init_polygons.Get_Simple_Polygon());
+        // epeidi mporei to teleutaio array na exei ena point (to opoio exei mpei sthn polygwniki grammi) kanoume elegxo
+        if (subdivision_vectors[i].size() == 1)
+        {
+            break;
+        }
 
-        // cout << "old area is: " << polygon_array[position_of_points_vector].area() << "\n";
-
-        // if (!position_of_points_vector)
-        // {
-        //     Global_Optimization(&polygon_array[position_of_points_vector], -1, position_of_points_vector, edge_points);
-        // }
-        // else if (position_of_points_vector == subdivision_vectors.size() - 1)
-        // {
-        //     Global_Optimization(&polygon_array[position_of_points_vector], position_of_points_vector, -1, edge_points);
-        // }
-        // else
-        // {
-        //     Global_Optimization(&polygon_array[position_of_points_vector], position_of_points_vector - 1, position_of_points_vector, edge_points);
-        // }
-
-        // cout << "new area is: " << polygon_array[position_of_points_vector].area() << "\n";
-        // getchar();
-        // position_of_points_vector++;
-
-        Incrementing init_poly(vec, X_ASCENDING);
+        // ftiaxnoume ena arxiko polygwno me ton incremental
+        Incrementing init_poly(subdivision_vectors[i], X_ASCENDING);
         init_poly.Create_Polygon_Line();
         Polygon temp_polygon = init_poly.Get_Simple_Polygon();
 
+        // se kathe periptwsi tha treksei global optimazation gia to subset apo Points
+
+        // an einai to prwto arkei na elegxoume to right most simeio na min kounithei kai na thesoume ola ta simeia sto new_polygon
         if (!position_of_points_vector)
         {
-            Global_Optimization(&temp_polygon, Point(-1, -1), vec[vec.size() - 1]);
+            Global_Optimization(&temp_polygon, Point(-1, -1), subdivision_vectors[i][subdivision_vectors[i].size() - 1]);
 
             new_polygon = Polygon(temp_polygon);
         }
+        // an einai to teleutaio arkei na elegxoume gia to left most simeio na min peiraxtei
         else if (position_of_points_vector == subdivision_vectors.size() - 1)
         {
-            Global_Optimization(&temp_polygon, vec[0], Point(-1, -1));
 
-            PointIterator position_to_add = find(new_polygon.begin(), new_polygon.end(), vec[0]);
+            Global_Optimization(&temp_polygon, subdivision_vectors[i][0], Point(-1, -1));
+
+            PointIterator position_to_add = find(new_polygon.begin(), new_polygon.end(), subdivision_vectors[i][0]);
             int position = position_to_add - new_polygon.begin();
 
-            // vazw ta points sto polugwno me tin antitheti seira
-            for (auto point_to_add = new_polygon.end() - 1; point_to_add != new_polygon.begin(); point_to_add--)
+            // vazw ta points sto polugwno me tin antitheti seira prin apo to koino simeio
+            for (auto point_to_add = temp_polygon.end() - 1; point_to_add != temp_polygon.begin(); point_to_add--)
             {
                 new_polygon.insert(new_polygon.begin() + position, *point_to_add);
             }
         }
+        // sta endiamesa subsets elegxoyme kai gia to left most kai to right most
         else
         {
-            Global_Optimization(&temp_polygon, vec[0], vec[vec.size() - 1]);
+            Global_Optimization(&temp_polygon, subdivision_vectors[i][0], subdivision_vectors[i][subdivision_vectors[i].size() - 1]);
 
-            PointIterator position_to_add = find(new_polygon.begin(), new_polygon.end(), vec[0]);
+            PointIterator position_to_add = find(new_polygon.begin(), new_polygon.end(), subdivision_vectors[i][0]);
             int position = position_to_add - new_polygon.begin();
 
-            // vazw ta points sto polugwno me tin antitheti seira
-            for (auto point_to_add = new_polygon.end() - 1; point_to_add != new_polygon.begin(); point_to_add--)
+            // vazw ta points sto polugwno me tin antitheti seira ektos apo to prwto
+            for (auto point_to_add = temp_polygon.end() - 1; point_to_add != temp_polygon.begin(); point_to_add--)
             {
                 new_polygon.insert(new_polygon.begin() + position, *point_to_add);
             }
         }
+        // paw sto epomeno array kai katharizw to temp polygwno
         position_of_points_vector++;
         temp_polygon.clear();
-
-        cout << "AFTER " << position_of_points_vector << "iteration new_polygon is simple -> " << new_polygon.is_simple() << "\n";
-        getchar();
     }
 }
 
@@ -429,6 +344,7 @@ const FT SimulatedAnnealing::calculate_energy(Polygon p)
     FT polygon_area = p.area();
     FT CH_area = CH.area();
 
+    // analoga to ti xreiazomaste MIN/MAX ypologizetai i energeia
     FT E;
     switch (target)
     {
@@ -483,12 +399,14 @@ const std::list<Point> SimulatedAnnealing::find_points_in_rectangle(Point p, Poi
     return result;
 }
 
+// elegxos orthotitas gia to global step
 bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Segment st)
 {
     Segment pr(p, r);
     Segment sq(st.source(), q);
     Segment qt(q, st.target());
 
+    // xrhsimopoioume tin check intersection gia 2 edges
     if (check_intersection(sq, pr) || check_intersection(pr, qt))
     {
         return 0;
@@ -510,6 +428,35 @@ bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Segment st)
     return 1;
 }
 
+// elegxos orthotitas gia to global step me dwto polygwno omws
+bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Segment st, Polygon temp_polygon)
+{
+    Segment pr(p, r);
+    Segment sq(st.source(), q);
+    Segment qt(q, st.target());
+
+    if (check_intersection(sq, pr) || check_intersection(pr, qt))
+    {
+        return 0;
+    }
+
+    for (Segment edge : temp_polygon.edges())
+    {
+        if (edge == pr || edge == sq || edge == qt || edge == st || edge == Segment(p, q) || edge == Segment(q, r))
+        {
+            continue;
+        }
+
+        if (check_intersection(edge, pr) || check_intersection(edge, sq) || check_intersection(edge, qt))
+        {
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
+// elegxos orthotitas gia to local step
 bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
 {
 
@@ -522,6 +469,7 @@ bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
         return 0;
     }
 
+    // pairnw mia lista apo ta points mesa sto orthogonio xrisimopoiwntas to KD-Tree
     std::list<Point> points_in_rectangle = find_points_in_rectangle(p, q, r, s);
 
     for (Point point : points_in_rectangle)
@@ -551,6 +499,7 @@ bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
             back_edge_to_check = *(starting_polygon.edges_begin() + index - 1);
         }
 
+        // an to point einai to p den prepei na tsekarw tin epomeni (pr)
         if (point == p)
         {
 
@@ -561,9 +510,10 @@ bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
             continue;
         }
 
+        // an to point einai to s den prepei na tsekarw me tin proigoumeni (qs)
         if (point == s)
         {
-            // cout << "for S checking edge " << front_edge_to_check << " whith " << pr << "\n";
+
             if (check_intersection(front_edge_to_check, pr))
             {
 

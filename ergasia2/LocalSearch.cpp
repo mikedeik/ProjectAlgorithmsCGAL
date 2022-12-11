@@ -95,7 +95,6 @@ const void LocalSearch::MaximizeArea()
     }
 }
 
-
 const void LocalSearch::MinimizeArea()
 {
     int max_path_length = 3;
@@ -109,7 +108,6 @@ const void LocalSearch::MinimizeArea()
         // for every edge e ε S do
         for (Segment edge : current_polygon.edges())
         {
-            // cout << edge << "\n";
             // for every path V of length <=k do
             for (int i = 0; i < max_path_length; i++)
             {

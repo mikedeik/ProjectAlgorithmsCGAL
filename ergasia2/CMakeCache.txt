@@ -177,7 +177,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=to_polygon
+CMAKE_PROJECT_NAME:STATIC=a.out
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -264,6 +264,15 @@ MPFR_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libmpfr.so
 
 MPFR_LIBRARIES_DIR:FILEPATH=/usr/lib/x86_64-linux-gnu
 
+//Value Computed by CMake
+a.out_BINARY_DIR:STATIC=/home/mike/Documents/Project_Emiris_2/project-emiris/ergasia2
+
+//Value Computed by CMake
+a.out_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+a.out_SOURCE_DIR:STATIC=/home/mike/Documents/Project_Emiris_2/project-emiris/ergasia2
+
 //The directory containing a CMake configuration file for boost_headers.
 boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0
 
@@ -287,7 +296,7 @@ Boost_DEBUG-ADVANCED:INTERNAL=1
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CGAL_Boost_USE_STATIC_LIBS
 CGAL_Boost_USE_STATIC_LIBS-ADVANCED:INTERNAL=1
-CGAL_EXECUTABLE_TARGETS:INTERNAL=to_polygon;to_polygon
+CGAL_EXECUTABLE_TARGETS:INTERNAL=to_polygon;to_polygon;a.out
 //CGAL library is configured to use GMP
 CGAL_USE_GMP:INTERNAL=TRUE
 //CGAL library is configured to use MPFR

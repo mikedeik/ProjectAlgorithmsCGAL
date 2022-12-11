@@ -311,6 +311,23 @@ void print_to_file(const Polygon ch_polygon, string filename, int time)
     MyFile.close();
 }
 
+void print_to_file(const Polygon starting_polygon, const Polygon new_polygon, string filename, int time)
+{
+    std::ofstream MyFile(filename);
+    for (Point p : new_polygon)
+    {
+        MyFile << p << "\n";
+    }
+    for (Segment edge : new_polygon.edges())
+    {
+        MyFile << edge << "\n";
+    }
+    MyFile << "area" << new_polygon.area() << "\n";
+    MyFile << "construction time " << time << "\n";
+    MyFile << "Polygon is Simple: " << new_polygon.is_simple() << "\n";
+    MyFile.close();
+}
+
 bool Compute_Metropolis(double DE, double T, double R)
 {
     return exp((-1) * DE / T) >= R;

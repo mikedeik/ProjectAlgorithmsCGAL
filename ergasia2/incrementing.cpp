@@ -28,6 +28,7 @@ Incrementing::Incrementing(vector<Point> inc_points, Sorter inc_sorter, string o
     {
         polygon.push_back(point);
     }
+
     // thetei point_position se 3 gia na ksekinisei apo auto to simeio
     point_position = 3;
     time = 0;
@@ -116,13 +117,6 @@ const void Incrementing::Create_Polygon_Line()
         ch_polygon.clear();
         convex_hull.clear();
 
-        if (!polygon.is_simple())
-        {
-            cout << "at point position " << point_position << " polygon simplicity broke\n";
-            cout << "this is the point " << points[point_position] << "\n";
-            getchar();
-        }
-
         // sto telos ftiaxnw to neo convex hull kai paw na prosthesw to epomeno simeio
         point_position++;
         CGAL::convex_hull_2(polygon.begin(), polygon.end(), std::back_inserter(convex_hull));
@@ -148,21 +142,11 @@ const void Incrementing::find_red_edges(Point p)
 
         // tha kratiwsw ti thesi tou proigoumenou simeiou sto convex hull
         ch_polygon.push_back(*it);
-        // if (*it == points[point_position - 1])
-        // {
-        //     position_to_start = it - ch_polygon.begin();
-        // }
     }
 
     PointIterator position_pointer = find(ch_polygon.begin(), ch_polygon.end(), points[point_position - 1]);
     position_to_start = position_pointer - ch_polygon.begin();
 
-    // cout << "--------- Convex Hull edges -----------\n";
-    // for (Segment edge : ch_polygon.edges())
-    // {
-    //     cout << edge << "\n";
-    // }
-    // getchar();
     // ksekinaw apo to proigoumeno simeio kai paw pros ta mprosta
 
     traverse_ccw(ch_polygon, position_to_start, p, &red_edges);
@@ -199,7 +183,6 @@ const void Incrementing::find_visible_edges(Point p)
         if ((*it).source() == starting_point)
         {
             first = it - polygon.edges_begin();
-            // cout << "first is : " << first << "\n";
         }
 
         // an yparxei mono ena edge den xreiazetai na kanoume kanenan elegxo
@@ -284,10 +267,6 @@ const void Incrementing::find_visible_edges(Point p)
 
     if (go_to_start)
     {
-        // cout << "we are in this case\n";
-        // cout << "last is " << last << "\n";
-
-        // getchar();
 
         for (auto itt = polygon.edges_begin(); itt != polygon.edges_begin() + last + 1; ++itt)
         {
@@ -336,7 +315,7 @@ const void Incrementing::find_visible_edges(Point p)
 
                     if (check_intersection(Triangle((*itt).source(), p, (*itt).target()), *intersect_it))
                     {
-                        // cout << "intersects\n";
+
                         intersects = 1;
                         break;
                     }
