@@ -126,7 +126,7 @@ void VisibleEdge::Create_Polygon()
         {
             continue;
         }
-
+;
         polygon.insert(polygon.begin() + random_edge_index + 1, nearest_poits[random_edge_index]);
 
         points_not_in_chain.erase(points_not_in_chain.begin() + Find_Index_Of_Point_In_Vector(nearest_poits[random_edge_index], points_not_in_chain));
