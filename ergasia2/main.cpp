@@ -101,16 +101,9 @@ int main(int argc, char **argv)
 
     SimulatedAnnealing SA(points, an_type[initialization], target, L, output_file_path);
     SA.OptimizeArea();
-    // Incrementing algo(points, X_DESCENDING, output_file_path);
+    char* str="max";
+    LocalSearch LS(points,str);
 
-    // algo.Create_Polygon_Line();
-    // algo.Print_Polygon();
-    // Polygon p = algo.Get_Simple_Polygon();
-    // LocalSearch LS(p);
-    // LS.MaximizeArea();
-    // cout << p.is_simple() << std::endl;
-    // LS.MinimizeArea();
-    // cout << p.is_simple() << std::endl;
     // SimulatedAnnealing SA(p, LOCAL, target, L);
     // SA.MinimizeArea();
     // testing_KD_tree(points);

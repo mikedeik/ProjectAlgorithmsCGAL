@@ -1,12 +1,25 @@
 #include "LocalSearch.h"
 using namespace std::chrono;
 
-LocalSearch::LocalSearch(Polygon polygon)
+LocalSearch::LocalSearch(vector<Point> points, char* operation)
 {
+    Incrementing algo(points, X_ASCENDING);
+    algo.Create_Polygon_Line();
+    Polygon polygon = algo.Get_Simple_Polygon();
     current_polygon = polygon;
     cout << polygon_history.size() << std::endl;
     polygon_history.push_back(polygon);
     cout << polygon_history.size() << std::endl;
+    if (strcmp(operation, "max")==0)
+    {
+
+        MaximizeArea();
+    }
+    else
+    {
+
+        MinimizeArea();
+    }
 }
 
 LocalSearch::~LocalSearch()

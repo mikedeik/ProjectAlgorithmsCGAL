@@ -2,6 +2,7 @@
 #define LOCALSEARCH
 
 #include "util.h"
+#include "incrementing.h"
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/Polygon_2.h>
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
@@ -18,7 +19,7 @@ private:
     vector<Polygon> polygon_history;
 
 public:
-    LocalSearch(Polygon polygon);
+    LocalSearch(vector<Point>,char* operation);//'max' for maximazation 'min' for minimization
     ~LocalSearch();
     const void MinimizeArea();
     const void MaximizeArea();
