@@ -13,18 +13,18 @@ typedef CGAL::Fuzzy_iso_box<Traits> Fuzzy_iso_box;
 class SimulatedAnnealing
 {
 private:
-    Polygon starting_polygon;
-    Polygon new_polygon;
-    vector<Point> points;
+    Polygon starting_polygon; // to arxiko polygwno pou tha vgei apo ton algorithmo prwtis ergasias
+    Polygon new_polygon;      // to teliko polygwno meta to optimization
+    vector<Point> points;     // ena vector apo points pou tha lavei ws orisma o algorithmos
 
-    AnnealingType type;
-    Target target;
-    Tree KD_tree;
-    double starting_area;
-    string output_file;
-    int L;
-    double T = 1.0;
-    int run_time;
+    AnnealingType type;   // o tropos pou tha ginei to optimization
+    Target target;        // to target tou optimization (MIN or MAX)
+    Tree KD_tree;         // to KD_tree pou tha ftiaksoume apo ta points
+    double starting_area; // metavliti pou tha krataei to starting area
+    string output_file;   // to arxeio eksodou
+    int L;                // to L (arithmos epanallipsewn)
+    double T = 1.0;       // i thermokrasia T
+    int run_time;         // o xronos ektelesis tou Optimization
 
     /* Calculates the energy of given Polygon */
     const FT calculate_energy(Polygon p);

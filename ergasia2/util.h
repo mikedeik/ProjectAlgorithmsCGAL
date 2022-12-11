@@ -12,6 +12,7 @@
 #include <CGAL/Kd_tree.h>
 #include <CGAL/Fuzzy_iso_box.h>
 #include <CGAL/Search_traits_2.h>
+#include <CGAL/convex_hull_2.h>
 
 enum Sorter
 {
