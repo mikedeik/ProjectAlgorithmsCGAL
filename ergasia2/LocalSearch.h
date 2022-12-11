@@ -21,9 +21,11 @@ private:
     // kratao ena history apo ola ta versions tou polygon
     //  meta apo kath itteration
     vector<Polygon> polygon_history;
+    Target target;
+    string output_file;
 
 public:
-    LocalSearch(vector<Point>,char* operation,float threshold);//'max' for maximazation 'min' for minimization
+    LocalSearch(vector<Point>, Target inc_target, float threshold, string inc_output_file); //'max' for maximazation 'min' for minimization
     ~LocalSearch();
     const void MinimizeArea();
     const void MaximizeArea();

@@ -99,14 +99,16 @@ int main(int argc, char **argv)
     cout << input_file_path << std::endl;
     get_points_from_file(input_file_path, &points);
 
-    SimulatedAnnealing SA(points, an_type[initialization], target, L, output_file_path);
-    SA.OptimizeArea();
-    char* str="max";
-    LocalSearch LS(points,str,threshold);
+    if (algorithm == "local_search")
+    {
+        LocalSearch LS(points, target, threshold, output_file_path);
+    }
 
-    // SimulatedAnnealing SA(p, LOCAL, target, L);
-    // SA.MinimizeArea();
-    // testing_KD_tree(points);
+    if (algorithm == "simulated_annealing")
+    {
+        SimulatedAnnealing SA(points, an_type[initialization], target, L, output_file_path);
+        SA.OptimizeArea();
+    }
 
     return 0;
 }
