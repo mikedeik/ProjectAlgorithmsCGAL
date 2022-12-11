@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/a.out.dir/LocalSearch.cpp.o"
+  "CMakeFiles/a.out.dir/LocalSearch.cpp.o.d"
   "CMakeFiles/a.out.dir/SimulatedAnnealing.cpp.o"
   "CMakeFiles/a.out.dir/SimulatedAnnealing.cpp.o.d"
   "CMakeFiles/a.out.dir/incrementing.cpp.o"

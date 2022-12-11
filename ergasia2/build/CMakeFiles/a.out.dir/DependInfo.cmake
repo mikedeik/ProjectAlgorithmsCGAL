@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/johnpsar/Desktop/project-emiris/ergasia2/LocalSearch.cpp" "CMakeFiles/a.out.dir/LocalSearch.cpp.o" "gcc" "CMakeFiles/a.out.dir/LocalSearch.cpp.o.d"
   "/home/johnpsar/Desktop/project-emiris/ergasia2/SimulatedAnnealing.cpp" "CMakeFiles/a.out.dir/SimulatedAnnealing.cpp.o" "gcc" "CMakeFiles/a.out.dir/SimulatedAnnealing.cpp.o.d"
   "/home/johnpsar/Desktop/project-emiris/ergasia2/incrementing.cpp" "CMakeFiles/a.out.dir/incrementing.cpp.o" "gcc" "CMakeFiles/a.out.dir/incrementing.cpp.o.d"
   "/home/johnpsar/Desktop/project-emiris/ergasia2/main.cpp" "CMakeFiles/a.out.dir/main.cpp.o" "gcc" "CMakeFiles/a.out.dir/main.cpp.o.d"

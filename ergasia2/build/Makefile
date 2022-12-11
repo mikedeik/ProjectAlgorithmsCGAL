@@ -129,6 +129,30 @@ a.out/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/build
 .PHONY : a.out/fast
 
+LocalSearch.o: LocalSearch.cpp.o
+.PHONY : LocalSearch.o
+
+# target to build an object file
+LocalSearch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/LocalSearch.cpp.o
+.PHONY : LocalSearch.cpp.o
+
+LocalSearch.i: LocalSearch.cpp.i
+.PHONY : LocalSearch.i
+
+# target to preprocess a source file
+LocalSearch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/LocalSearch.cpp.i
+.PHONY : LocalSearch.cpp.i
+
+LocalSearch.s: LocalSearch.cpp.s
+.PHONY : LocalSearch.s
+
+# target to generate assembly for a file
+LocalSearch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/LocalSearch.cpp.s
+.PHONY : LocalSearch.cpp.s
+
 SimulatedAnnealing.o: SimulatedAnnealing.cpp.o
 .PHONY : SimulatedAnnealing.o
 
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... a.out"
+	@echo "... LocalSearch.o"
+	@echo "... LocalSearch.i"
+	@echo "... LocalSearch.s"
 	@echo "... SimulatedAnnealing.o"
 	@echo "... SimulatedAnnealing.i"
 	@echo "... SimulatedAnnealing.s"
