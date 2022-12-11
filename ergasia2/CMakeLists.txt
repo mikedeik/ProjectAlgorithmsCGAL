@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.1...3.23)
 
-project( a.out )
+project( optimal_polygon )
 
 
 # CGAL and its components
@@ -32,12 +32,12 @@ endif()
 # include for local package
 
 
-# Creating entries for target: a.out
+# Creating entries for target: optimal_polygon
 # ############################
 
-add_executable( a.out  incrementing.cpp visibleedge.cpp main.cpp util.cpp SimulatedAnnealing.cpp LocalSearch.cpp)
+add_executable( optimal_polygon  incrementing.cpp visibleedge.cpp main.cpp util.cpp SimulatedAnnealing.cpp LocalSearch.cpp)
 
-add_to_cached_list( CGAL_EXECUTABLE_TARGETS a.out )
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS optimal_polygon )
 
 # Link the executable to CGAL and third-party libraries
-target_link_libraries(a.out PRIVATE CGAL::CGAL )
+target_link_libraries(optimal_polygon PRIVATE CGAL::CGAL )

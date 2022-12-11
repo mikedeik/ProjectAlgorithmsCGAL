@@ -26,6 +26,8 @@ SimulatedAnnealing::SimulatedAnnealing(vector<Point> inc_points, AnnealingType a
         KD_tree.insert(point);
     }
     new_polygon = starting_polygon;
+
+    delete algo;
 }
 
 SimulatedAnnealing::~SimulatedAnnealing()
@@ -33,6 +35,8 @@ SimulatedAnnealing::~SimulatedAnnealing()
 
     starting_polygon.clear();
     new_polygon.clear();
+    initial_polygon.clear();
+    points.clear();
 }
 
 const void SimulatedAnnealing::OptimizeArea()
@@ -157,7 +161,6 @@ const void SimulatedAnnealing::Global_Optimization()
 const void SimulatedAnnealing::Global_Optimization(Polygon *polygon, Point left_most, Point right_most)
 {
     cout << "Running Global for subdivision\n";
-    cout << "stating polygon is simple " << polygon->is_simple() << "\n";
 
     Polygon output_polygon = *polygon;
     T = 1.0;
@@ -326,6 +329,12 @@ const void SimulatedAnnealing::Subdivision_Optimization()
         position_of_points_vector++;
         temp_polygon.clear();
     }
+
+    for (vector<Point> vec : subdivision_vectors)
+    {
+        vec.clear();
+    }
+    subdivision_vectors.clear();
 }
 
 const FT SimulatedAnnealing::calculate_energy(Polygon p)
@@ -358,8 +367,6 @@ const FT SimulatedAnnealing::calculate_energy(Polygon p)
         E = -1;
         break;
     }
-
-    // cout << "Energy: " << E << "\n";
 
     return E;
 }

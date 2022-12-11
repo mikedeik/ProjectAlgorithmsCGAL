@@ -57,7 +57,10 @@ private:
 
 public:
     /*  inc_points : vector of Points
-        an_type : should be LOCAL or GLOBAL or SUBDIVSION */
+        an_type : should be LOCAL or GLOBAL or SUBDIVSION
+        Area_target: should be MIN or MAX
+        L : should be an int (on thousands for better results)
+        inc_output_file: output file path */
     SimulatedAnnealing(vector<Point> inc_points, AnnealingType an_type, Target Area_target, int L, string inc_output_file);
     ~SimulatedAnnealing();
 

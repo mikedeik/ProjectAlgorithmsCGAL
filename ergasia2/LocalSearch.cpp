@@ -114,7 +114,7 @@ const void LocalSearch::MaximizeArea()
     }
     auto stop = high_resolution_clock::now();
 
-    auto duration = duration_cast<seconds>(stop - start);
+    auto duration = duration_cast<milliseconds>(stop - start);
     int time = duration.count();
     cout << "Time taken by function: "
          << duration.count() << " seconds"

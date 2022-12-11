@@ -126,9 +126,6 @@ const void Incrementing::Create_Polygon_Line()
 
     auto duration = duration_cast<seconds>(stop - start);
     time = duration.count();
-    cout << "Time taken by function: "
-         << duration.count() << " seconds"
-         << "\n";
 }
 
 const void Incrementing::find_red_edges(Point p)
@@ -177,7 +174,6 @@ const void Incrementing::find_visible_edges(Point p)
         if ((*it).target() == end_point)
         {
             last = it - polygon.edges_begin();
-            // cout << "last is : " << last << "\n";
         }
 
         if ((*it).source() == starting_point)
