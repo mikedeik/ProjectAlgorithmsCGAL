@@ -13,9 +13,11 @@ typedef CGAL::Fuzzy_iso_box<Traits> Fuzzy_iso_box;
 class SimulatedAnnealing
 {
 private:
-    Polygon starting_polygon; // to arxiko polygwno pou tha vgei apo ton algorithmo prwtis ergasias
+    Polygon starting_polygon; // to arxiko polygwno pou tha krataei to aplo polygwno gia backtrack
     Polygon new_polygon;      // to teliko polygwno meta to optimization
-    vector<Point> points;     // ena vector apo points pou tha lavei ws orisma o algorithmos
+    Polygon initial_polygon;  // to  arxiko polygwno meta apo tin xrisi tou prwtou algorithmou
+
+    vector<Point> points; // ena vector apo points pou tha lavei ws orisma o algorithmos
 
     AnnealingType type;   // o tropos pou tha ginei to optimization
     Target target;        // to target tou optimization (MIN or MAX)

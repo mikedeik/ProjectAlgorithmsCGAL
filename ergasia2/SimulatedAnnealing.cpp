@@ -14,6 +14,7 @@ SimulatedAnnealing::SimulatedAnnealing(vector<Point> inc_points, AnnealingType a
 
     Incrementing *algo = new Incrementing(points, X_ASCENDING);
     algo->Create_Polygon_Line();
+    initial_polygon = algo->Get_Simple_Polygon();
     starting_polygon = algo->Get_Simple_Polygon();
 
     calculate_energy(starting_polygon);
@@ -59,9 +60,18 @@ const void SimulatedAnnealing::OptimizeArea()
     auto duration = duration_cast<milliseconds>(stop - start);
     run_time = duration.count();
 
-    cout << "starting area :" << starting_area << "\n";
-    cout << "new area :" << new_polygon.area() << "\n";
-    cout << "is it simple? -> " << new_polygon.is_simple() << "\n";
+    switch (target)
+    {
+    case MIN:
+        print_to_file(initial_polygon, new_polygon, output_file, run_time, "Simulated Annealing", "MIN");
+        break;
+    case MAX:
+        print_to_file(initial_polygon, new_polygon, output_file, run_time, "Simulated Annealing", "MAX");
+        break;
+
+    default:
+        break;
+    }
 }
 
 const void SimulatedAnnealing::Local_Optimization()
