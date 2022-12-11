@@ -119,6 +119,8 @@ const void LocalSearch::MaximizeArea()
     cout << "Time taken by function: "
          << duration.count() << " seconds"
          << "\n";
+    string algo = "Local Search";
+    print_to_file(polygon_history[polygon_history.size() - 1], polygon_history[0], output_file, time, algo, target);
 }
 
 const void LocalSearch::MinimizeArea()
@@ -206,6 +208,8 @@ const void LocalSearch::MinimizeArea()
     cout << "Time taken by function: "
          << duration.count() << " seconds"
          << "\n";
+    string algo = "Local Search";
+    print_to_file(polygon_history[polygon_history.size() - 1], polygon_history[0], output_file, time, algo, target);
 }
 Polygon RemovePath(Polygon polygon, vector<Point> path)
 {
