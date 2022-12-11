@@ -1,10 +1,11 @@
 #include "LocalSearch.h"
 using namespace std::chrono;
 
-LocalSearch::LocalSearch(vector<Point> points, Target inc_target, float threshold, string inc_output_file) : target(inc_target),
-                                                                                                             output_file(inc_output_file)
+LocalSearch::LocalSearch(vector<Point> points, Target inc_target, float threshold, string inc_output_file, int L) : target(inc_target),
+                                                                                                                    output_file(inc_output_file)
 {
     threshold = threshold;
+    L = L;
     Incrementing algo(points, X_ASCENDING);
     algo.Create_Polygon_Line();
     Polygon polygon = algo.Get_Simple_Polygon();
@@ -36,8 +37,7 @@ const void LocalSearch::MaximizeArea()
 {
     auto start = high_resolution_clock::now();
 
-    int max_path_length = 3;
-    float threshold = 0.01;
+    int max_path_length = L;
     float DA = threshold; // difference of area (curr polygon area - prev polygon area)
 
     vector<Point> path;
@@ -127,7 +127,7 @@ const void LocalSearch::MinimizeArea()
 {
     auto start = high_resolution_clock::now();
 
-    int max_path_length = 3;
+    int max_path_length = L;
     float DA = threshold; // difference of area (curr polygon area - prev polygon area)
 
     vector<Point> path;

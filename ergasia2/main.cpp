@@ -101,7 +101,7 @@ int main(int argc, char **argv)
 
     if (algorithm == "local_search")
     {
-        LocalSearch LS(points, target, threshold, output_file_path);
+        LocalSearch LS(points, target, threshold, output_file_path,L);
     }
 
     if (algorithm == "simulated_annealing")
