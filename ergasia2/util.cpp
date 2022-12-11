@@ -311,9 +311,10 @@ void print_to_file(const Polygon ch_polygon, string filename, int time)
     MyFile.close();
 }
 
-void print_to_file(const Polygon starting_polygon, const Polygon new_polygon, string filename, int time)
+void print_to_file(const Polygon starting_polygon, const Polygon new_polygon, string filename, int time, string algo, string type)
 {
     std::ofstream MyFile(filename);
+    MyFile << "Optimal Area Polygonization\n";
     for (Point p : new_polygon)
     {
         MyFile << p << "\n";
@@ -322,10 +323,49 @@ void print_to_file(const Polygon starting_polygon, const Polygon new_polygon, st
     {
         MyFile << edge << "\n";
     }
-    MyFile << "area" << new_polygon.area() << "\n";
-    MyFile << "construction time " << time << "\n";
-    MyFile << "Polygon is Simple: " << new_polygon.is_simple() << "\n";
+    MyFile << "Algorithm: " << algo << "_" << type << "\n";
+    MyFile << "Area_initial: " << CGAL::to_double(starting_polygon.area()) << "\n";
+    MyFile << "Area :" << CGAL::to_double(new_polygon.area()) << "\n";
+
+    double starting_ratio;
+    double new_ratio;
+
+    vector<Point> CH_start_points;
+    vector<Point> CH_new_points;
+
+    Polygon CH_starting;
+    Polygon CH_new;
+
+    CGAL::convex_hull_2(starting_polygon.begin(), starting_polygon.end(), std::back_inserter(CH_start_points));
+
+    for (Point p : CH_start_points)
+    {
+        CH_starting.push_back(p);
+    }
+
+    CGAL::convex_hull_2(new_polygon.begin(), new_polygon.end(), std::back_inserter(CH_new_points));
+
+    for (Point p : CH_new_points)
+    {
+        CH_new.push_back(p);
+    }
+
+    starting_ratio = CGAL::to_double(starting_polygon.area()) / CGAL::to_double(CH_starting.area());
+
+    new_ratio = CGAL::to_double(new_polygon.area()) / CGAL::to_double(CH_new.area());
+
+    MyFile << "Ratio_initial: " << starting_ratio << "\n";
+    MyFile << "Ratio: " << new_ratio << "\n";
+
+    MyFile << "Construction time: " << time << "\n";
+
     MyFile.close();
+
+    CH_start_points.clear();
+    CH_new_points.clear();
+
+    CH_starting.clear();
+    CH_new.clear();
 }
 
 bool Compute_Metropolis(double DE, double T, double R)
