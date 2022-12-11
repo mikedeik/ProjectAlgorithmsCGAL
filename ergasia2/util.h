@@ -86,7 +86,7 @@ void traverse_ccw(const Polygon ch_polygon, int position_to_start, Point p, vect
 
 void print_to_file(const Polygon ch_polygon, string filename, int time);
 
-void print_to_file(const Polygon starting_polygon, const Polygon new_polygon, string filename, int time, string algo, string type);
+void print_to_file(const Polygon starting_polygon, const Polygon new_polygon, string filename, int time, string algo, Target type);
 
 // elegxei an ikanopoieitai to kritirio Metropolis
 bool Compute_Metropolis(double DE, double T, double R);

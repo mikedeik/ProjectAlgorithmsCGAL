@@ -311,7 +311,7 @@ void print_to_file(const Polygon ch_polygon, string filename, int time)
     MyFile.close();
 }
 
-void print_to_file(const Polygon starting_polygon, const Polygon new_polygon, string filename, int time, string algo, string type)
+void print_to_file(const Polygon starting_polygon, const Polygon new_polygon, string filename, int time, string algo, Target type)
 {
     std::ofstream MyFile(filename);
     MyFile << "Optimal Area Polygonization\n";
@@ -323,7 +323,21 @@ void print_to_file(const Polygon starting_polygon, const Polygon new_polygon, st
     {
         MyFile << edge << "\n";
     }
-    MyFile << "Algorithm: " << algo << "_" << type << "\n";
+
+    string optimization;
+    switch (type)
+    {
+    case MIN:
+        optimization = "MIN";
+        break;
+    case MAX:
+        optimization = "MAX";
+        break;
+    default:
+        break;
+    }
+
+    MyFile << "Algorithm: " << algo << "_" << optimization << "\n";
     MyFile << "Area_initial: " << CGAL::to_double(starting_polygon.area()) << "\n";
     MyFile << "Area :" << CGAL::to_double(new_polygon.area()) << "\n";
 
