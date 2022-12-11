@@ -17,12 +17,13 @@ class LocalSearch
 {
 private:
     Polygon current_polygon;
+    float threshold;
     // kratao ena history apo ola ta versions tou polygon
     //  meta apo kath itteration
     vector<Polygon> polygon_history;
 
 public:
-    LocalSearch(vector<Point>,char* operation);//'max' for maximazation 'min' for minimization
+    LocalSearch(vector<Point>,char* operation,float threshold);//'max' for maximazation 'min' for minimization
     ~LocalSearch();
     const void MinimizeArea();
     const void MaximizeArea();

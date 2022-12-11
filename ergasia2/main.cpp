@@ -102,7 +102,7 @@ int main(int argc, char **argv)
     SimulatedAnnealing SA(points, an_type[initialization], target, L, output_file_path);
     SA.OptimizeArea();
     char* str="max";
-    LocalSearch LS(points,str);
+    LocalSearch LS(points,str,threshold);
 
     // SimulatedAnnealing SA(p, LOCAL, target, L);
     // SA.MinimizeArea();
