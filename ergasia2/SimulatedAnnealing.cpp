@@ -60,18 +60,7 @@ const void SimulatedAnnealing::OptimizeArea()
     auto duration = duration_cast<milliseconds>(stop - start);
     run_time = duration.count();
 
-    switch (target)
-    {
-    case MIN:
-        print_to_file(initial_polygon, new_polygon, output_file, run_time, "Simulated Annealing", "MIN");
-        break;
-    case MAX:
-        print_to_file(initial_polygon, new_polygon, output_file, run_time, "Simulated Annealing", "MAX");
-        break;
-
-    default:
-        break;
-    }
+    print_to_file(initial_polygon, new_polygon, output_file, run_time, "Simulated Annealing", target);
 }
 
 const void SimulatedAnnealing::Local_Optimization()
