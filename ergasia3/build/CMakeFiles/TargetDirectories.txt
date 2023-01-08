@@ -1,0 +1,3 @@
+/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles/a.out.dir
+/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles/edit_cache.dir
+/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles/rebuild_cache.dir
