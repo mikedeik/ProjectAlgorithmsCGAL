@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 
     int L_SA = 5000;
     int L_LS = 5;
-    double threshold = 100.0;
+    double threshold = 5.0;
     Target target = MIN;
 
     string input_dir = "";
@@ -49,6 +49,8 @@ int main(int argc, char **argv)
         }
     }
 
+    // map<int, vector<double>> Score_Map;
+
     vector<Point> points;
 
     for (const auto &entry : fs::directory_iterator(input_dir))
@@ -69,6 +71,8 @@ int main(int argc, char **argv)
 
         SimulatedAnnealing SA(points, LOCAL, target, L_SA, output_file);
         SA.OptimizeArea();
+
+        LocalSearch LS(points, target, threshold, output_file, L_LS);
 
         getchar();
     }

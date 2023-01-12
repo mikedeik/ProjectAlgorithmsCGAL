@@ -26,7 +26,7 @@ private:
     string output_file;
 
 public:
-    LocalSearch(vector<Point>, Target inc_target, float threshold, string inc_output_file, int L); //'max' for maximazation 'min' for minimization
+    LocalSearch(vector<Point>, Target inc_target, float threshold, string inc_output_file, int inc_L); //'max' for maximazation 'min' for minimization
     ~LocalSearch();
     const void MinimizeArea();
     const void MaximizeArea();

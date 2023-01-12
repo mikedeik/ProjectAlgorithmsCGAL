@@ -1,11 +1,11 @@
 #include "LocalSearch.h"
 using namespace std::chrono;
 
-LocalSearch::LocalSearch(vector<Point> points, Target inc_target, float threshold, string inc_output_file, int L) : target(inc_target),
-                                                                                                                    output_file(inc_output_file)
+LocalSearch::LocalSearch(vector<Point> points, Target inc_target, float threshold, string inc_output_file, int inc_L) : target(inc_target),
+                                                                                                                        output_file(inc_output_file),
+                                                                                                                        L(inc_L)
 {
     threshold = threshold;
-    L = L;
     Incrementing algo(points, X_ASCENDING);
     algo.Create_Polygon_Line();
     Polygon polygon = algo.Get_Simple_Polygon();
@@ -37,7 +37,6 @@ const void LocalSearch::MaximizeArea()
 {
     auto start = high_resolution_clock::now();
 
-    int max_path_length = L;
     float DA = threshold; // difference of area (curr polygon area - prev polygon area)
 
     vector<Point> path;
@@ -49,7 +48,7 @@ const void LocalSearch::MaximizeArea()
         {
             // cout << edge << "\n";
             // for every path V of length <=k do
-            for (int i = 0; i < max_path_length; i++)
+            for (int i = 1; i < L; i++)
             {
                 int j = 0;
                 for (Point point : current_polygon.vertices())
@@ -127,7 +126,6 @@ const void LocalSearch::MinimizeArea()
 {
     auto start = high_resolution_clock::now();
 
-    int max_path_length = L;
     float DA = threshold; // difference of area (curr polygon area - prev polygon area)
 
     vector<Point> path;
@@ -138,8 +136,9 @@ const void LocalSearch::MinimizeArea()
         for (Segment edge : current_polygon.edges())
         {
             // for every path V of length <=k do
-            for (int i = 0; i < max_path_length; i++)
+            for (int i = 1; i < L; i++)
             {
+
                 int j = 0;
                 for (Point point : current_polygon.vertices())
                 {
@@ -173,11 +172,11 @@ const void LocalSearch::MinimizeArea()
                     temp_polygon = RemovePath(temp_polygon, path); // edo to temp polygon exei afairemeno to path
                     // insert path between edge
                     // epeidi ta vazo ola amesos meta to proto simeio tou edge mpainoun anapoda(opos theloume)
-                    for (int i = 0; i < path.size(); i++)
+                    for (int ii = 0; ii < path.size(); ii++)
                     {
                         PointIterator position_to_insert = find(temp_polygon.vertices().begin(), temp_polygon.vertices().end(), edge.vertex(0));
                         int index = position_to_insert - temp_polygon.vertices().begin();
-                        temp_polygon.insert(temp_polygon.begin() + index, path[i]);
+                        temp_polygon.insert(temp_polygon.begin() + index, path[ii]);
                     }
 
                     if (temp_polygon.is_simple())
@@ -194,8 +193,8 @@ const void LocalSearch::MinimizeArea()
                 // if V moving to e increases area save to list
             }
         }
-        DA = abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area()));
-        cout << " DA IS :" << DA << std::endl;
+        DA = abs(abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area())));
+        // cout << " DA IS :" << DA << std::endl;
         current_polygon = best_polygon;
         polygon_history.push_back(current_polygon);
         // Aplly all changes
@@ -203,13 +202,13 @@ const void LocalSearch::MinimizeArea()
     }
     auto stop = high_resolution_clock::now();
 
-    auto duration = duration_cast<seconds>(stop - start);
+    auto duration = duration_cast<milliseconds>(stop - start);
     int time = duration.count();
     cout << "Time taken by function: "
-         << duration.count() << " seconds"
+         << duration.count() << " milliseconds"
          << "\n";
     string algo = "Local Search";
-    print_to_file(polygon_history[polygon_history.size() - 1], polygon_history[0], output_file, time, algo, target);
+    print_to_file(polygon_history[0], polygon_history[polygon_history.size() - 1], output_file, time, algo, target);
 }
 Polygon RemovePath(Polygon polygon, vector<Point> path)
 {
