@@ -65,6 +65,12 @@ void get_points_from_file(string filename, vector<Point> *points)
         int to_drop;
         input >> to_drop;
         input >> p;
+
+        if (p == Point(0, -0))
+        {
+            (*points).clear();
+            return;
+        }
         points->push_back(p);
     }
 
