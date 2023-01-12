@@ -3,11 +3,11 @@
 
 cmake_minimum_required(VERSION 3.1...3.23)
 
-project( optimal_polygon )
+project( polygonization )
 
 
 # CGAL and its components
-find_package( CGAL PATHS /home/johnpsar/CGAL /home/mike/CGAL-5.5)
+find_package( CGAL QUIET COMPONENTS  )
 
 if ( NOT CGAL_FOUND )
 
@@ -15,6 +15,7 @@ if ( NOT CGAL_FOUND )
   return()  
 
 endif()
+
 
 # Boost and its components
 find_package( Boost REQUIRED )
@@ -32,12 +33,13 @@ endif()
 # include for local package
 
 
-# Creating entries for target: optimal_polygon
+# Creating entries for target: polygonization
 # ############################
 
-add_executable( optimal_polygon  incrementing.cpp visibleedge.cpp main.cpp util.cpp SimulatedAnnealing.cpp LocalSearch.cpp)
+add_executable( polygonization  incrementing.cpp LocalSearch.cpp main.cpp SimulatedAnnealing.cpp util.cpp visibleedge.cpp )
 
-add_to_cached_list( CGAL_EXECUTABLE_TARGETS optimal_polygon )
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS polygonization )
 
 # Link the executable to CGAL and third-party libraries
-target_link_libraries(optimal_polygon PRIVATE CGAL::CGAL )
+target_link_libraries(polygonization PRIVATE CGAL::CGAL )
+

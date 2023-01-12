@@ -29,6 +29,7 @@ private:
     int Find_Index_Of_Point_In_Vector(Point, vector<Point>);
     int Find_Index_In_Polygon(Point);
     int time;
+    vector<int> added_points;
 
 public:
     VisibleEdge(std::vector<Point> points, string output_file);
@@ -39,6 +40,7 @@ public:
     // and adds the internal points to the polygonal chain
     void Create_Polygon();
     FT Get_Polygon_Area();
+    const Polygon Get_Simple_Polygon();
 };
 
 #endif

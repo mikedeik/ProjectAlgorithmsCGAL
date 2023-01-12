@@ -78,5 +78,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/optimal_polygon.dir/DependInfo.cmake"
+  "CMakeFiles/polygonization.dir/DependInfo.cmake"
   )

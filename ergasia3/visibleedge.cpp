@@ -4,12 +4,18 @@
 VisibleEdge::VisibleEdge(std::vector<Point> points, string output_file)
 {
     this->points = points;
+
+    for (Point p : points)
+    {
+        added_points.push_back(0);
+    }
+
     time = 0;
     Create_Convex_Hull();
     Create_Polygon();
     if (output_file != "")
     {
-        print_to_file(polygon, output_file,time);
+        print_to_file(polygon, output_file, time);
     }
     else
     {
@@ -42,29 +48,22 @@ void VisibleEdge::Create_Convex_Hull()
 {
     CGAL::convex_hull_2(points.begin(), points.end(), std::back_inserter(convex_hull_points));
     std::cout << convex_hull_points.size() << " points on the convex hull" << std::endl;
+
+    int position = 0;
+
     for (Point point : convex_hull_points)
     {
+
+        int position_of_added = Find_Index_Of_Point_In_Vector(point, points);
+
+        added_points[position_of_added] = 1;
+
         polygon.push_back(point);
     }
-    for (int i = 0; i < convex_hull_points.size() - 1; i++)
-    {
-        edges.push_back(Segment(convex_hull_points[i], convex_hull_points[i + 1]));
-    }
-    edges.push_back(Segment(convex_hull_points.back(), convex_hull_points.front()));
-
-    Print_Edges();
 }
 
 void VisibleEdge::Print_Edges()
 {
-    std::cout << "Printing Edges\n";
-    for (Segment seg : edges)
-    {
-
-        std::cout << "(" << seg[0] << ")"
-                  << "->"
-                  << "(" << seg[1] << ")" << std::endl;
-    }
 }
 
 bool VisibleEdge::Is_Point_Included_In_Polygonal_Chain(Point p)
@@ -85,12 +84,15 @@ void VisibleEdge::Create_Polygon()
     auto start = std::chrono::high_resolution_clock::now();
 
     points_not_in_chain.clear();
+
+    int position = 0;
     for (Point p : points)
     {
-        if (!Is_Point_Included_In_Polygonal_Chain(p))
+        if (added_points[position] == 0)
         {
             points_not_in_chain.push_back(p);
         }
+        position++;
     }
 
     while (points_not_in_chain.size() > 0)
@@ -157,30 +159,22 @@ Point VisibleEdge::Find_Nearest_Point_To_Segment(Segment s)
 
 int VisibleEdge::Find_Index_Of_Point_In_Vector(Point p, vector<Point> v)
 {
-    for (int i = 0; i < v.size(); i++)
-    {
-        if (v[i].x() == p.x() && v[i].y() == p.y())
-        {
-            return i;
-        }
-    }
-    return -1;
+    PointIterator it = find(v.begin(), v.end(), p);
+    return it - v.begin();
 }
 
 int VisibleEdge::Find_Index_In_Polygon(Point p)
 {
-    for (int i = 0; i < polygon.size(); i++)
-    {
-        if (polygon[i].x() == p.x() && polygon[i].y() == p.y())
-        {
-            cout << "INDEX : " << i << std::endl;
-            return i;
-        }
-    }
-    return -1;
+    PointIterator it = find(polygon.begin(), polygon.end(), p);
+    return it - polygon.begin();
 }
 
 FT VisibleEdge::Get_Polygon_Area()
 {
     return polygon.area();
+}
+
+const Polygon VisibleEdge::Get_Simple_Polygon()
+{
+    return polygon;
 }

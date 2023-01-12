@@ -5,110 +5,71 @@
 #include "SimulatedAnnealing.h"
 #include "LocalSearch.h"
 #include <map>
+#include <filesystem>
 
+namespace fs = std::filesystem;
 using namespace std;
 
 int main(int argc, char **argv)
 {
-    int L;
-    double threshold;
-    Target target;
-    string input_file_path = "", output_file_path = "", algorithm = "", initialization = "";
 
-    if (argc != 12)
-    {
-        Print_Errors();
-        return 1;
-    }
+    int L_SA = 5000;
+    int L_LS = 5;
+    double threshold = 100.0;
+    Target target = MIN;
 
-    for (int i = 1; i <= 6; i++)
+    string input_dir = "";
+    string output_file = "out.txt";
+
+    for (int i = 1; i < argc; i = i + 2)
     {
-        switch (i)
+
+        if (argv[i] && argv[i + 1])
         {
-        case 1:
-            if (!strcmp(argv[1], "-i"))
+            if (!strcmp(argv[i], "-i"))
             {
-                input_file_path = argv[2];
-                break;
+                input_dir = argv[i + 1];
             }
-            Print_Errors(i);
-            return i;
-        case 2:
-            if (!strcmp(argv[3], "-o"))
+            if (!strcmp(argv[i], "-o"))
             {
-                output_file_path = argv[4];
-                break;
+                output_file = argv[i + 1];
             }
-            Print_Errors(i);
-            return i;
-        case 3:
-            if (!strcmp(argv[5], "-algorithm"))
+            if (!strcmp(argv[i], "-L_SA"))
             {
-                algorithm = argv[6];
-                break;
+                L_SA = stoi(argv[i + 1]);
             }
-            Print_Errors(i);
-            return i;
-        case 4:
-            if (!strcmp(argv[7], "-L"))
+            if (!strcmp(argv[i], "-L_LS"))
             {
-                L = atoi(argv[8]);
-                break;
+                L_LS = stoi(argv[i + 1]);
             }
-            Print_Errors(i);
-            return i;
-        case 5:
-            if (!strcmp(argv[9], "-max"))
+            if (!strcmp(argv[i], "-threshold"))
             {
-                target = MAX;
-                break;
+                threshold = stof(argv[i + 1]);
             }
-            if (!strcmp(argv[9], "-min"))
-            {
-                target = MIN;
-                break;
-            }
-            Print_Errors(i);
-            return i;
-        case 6:
-            if (!strcmp(argv[10], "-threshold"))
-            {
-                threshold = atof(argv[11]);
-                break;
-            }
-            if (!strcmp(argv[10], "-annealing"))
-            {
-                initialization = argv[11];
-                break;
-            }
-            Print_Errors(i);
-            return i;
-
-        default:
-            break;
         }
     }
 
-    map<string, AnnealingType> an_type;
-
-    an_type.insert(pair<string, AnnealingType>("local", LOCAL));
-    an_type.insert(pair<string, AnnealingType>("global", GLOBAL));
-    an_type.insert(pair<string, AnnealingType>("subdivision", SUBDIVISION));
-
     vector<Point> points;
-    cout << input_file_path << std::endl;
-    get_points_from_file(input_file_path, &points);
 
-    if (algorithm == "local_search")
+    for (const auto &entry : fs::directory_iterator(input_dir))
     {
-        LocalSearch LS(points, target, threshold, output_file_path,L);
-    }
+        std::cout << entry << std::endl;
+        std::filesystem::path outfilename = entry.path();
+        string filename = outfilename.string();
 
-    if (algorithm == "simulated_annealing")
-    {
-        SimulatedAnnealing SA(points, an_type[initialization], target, L, output_file_path);
+        points.clear();
+
+        get_points_from_file(filename, &points);
+
+        if (points.empty())
+        {
+            cout << "error reading points \n";
+            exit(1);
+        }
+
+        SimulatedAnnealing SA(points, LOCAL, target, L_SA, output_file);
         SA.OptimizeArea();
-    }
 
-    return 0;
+        getchar();
+    }
 }

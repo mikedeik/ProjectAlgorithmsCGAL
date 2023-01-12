@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia2
+CMAKE_SOURCE_DIR = /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia2
+CMAKE_BINARY_DIR = /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia3
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia2/CMakeFiles /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia2//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia3/CMakeFiles /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia3//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documents/Project_Emiris_2/project-emiris/ergasia3/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named optimal_polygon
+# Target rules for targets named polygonization
 
 # Build rule for target.
-optimal_polygon: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 optimal_polygon
-.PHONY : optimal_polygon
+polygonization: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 polygonization
+.PHONY : polygonization
 
 # fast build rule for target.
-optimal_polygon/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/build
-.PHONY : optimal_polygon/fast
+polygonization/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/build
+.PHONY : polygonization/fast
 
 LocalSearch.o: LocalSearch.cpp.o
 .PHONY : LocalSearch.o
 
 # target to build an object file
 LocalSearch.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/LocalSearch.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/LocalSearch.cpp.o
 .PHONY : LocalSearch.cpp.o
 
 LocalSearch.i: LocalSearch.cpp.i
@@ -142,7 +142,7 @@ LocalSearch.i: LocalSearch.cpp.i
 
 # target to preprocess a source file
 LocalSearch.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/LocalSearch.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/LocalSearch.cpp.i
 .PHONY : LocalSearch.cpp.i
 
 LocalSearch.s: LocalSearch.cpp.s
@@ -150,7 +150,7 @@ LocalSearch.s: LocalSearch.cpp.s
 
 # target to generate assembly for a file
 LocalSearch.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/LocalSearch.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/LocalSearch.cpp.s
 .PHONY : LocalSearch.cpp.s
 
 SimulatedAnnealing.o: SimulatedAnnealing.cpp.o
@@ -158,7 +158,7 @@ SimulatedAnnealing.o: SimulatedAnnealing.cpp.o
 
 # target to build an object file
 SimulatedAnnealing.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/SimulatedAnnealing.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/SimulatedAnnealing.cpp.o
 .PHONY : SimulatedAnnealing.cpp.o
 
 SimulatedAnnealing.i: SimulatedAnnealing.cpp.i
@@ -166,7 +166,7 @@ SimulatedAnnealing.i: SimulatedAnnealing.cpp.i
 
 # target to preprocess a source file
 SimulatedAnnealing.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/SimulatedAnnealing.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/SimulatedAnnealing.cpp.i
 .PHONY : SimulatedAnnealing.cpp.i
 
 SimulatedAnnealing.s: SimulatedAnnealing.cpp.s
@@ -174,7 +174,7 @@ SimulatedAnnealing.s: SimulatedAnnealing.cpp.s
 
 # target to generate assembly for a file
 SimulatedAnnealing.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/SimulatedAnnealing.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/SimulatedAnnealing.cpp.s
 .PHONY : SimulatedAnnealing.cpp.s
 
 incrementing.o: incrementing.cpp.o
@@ -182,7 +182,7 @@ incrementing.o: incrementing.cpp.o
 
 # target to build an object file
 incrementing.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/incrementing.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/incrementing.cpp.o
 .PHONY : incrementing.cpp.o
 
 incrementing.i: incrementing.cpp.i
@@ -190,7 +190,7 @@ incrementing.i: incrementing.cpp.i
 
 # target to preprocess a source file
 incrementing.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/incrementing.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/incrementing.cpp.i
 .PHONY : incrementing.cpp.i
 
 incrementing.s: incrementing.cpp.s
@@ -198,7 +198,7 @@ incrementing.s: incrementing.cpp.s
 
 # target to generate assembly for a file
 incrementing.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/incrementing.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/incrementing.cpp.s
 .PHONY : incrementing.cpp.s
 
 main.o: main.cpp.o
@@ -206,7 +206,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -214,7 +214,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -222,7 +222,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 util.o: util.cpp.o
@@ -230,7 +230,7 @@ util.o: util.cpp.o
 
 # target to build an object file
 util.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/util.cpp.o
 .PHONY : util.cpp.o
 
 util.i: util.cpp.i
@@ -238,7 +238,7 @@ util.i: util.cpp.i
 
 # target to preprocess a source file
 util.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/util.cpp.i
 .PHONY : util.cpp.i
 
 util.s: util.cpp.s
@@ -246,7 +246,7 @@ util.s: util.cpp.s
 
 # target to generate assembly for a file
 util.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/util.cpp.s
 .PHONY : util.cpp.s
 
 visibleedge.o: visibleedge.cpp.o
@@ -254,7 +254,7 @@ visibleedge.o: visibleedge.cpp.o
 
 # target to build an object file
 visibleedge.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/visibleedge.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/visibleedge.cpp.o
 .PHONY : visibleedge.cpp.o
 
 visibleedge.i: visibleedge.cpp.i
@@ -262,7 +262,7 @@ visibleedge.i: visibleedge.cpp.i
 
 # target to preprocess a source file
 visibleedge.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/visibleedge.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/visibleedge.cpp.i
 .PHONY : visibleedge.cpp.i
 
 visibleedge.s: visibleedge.cpp.s
@@ -270,7 +270,7 @@ visibleedge.s: visibleedge.cpp.s
 
 # target to generate assembly for a file
 visibleedge.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/optimal_polygon.dir/build.make CMakeFiles/optimal_polygon.dir/visibleedge.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/visibleedge.cpp.s
 .PHONY : visibleedge.cpp.s
 
 # Help Target
@@ -281,7 +281,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... optimal_polygon"
+	@echo "... polygonization"
 	@echo "... LocalSearch.o"
 	@echo "... LocalSearch.i"
 	@echo "... LocalSearch.s"
