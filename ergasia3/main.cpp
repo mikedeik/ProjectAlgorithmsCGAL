@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 
     int L_SA = 5000;
     int L_LS = 5;
-    double threshold = 5.0;
+    double threshold = 1000000.0;
     Target target = MIN;
 
     string input_dir = "";
@@ -49,10 +49,22 @@ int main(int argc, char **argv)
         }
     }
 
-    map<int, vector<double>> Score_Map;
+    map<int, double> Score_Map_LS_MIN;
+    map<int, double> Score_Map_LS_MAX;
+    map<int, double> Score_Map_SA_MIN;
+    map<int, double> Score_Map_SA_MAX;
 
+    for (int points_size = 10; points_size < 101; points_size += 10)
+    {
+        Score_Map_LS_MIN.insert(pair<int, double>(points_size, 1.0));
+        Score_Map_SA_MIN.insert(pair<int, double>(points_size, 1.0));
+        Score_Map_LS_MAX.insert(pair<int, double>(points_size, 0.0));
+        Score_Map_SA_MAX.insert(pair<int, double>(points_size, 0.0));
+    }
+
+    double new_ratio;
     vector<Point> points;
-    //todo na valoume orisma se kathe sinartisi ena max time kai na kanei abort otan to ksepernaei
+    // todo na valoume orisma se kathe sinartisi ena max time kai na kanei abort otan to ksepernaei
     for (const auto &entry : fs::directory_iterator(input_dir))
     {
         std::cout << entry << std::endl;
@@ -72,8 +84,27 @@ int main(int argc, char **argv)
         SimulatedAnnealing SA(points, LOCAL, target, L_SA, output_file);
         SA.OptimizeArea();
 
-        LocalSearch LS(points, target, threshold, output_file, L_LS);
+        // Running Local Search MIN
+        LocalSearch LS_min(points, MIN, threshold, output_file, L_LS);
+        new_ratio = LS_min.get_ratio();
 
-        getchar();
+        if (new_ratio < Score_Map_LS_MIN[points.size()])
+        {
+            Score_Map_LS_MIN[points.size()] = new_ratio;
+        }
+
+        // Running Local Search MAX
+        LocalSearch LS_max(points, MAX, threshold, output_file, L_LS);
+        new_ratio = LS_max.get_ratio();
+
+        if (new_ratio > Score_Map_LS_MAX[points.size()])
+        {
+            Score_Map_LS_MAX[points.size()] = new_ratio;
+        }
+    }
+
+    for (auto const &size : Score_Map_LS_MIN)
+    {
+        cout << "For " << size.first << " points best is " << size.second << "\n";
     }
 }

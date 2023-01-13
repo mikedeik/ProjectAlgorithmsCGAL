@@ -24,12 +24,14 @@ private:
     vector<Polygon> polygon_history;
     Target target;
     string output_file;
+    double ratio = 999999.9;
 
 public:
     LocalSearch(vector<Point>, Target inc_target, float threshold, string inc_output_file, int inc_L); //'max' for maximazation 'min' for minimization
     ~LocalSearch();
     const void MinimizeArea();
     const void MaximizeArea();
+    const double get_ratio();
 };
 Polygon RemovePath(Polygon, vector<Point>);
 const void Print_Polygon(Polygon);

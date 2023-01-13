@@ -40,7 +40,7 @@ const void LocalSearch::MaximizeArea()
     float DA = threshold; // difference of area (curr polygon area - prev polygon area)
 
     vector<Point> path;
-    while (DA >= threshold)
+    while (DA >= threshold || DA == 0)
     {
         Polygon best_polygon = current_polygon;
         // for every edge e ε S do
@@ -104,22 +104,35 @@ const void LocalSearch::MaximizeArea()
                 // if V moving to e increases area save to list
             }
         }
-        DA = abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area()));
+        DA = abs(abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area())));
         cout << " DA IS :" << DA << std::endl;
         current_polygon = best_polygon;
         polygon_history.push_back(current_polygon);
         // Aplly all changes
         // Keep best solution
     }
-    auto stop = high_resolution_clock::now();
+    // auto stop = high_resolution_clock::now();
 
-    auto duration = duration_cast<milliseconds>(stop - start);
-    int time = duration.count();
-    cout << "Time taken by function: "
-         << duration.count() << " seconds"
-         << "\n";
-    string algo = "Local Search";
-    print_to_file(polygon_history[polygon_history.size() - 1], polygon_history[0], output_file, time, algo, target);
+    // auto duration = duration_cast<milliseconds>(stop - start);
+    // int time = duration.count();
+    // cout << "Time taken by function: "
+    //      << duration.count() << " seconds"
+    //      << "\n";
+    // string algo = "Local Search";
+    // print_to_file(polygon_history[polygon_history.size() - 1], polygon_history[0], output_file, time, algo, target);
+
+    // calculate ratio of best polygon
+    vector<Point> CH_new_points;
+    Polygon CH_new;
+
+    CGAL::convex_hull_2(polygon_history[polygon_history.size() - 1].begin(), polygon_history[polygon_history.size() - 1].end(), std::back_inserter(CH_new_points));
+
+    for (Point p : CH_new_points)
+    {
+        CH_new.push_back(p);
+    }
+
+    ratio = CGAL::to_double(polygon_history[polygon_history.size() - 1].area()) / CGAL::to_double(CH_new.area());
 }
 
 const void LocalSearch::MinimizeArea()
@@ -129,7 +142,7 @@ const void LocalSearch::MinimizeArea()
     float DA = threshold; // difference of area (curr polygon area - prev polygon area)
 
     vector<Point> path;
-    while (DA >= threshold)
+    while (DA >= threshold || DA == 0)
     {
         Polygon best_polygon = current_polygon;
         // for every edge e ε S do
@@ -200,15 +213,28 @@ const void LocalSearch::MinimizeArea()
         // Aplly all changes
         // Keep best solution
     }
-    auto stop = high_resolution_clock::now();
 
-    auto duration = duration_cast<milliseconds>(stop - start);
-    int time = duration.count();
-    cout << "Time taken by function: "
-         << duration.count() << " milliseconds"
-         << "\n";
-    string algo = "Local Search";
-    print_to_file(polygon_history[0], polygon_history[polygon_history.size() - 1], output_file, time, algo, target);
+    vector<Point> CH_new_points;
+    Polygon CH_new;
+
+    CGAL::convex_hull_2(polygon_history[polygon_history.size() - 1].begin(), polygon_history[polygon_history.size() - 1].end(), std::back_inserter(CH_new_points));
+
+    for (Point p : CH_new_points)
+    {
+        CH_new.push_back(p);
+    }
+
+    ratio = CGAL::to_double(polygon_history[polygon_history.size() - 1].area()) / CGAL::to_double(CH_new.area());
+
+    // auto stop = high_resolution_clock::now();
+
+    // auto duration = duration_cast<milliseconds>(stop - start);
+    // int time = duration.count();
+    // cout << "Time taken by function: "
+    //      << duration.count() << " milliseconds"
+    //      << "\n";
+    // string algo = "Local Search";
+    // print_to_file(polygon_history[0], polygon_history[polygon_history.size() - 1], output_file, time, algo, target);
 }
 Polygon RemovePath(Polygon polygon, vector<Point> path)
 {
@@ -257,4 +283,9 @@ const void Print_Polygon(Polygon polygon)
     {
         cout << point << "\n";
     }
+}
+
+const double LocalSearch::get_ratio()
+{
+    return ratio;
 }
