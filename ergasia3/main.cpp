@@ -49,10 +49,10 @@ int main(int argc, char **argv)
         }
     }
 
-    // map<int, vector<double>> Score_Map;
+    map<int, vector<double>> Score_Map;
 
     vector<Point> points;
-
+    //todo na valoume orisma se kathe sinartisi ena max time kai na kanei abort otan to ksepernaei
     for (const auto &entry : fs::directory_iterator(input_dir))
     {
         std::cout << entry << std::endl;

@@ -54,16 +54,16 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnpsar/Desktop/project-emiris/ergasia2
+CMAKE_SOURCE_DIR = /home/johnpsar/Desktop/project-emiris/ergasia3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnpsar/Desktop/project-emiris/ergasia2/build
+CMAKE_BINARY_DIR = /home/johnpsar/Desktop/project-emiris/ergasia3/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/a.out.dir/all
+all: CMakeFiles/polygonization.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/a.out.dir/clean
+clean: CMakeFiles/polygonization.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/a.out.dir
+# Target rules for target CMakeFiles/polygonization.dir
 
 # All Build rule for target.
-CMakeFiles/a.out.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target a.out"
-.PHONY : CMakeFiles/a.out.dir/all
+CMakeFiles/polygonization.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnpsar/Desktop/project-emiris/ergasia3/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target polygonization"
+.PHONY : CMakeFiles/polygonization.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/a.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/a.out.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles 0
-.PHONY : CMakeFiles/a.out.dir/rule
+CMakeFiles/polygonization.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnpsar/Desktop/project-emiris/ergasia3/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/polygonization.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnpsar/Desktop/project-emiris/ergasia3/build/CMakeFiles 0
+.PHONY : CMakeFiles/polygonization.dir/rule
 
 # Convenience name for target.
-a.out: CMakeFiles/a.out.dir/rule
-.PHONY : a.out
+polygonization: CMakeFiles/polygonization.dir/rule
+.PHONY : polygonization
 
 # clean rule for target.
-CMakeFiles/a.out.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/clean
-.PHONY : CMakeFiles/a.out.dir/clean
+CMakeFiles/polygonization.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonization.dir/build.make CMakeFiles/polygonization.dir/clean
+.PHONY : CMakeFiles/polygonization.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

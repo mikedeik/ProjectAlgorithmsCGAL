@@ -7,7 +7,8 @@ project( polygonization )
 
 
 # CGAL and its components
-find_package( CGAL QUIET COMPONENTS  )
+find_package( CGAL PATHS /home/johnpsar/CGAL /home/mike/CGAL-5.5)
+
 
 if ( NOT CGAL_FOUND )
 

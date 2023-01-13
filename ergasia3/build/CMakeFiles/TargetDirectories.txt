@@ -1,3 +1,3 @@
-/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles/a.out.dir
-/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles/edit_cache.dir
-/home/johnpsar/Desktop/project-emiris/ergasia2/build/CMakeFiles/rebuild_cache.dir
+/home/johnpsar/Desktop/project-emiris/ergasia3/build/CMakeFiles/polygonization.dir
+/home/johnpsar/Desktop/project-emiris/ergasia3/build/CMakeFiles/edit_cache.dir
+/home/johnpsar/Desktop/project-emiris/ergasia3/build/CMakeFiles/rebuild_cache.dir
