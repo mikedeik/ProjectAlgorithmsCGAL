@@ -38,7 +38,7 @@ const void LocalSearch::MaximizeArea()
 {
     auto start = high_resolution_clock::now();
 
-    float DA = threshold; // difference of area (curr polygon area - prev polygon area)
+    double DA = threshold; // difference of area (curr polygon area - prev polygon area)
 
     vector<Point> path;
     while (DA >= threshold || DA == 0)
@@ -93,6 +93,7 @@ const void LocalSearch::MaximizeArea()
 
                     if (temp_polygon.is_simple())
                     {
+                        // cout << "in here";
                         if (temp_polygon.area() > best_polygon.area())
                         {
                             cout << "temp area " << CGAL::to_double(temp_polygon.area()) << " best area" << CGAL::to_double(best_polygon.area()) << std::endl;
@@ -120,7 +121,7 @@ const void LocalSearch::MaximizeArea()
             }
         }
         DA = abs(abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area())));
-        cout << " DA IS :" << DA << std::endl;
+        cout << " DA IS : " << DA << std::endl;
         current_polygon = best_polygon;
         polygon_history.push_back(current_polygon);
         // Aplly all changes
@@ -144,7 +145,7 @@ const void LocalSearch::MinimizeArea()
 {
     auto start = high_resolution_clock::now();
 
-    float DA = threshold; // difference of area (curr polygon area - prev polygon area)
+    double DA = threshold; // difference of area (curr polygon area - prev polygon area)
 
     vector<Point> path;
     while (DA >= threshold || DA == 0)
@@ -199,6 +200,7 @@ const void LocalSearch::MinimizeArea()
 
                     if (temp_polygon.is_simple())
                     {
+                        cout << "in here";
                         if (temp_polygon.area() < best_polygon.area())
                         {
                             cout << "temp area " << CGAL::to_double(temp_polygon.area()) << " best area" << CGAL::to_double(best_polygon.area()) << std::endl;
