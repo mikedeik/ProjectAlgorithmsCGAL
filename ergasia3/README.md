@@ -19,7 +19,7 @@ Paratiroume pws o SA algorithmos einai taxyteros apo ton local search to opoio e
 
 Paratiroume pws to local step ston SA einai asfalws poly taxytero apo to global logo tou KD-Tree kai tis anazitisis mono sto orthogonio metaksu twn tessarwn simeiwn pou anazitoume.
 
-Paratiroume pws o Local Search mas dinei to kalitero accuracy ,alla einai tautoxrona o pio argos gia megales times ,to opoio einai anamenomeno dioti einai eksantlitikos algorithmos. Exoume valei san optimization molis pesei i diafora emvadou kato apo to threshold na stamataei amesos i ektelesi anexartitos to simeio ektelesis pou vrisketai.
+Paratiroume pws o Local Search mas dinei to kalitero accuracy ,alla einai tautoxrona o pio argos gia megales times ,to opoio einai anamenomeno dioti einai eksantlitikos algorithmos. Exoume valei san optimization molis pesei i diafora emvadou kato apo to threshold na stamataei amesos i ektelesi anexartitos to simeio ektelesis pou vris.
 
 Paratiroume pws o Auksitikos Algorithmos einai o grigoroteros apo olous omos dinei mikrotero accuracy apo to Local Search kai ton Simulated Annealing. Stin periptosi mas einai grigorotero apo ton Algorithmo me Vasi To KP dioti eixei ilopoioithei mono me tixaies akmes .
 

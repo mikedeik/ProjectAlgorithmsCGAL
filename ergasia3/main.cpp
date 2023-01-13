@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     double threshold = 100000.0;
     Target target = MIN;
 
-    string input_dir = "";
+    string input_dir = "../";
     string output_file = "out.txt";
 
     for (int i = 1; i < argc; i = i + 2)
@@ -282,6 +282,17 @@ int main(int argc, char **argv)
         cout << "For " << size.first << " points best is " << size.second << "\n";
     }
 
+    // Printing
+    std::ofstream MyFile(output_file);
+    MyFile << "      ||       LS                             ||       SA_LOCAL                          ||    SA_GLOBAL                          ||\n";
+    MyFile << "Size  ||min_score|max_score|min_bound|max_bound| |min_score|max_score|min_bound|max_bound||min_score|max_score|min_bound|max_bound|";
+    for (auto const &size : Bound_Map_SA_GLOBAL_MAX)
+    {
+        MyFile << size.first << "||" << Score_Map_LS_MIN[size.first] << "|" << Score_Map_LS_MAX[size.first] << " |" << Bound_Map_LS_MIN[size.first] << " |" << Bound_Map_LS_MAX[size.first] << " ||"
+               << "||" << Score_Map_SA_LOCAL_MIN[size.first] << "|" << Score_Map_SA_LOCAL_MAX[size.first] << " |" << Bound_Map_SA_LOCAL_MIN[size.first] << " |" << Bound_Map_SA_LOCAL_MAX[size.first] << " ||"
+               << "||" << Score_Map_SA_GLOBAL_MIN[size.first] << "|" << Score_Map_SA_GLOBAL_MAX[size.first] << " |" << Bound_Map_SA_GLOBAL_MIN[size.first] << " |" << Bound_Map_SA_GLOBAL_MAX[size.first] << " ||";
+    }
+    MyFile.close();
     // cout << "Size "
     //      << "min_score "
     //      << "max_core"
