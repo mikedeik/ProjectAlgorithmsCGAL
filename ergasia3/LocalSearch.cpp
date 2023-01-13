@@ -1,18 +1,19 @@
 #include "LocalSearch.h"
 using namespace std::chrono;
 
-LocalSearch::LocalSearch(vector<Point> points, Target inc_target, float threshold, string inc_output_file, int inc_L) : target(inc_target),
-                                                                                                                        output_file(inc_output_file),
-                                                                                                                        L(inc_L)
+LocalSearch::LocalSearch(vector<Point> points, Target inc_target, float inc_threshold, string inc_output_file, int inc_L) : target(inc_target),
+                                                                                                                            output_file(inc_output_file),
+                                                                                                                            L(inc_L),
+                                                                                                                            threshold(inc_threshold)
 {
-    threshold = threshold;
+
     Incrementing algo(points, X_ASCENDING);
     algo.Create_Polygon_Line();
     Polygon polygon = algo.Get_Simple_Polygon();
     current_polygon = polygon;
-    cout << polygon_history.size() << std::endl;
     polygon_history.push_back(polygon);
-    cout << polygon_history.size() << std::endl;
+
+    threshold = (CGAL::to_double(polygon.area())) / 10000.0;
 
     switch (target)
     {
@@ -94,14 +95,28 @@ const void LocalSearch::MaximizeArea()
                     {
                         if (temp_polygon.area() > best_polygon.area())
                         {
-                            cout << "temp area" << CGAL::to_double(temp_polygon.area()) << "best area" << CGAL::to_double(best_polygon.area()) << std::endl;
+                            cout << "temp area " << CGAL::to_double(temp_polygon.area()) << " best area" << CGAL::to_double(best_polygon.area()) << std::endl;
                             best_polygon = temp_polygon;
+                            DA = abs(abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area())));
+
+                            if (DA < threshold || DA == 0)
+                            {
+                                break;
+                            }
                         }
                     }
                     path.clear();
                     j++;
+                    if (DA < threshold || DA == 0)
+                    {
+                        break;
+                    }
                 }
                 // if V moving to e increases area save to list
+                if (DA < threshold || DA == 0)
+                {
+                    break;
+                }
             }
         }
         DA = abs(abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area())));
@@ -111,17 +126,7 @@ const void LocalSearch::MaximizeArea()
         // Aplly all changes
         // Keep best solution
     }
-    // auto stop = high_resolution_clock::now();
 
-    // auto duration = duration_cast<milliseconds>(stop - start);
-    // int time = duration.count();
-    // cout << "Time taken by function: "
-    //      << duration.count() << " seconds"
-    //      << "\n";
-    // string algo = "Local Search";
-    // print_to_file(polygon_history[polygon_history.size() - 1], polygon_history[0], output_file, time, algo, target);
-
-    // calculate ratio of best polygon
     vector<Point> CH_new_points;
     Polygon CH_new;
 
@@ -196,14 +201,29 @@ const void LocalSearch::MinimizeArea()
                     {
                         if (temp_polygon.area() < best_polygon.area())
                         {
-                            cout << "temp area" << CGAL::to_double(temp_polygon.area()) << "best area" << CGAL::to_double(best_polygon.area()) << std::endl;
+                            cout << "temp area " << CGAL::to_double(temp_polygon.area()) << " best area" << CGAL::to_double(best_polygon.area()) << std::endl;
                             best_polygon = temp_polygon;
+                            DA = abs(abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area())));
+
+                            if (DA < threshold || DA == 0)
+                            {
+                                break;
+                            }
                         }
                     }
                     path.clear();
                     j++;
+
+                    if (DA < threshold || DA == 0)
+                    {
+                        break;
+                    }
                 }
                 // if V moving to e increases area save to list
+                if (DA < threshold || DA == 0)
+                {
+                    break;
+                }
             }
         }
         DA = abs(abs(CGAL::to_double(best_polygon.area())) - abs(CGAL::to_double(current_polygon.area())));

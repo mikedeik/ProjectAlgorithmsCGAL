@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 
     int L_SA = 5000;
     int L_LS = 5;
-    double threshold = 1000000.0;
+    double threshold = 100000.0;
     Target target = MIN;
 
     string input_dir = "";
@@ -51,16 +51,16 @@ int main(int argc, char **argv)
 
     map<int, double> Score_Map_LS_MIN;
     map<int, double> Score_Map_LS_MAX;
-    map<int, double> Score_Map_SA_MIN;
-    map<int, double> Score_Map_SA_MAX;
-
-    for (int points_size = 10; points_size < 101; points_size += 10)
-    {
-        Score_Map_LS_MIN.insert(pair<int, double>(points_size, 1.0));
-        Score_Map_SA_MIN.insert(pair<int, double>(points_size, 1.0));
-        Score_Map_LS_MAX.insert(pair<int, double>(points_size, 0.0));
-        Score_Map_SA_MAX.insert(pair<int, double>(points_size, 0.0));
-    }
+    map<int, double> Score_Map_SA_LOCAL_MIN;
+    map<int, double> Score_Map_SA_LOCAL_MAX;
+    map<int, double> Score_Map_SA_GLOBAL_MIN;
+    map<int, double> Score_Map_SA_GLOBAL_MAX;
+    map<int, double> Bound_Map_LS_MIN;
+    map<int, double> Bound_Map_LS_MAX;
+    map<int, double> Bound_Map_SA_LOCAL_MIN;
+    map<int, double> Bound_Map_SA_LOCAL_MAX;
+    map<int, double> Bound_Map_SA_GLOBAL_MIN;
+    map<int, double> Bound_Map_SA_GLOBAL_MAX;
 
     double new_ratio;
     vector<Point> points;
@@ -81,25 +81,179 @@ int main(int argc, char **argv)
             exit(1);
         }
 
-        SimulatedAnnealing SA(points, LOCAL, target, L_SA, output_file);
-        SA.OptimizeArea();
+        // ========== SA with LOCAL step and MIN =================
+
+        SimulatedAnnealing SA_LOCAL_MIN(points, LOCAL, MIN, L_SA, output_file);
+        SA_LOCAL_MIN.OptimizeArea();
+
+        // an den exoume score gia ton arithmo twn points ftiakse neo mapping alliws prosthese to neo score
+        new_ratio = SA_LOCAL_MIN.get_ratio();
+
+        if (Score_Map_SA_LOCAL_MIN.find(points.size()) == Score_Map_SA_LOCAL_MIN.end())
+        {
+            Score_Map_SA_LOCAL_MIN.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+            Score_Map_SA_LOCAL_MIN[points.size()] += new_ratio;
+        }
+
+        // omoiws an to kainourgio ratio einai megalutero apo to palio bound antikathistatai
+        if (Bound_Map_SA_LOCAL_MIN.find(points.size()) == Bound_Map_SA_LOCAL_MIN.end())
+        {
+            Bound_Map_SA_LOCAL_MIN.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+
+            if (new_ratio > Bound_Map_SA_LOCAL_MIN[points.size()])
+            {
+                Bound_Map_SA_LOCAL_MIN[points.size()] = new_ratio;
+            }
+        }
+
+        // ========== SA with LOCAL step and MAX =================
+
+        SimulatedAnnealing SA_LOCAL_MAX(points, LOCAL, MAX, L_SA, output_file);
+        SA_LOCAL_MAX.OptimizeArea();
+
+        new_ratio = SA_LOCAL_MAX.get_ratio();
+
+        if (Score_Map_SA_LOCAL_MAX.find(points.size()) == Score_Map_SA_LOCAL_MAX.end())
+        {
+            Score_Map_SA_LOCAL_MAX.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+            Score_Map_SA_LOCAL_MAX[points.size()] += new_ratio;
+        }
+
+        // omoiws an to kainourgio ratio einai mikrotero apo to palio bound antikathistatai
+        if (Bound_Map_SA_LOCAL_MAX.find(points.size()) == Bound_Map_SA_LOCAL_MAX.end())
+        {
+            Bound_Map_SA_LOCAL_MAX.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+
+            if (new_ratio < Bound_Map_SA_LOCAL_MAX[points.size()])
+            {
+                Bound_Map_SA_LOCAL_MAX[points.size()] = new_ratio;
+            }
+        }
+
+        // ========== SA with GLOBAL step and MIN =================
+
+        SimulatedAnnealing SA_GLOBAL_MIN(points, LOCAL, MIN, L_SA, output_file);
+        SA_GLOBAL_MIN.OptimizeArea();
+
+        new_ratio = SA_GLOBAL_MIN.get_ratio();
+
+        if (Score_Map_SA_GLOBAL_MIN.find(points.size()) == Score_Map_SA_GLOBAL_MIN.end())
+        {
+            Score_Map_SA_GLOBAL_MIN.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+            Score_Map_SA_GLOBAL_MIN[points.size()] += new_ratio;
+        }
+
+        // omoiws an to kainourgio ratio einai megalutero apo to palio bound antikathistatai
+        if (Bound_Map_SA_GLOBAL_MIN.find(points.size()) == Bound_Map_SA_GLOBAL_MIN.end())
+        {
+            Bound_Map_SA_GLOBAL_MIN.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+
+            if (new_ratio > Bound_Map_SA_GLOBAL_MIN[points.size()])
+            {
+                Bound_Map_SA_GLOBAL_MIN[points.size()] = new_ratio;
+            }
+        }
+
+        // =========== SA with GLOBAL step with MAX =================================
+
+        SimulatedAnnealing SA_GLOBAL_MAX(points, LOCAL, MAX, L_SA, output_file);
+        SA_GLOBAL_MAX.OptimizeArea();
+
+        new_ratio = SA_GLOBAL_MAX.get_ratio();
+
+        if (Score_Map_SA_GLOBAL_MAX.find(points.size()) == Score_Map_SA_GLOBAL_MAX.end())
+        {
+            Score_Map_SA_GLOBAL_MAX.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+            Score_Map_SA_GLOBAL_MAX[points.size()] += new_ratio;
+        }
+
+        // omoiws an to kainourgio ratio einai mikrotero apo to palio bound antikathistatai
+        if (Bound_Map_SA_GLOBAL_MAX.find(points.size()) == Bound_Map_SA_GLOBAL_MAX.end())
+        {
+            Bound_Map_SA_GLOBAL_MAX.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+
+            if (new_ratio < Bound_Map_SA_GLOBAL_MAX[points.size()])
+            {
+                Bound_Map_SA_GLOBAL_MAX[points.size()] = new_ratio;
+            }
+        }
 
         // Running Local Search MIN
         LocalSearch LS_min(points, MIN, threshold, output_file, L_LS);
         new_ratio = LS_min.get_ratio();
 
-        if (new_ratio < Score_Map_LS_MIN[points.size()])
+        if (Score_Map_LS_MIN.find(points.size()) == Score_Map_LS_MIN.end())
         {
-            Score_Map_LS_MIN[points.size()] = new_ratio;
+            Score_Map_LS_MIN.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+            Score_Map_LS_MIN[points.size()] += new_ratio;
+        }
+
+        // omoiws an to kainourgio ratio einai megalutero apo to palio bound antikathistatai
+        if (Bound_Map_LS_MIN.find(points.size()) == Bound_Map_LS_MIN.end())
+        {
+            Bound_Map_LS_MIN.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+
+            if (new_ratio > Bound_Map_LS_MIN[points.size()])
+            {
+                Bound_Map_LS_MIN[points.size()] = new_ratio;
+            }
         }
 
         // Running Local Search MAX
         LocalSearch LS_max(points, MAX, threshold, output_file, L_LS);
         new_ratio = LS_max.get_ratio();
 
-        if (new_ratio > Score_Map_LS_MAX[points.size()])
+        if (Score_Map_LS_MAX.find(points.size()) == Score_Map_LS_MAX.end())
         {
-            Score_Map_LS_MAX[points.size()] = new_ratio;
+            Score_Map_LS_MAX.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+            Score_Map_LS_MAX[points.size()] += new_ratio;
+        }
+
+        // omoiws an to kainourgio ratio einai mikrotero apo to palio bound antikathistatai
+        if (Bound_Map_LS_MAX.find(points.size()) == Bound_Map_LS_MAX.end())
+        {
+            Bound_Map_LS_MAX.insert(pair<int, double>(points.size(), new_ratio));
+        }
+        else
+        {
+
+            if (new_ratio < Bound_Map_LS_MAX[points.size()])
+            {
+                Bound_Map_LS_MAX[points.size()] = new_ratio;
+            }
         }
     }
 
@@ -107,4 +261,31 @@ int main(int argc, char **argv)
     {
         cout << "For " << size.first << " points best is " << size.second << "\n";
     }
+    for (auto const &size : Score_Map_LS_MAX)
+    {
+        cout << "For " << size.first << " points best is " << size.second << "\n";
+    }
+    for (auto const &size : Score_Map_SA_LOCAL_MIN)
+    {
+        cout << "For " << size.first << " points best is " << size.second << "\n";
+    }
+    for (auto const &size : Score_Map_SA_LOCAL_MAX)
+    {
+        cout << "For " << size.first << " points best is " << size.second << "\n";
+    }
+    for (auto const &size : Score_Map_SA_GLOBAL_MIN)
+    {
+        cout << "For " << size.first << " points best is " << size.second << "\n";
+    }
+    for (auto const &size : Bound_Map_SA_GLOBAL_MAX)
+    {
+        cout << "For " << size.first << " points best is " << size.second << "\n";
+    }
+
+    // cout << "Size "
+    //      << "min_score "
+    //      << "max_core"
+    //      << "min _ bound"
+    //      << "max_bound \n";
+    // cout << size.first << Score_Map_LS_MIN[size.first] << Score_Map_LS_MAX[size.first] << Bound_Map_LS_MIN[size.first] << Bound_Map_LS_MAX[size.first]
 }

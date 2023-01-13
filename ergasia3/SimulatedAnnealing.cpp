@@ -544,3 +544,19 @@ bool SimulatedAnnealing::check_validity(Point p, Point q, Point r, Point s)
     // an gia oles autes tis akmes den exoume tomi tote i allagi einai valid
     return 1;
 }
+
+const double SimulatedAnnealing::get_ratio()
+{
+
+    vector<Point> CH_new_points;
+    Polygon CH_new;
+
+    CGAL::convex_hull_2(new_polygon.begin(), new_polygon.end(), std::back_inserter(CH_new_points));
+
+    for (Point p : CH_new_points)
+    {
+        CH_new.push_back(p);
+    }
+
+    return CGAL::to_double(new_polygon.area()) / CGAL::to_double(CH_new.area());
+}

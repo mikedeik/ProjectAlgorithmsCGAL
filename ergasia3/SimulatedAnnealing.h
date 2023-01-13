@@ -66,6 +66,7 @@ public:
 
     /* Veltistopoiei to emvado tis polygwnikis grammis analoga me ta orismata tou algorithmou*/
     const void OptimizeArea();
+    const double get_ratio();
 };
 
 #endif // SIMANNEALING
